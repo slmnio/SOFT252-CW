@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.slmn.patientmanagement.structures;
+package com.slmn.patient_management.user_structures;
 
 /**
  *
@@ -15,8 +15,8 @@ public class Patient extends User {
     private String sex; 
     // "sex" is the medically correct term for "gender assigned at birth"
     
-    public Patient (String givenName, String surname, String address, int age, String sex) {
-        super("P", givenName, surname, address);        
+    public Patient (String givenName, String surname, String address, String password, int age, String sex) {
+        super("P", givenName, surname, address, password);
         
         this.age = age;
         this.sex = sex;

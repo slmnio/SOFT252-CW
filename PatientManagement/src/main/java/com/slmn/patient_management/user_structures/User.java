@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.slmn.patientmanagement.structures;
+package com.slmn.patient_management.user_structures;
 
 /**
  *
@@ -15,16 +15,18 @@ public abstract class User {
     private String givenName;
     private String surname; // will be private with get/set
     private String address;
+    private String password;
     static final private int IDLength = 4;
     
     // age and gender aren't required for all users, they can be added in subs
     
-    public User(String code, String givenName, String surname, String address) {
+    public User(String code, String givenName, String surname, String address, String password) {
         this.ID = this.generateID(code);
         
         this.givenName = givenName;
         this.surname = surname;
         this.address = address;
+        this.password = password;
     }
     
     private String generateID(String code) {
@@ -48,5 +50,8 @@ public abstract class User {
     public String getFullName() { return String.format("%s %s", this.givenName, this.surname); }
     public String getAddress() { return this.address; }
     public String getID() { return this.ID; }
+
+    public boolean passwordMatches(String attempt) { return this.password.equals(attempt); }
+
     
 }

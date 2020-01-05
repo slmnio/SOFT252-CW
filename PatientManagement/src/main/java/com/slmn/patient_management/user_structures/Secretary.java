@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.slmn.patientmanagement.structures;
+package com.slmn.patient_management.user_structures;
 
 /**
  *
  * @author Jill
  */
 public class Secretary extends User {
-    public Secretary (String givenName, String surname, String address) {
-        super("S", givenName, surname, address);        
+    public Secretary (String givenName, String surname, String address, String password) {
+        super("S", givenName, surname, address, password);
     }
 }

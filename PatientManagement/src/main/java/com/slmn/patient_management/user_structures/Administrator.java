@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.slmn.patientmanagement.structures;
+package com.slmn.patient_management.user_structures;
 
 /**
  *
@@ -11,7 +11,7 @@ package com.slmn.patientmanagement.structures;
  */
 public class Administrator extends User {
     
-    public Administrator(String givenName, String surname, String address) {
-        super("A", givenName, surname, address);       
+    public Administrator(String givenName, String surname, String address, String password) {
+        super("A", givenName, surname, address, password);
     }
 }
