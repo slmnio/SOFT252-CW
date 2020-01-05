@@ -7,11 +7,10 @@ package com.slmn.patientmanagement.structures;
 
 /**
  *
- * @author solca
+ * @author Jill
  */
-public class Administrator extends User {
-    
-    public Administrator(String givenName, String surname, String address) {
-        super("A", givenName, surname, address);       
+public class Secretary extends User {
+    public Secretary (String givenName, String surname, String address) {
+        super("S", givenName, surname, address);        
     }
 }
