@@ -5,6 +5,9 @@
  */
 package com.slmn.patient_management.user_structures;
 
+import com.slmn.patient_management.io.JSONArrayFile;
+
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -24,8 +27,17 @@ public class MainTest {
         list.add(new Doctor("Solomon", "Cammack", "upstairs", "password"));
         list.add(new Patient("Solomon", "Cammack", "upstairs", "password", 20, "Male"));
 
-
         list.forEach(item -> System.out.println(item.describe()));
+
+
+        System.out.println(System.getProperty("user.dir"));
+
+
+        JSONArrayFile file = new JSONArrayFile("users.json");
+
+        ArrayList<User> list2 = file.readOrCreateEmpty();
+        list2.forEach(item -> System.out.println(item.describe()));
+
 
     }
 }
