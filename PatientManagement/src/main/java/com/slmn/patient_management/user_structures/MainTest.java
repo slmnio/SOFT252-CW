@@ -5,6 +5,7 @@
  */
 package com.slmn.patient_management.user_structures;
 
+import com.google.gson.Gson;
 import com.slmn.patient_management.io.JSONArrayFile;
 
 import java.io.FileNotFoundException;
@@ -32,6 +33,8 @@ public class MainTest {
 
         System.out.println(System.getProperty("user.dir"));
 
+
+        Administrator admin = new Administrator("Solomon", "Cammack", "10 Babbage", "password");
 
         JSONArrayFile file = new JSONArrayFile("users.json");
 

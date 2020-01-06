@@ -11,6 +11,7 @@ public class JSONArrayFile {
     public JSONArrayFile(String filename) {
         this.filename = filename;
     }
+
     public <T> ArrayList<T> readOrCreateEmpty() {
         Gson gson = new Gson();
         JSONFile file = new JSONFile(this.filename);

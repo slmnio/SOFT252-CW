@@ -9,7 +9,7 @@ package com.slmn.patient_management.user_structures;
  *
  * @author solca
  */
-public abstract class User {    
+public abstract class User /*implements GSONFillable*/ {
     private String ID;
     
     private String givenName;
@@ -27,6 +27,13 @@ public abstract class User {
         this.surname = surname;
         this.address = address;
         this.password = password;
+    }
+
+    public static void createAppropriateUser(Object object) {
+        User user;
+
+
+
     }
     
     private String generateID(String code) {

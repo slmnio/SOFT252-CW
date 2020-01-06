@@ -21,4 +21,5 @@ public class Patient extends User {
         this.age = age;
         this.sex = sex;
     }
+
 }
