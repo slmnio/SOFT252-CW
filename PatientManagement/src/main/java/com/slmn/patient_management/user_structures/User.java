@@ -74,7 +74,7 @@ public abstract class User {
     }
     
     public String describe() {
-        return "User "+ this.ID +": " + this.givenName + " " + this.surname;   
+        return String.format("[%s] %s: %s %s", this.getClass().getSimpleName(), this.ID, this.givenName, this.surname);
     }
     
     public String getGivenName() { return this.givenName; }

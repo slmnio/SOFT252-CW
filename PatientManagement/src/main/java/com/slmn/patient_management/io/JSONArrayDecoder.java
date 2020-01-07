@@ -15,7 +15,7 @@ public class JSONArrayDecoder {
 
 
     public ArrayList decode() {
-        ArrayList output = new ArrayList();
+        ArrayList output;
 
         JSONArrayFile file = new JSONArrayFile(this.filename);
         ArrayList objects = file.readOrCreateEmpty();
