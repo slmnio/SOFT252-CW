@@ -5,6 +5,8 @@
  */
 package com.slmn.patient_management.user_structures;
 
+import com.google.gson.internal.LinkedTreeMap;
+
 /**
  *
  * @author Jill
@@ -12,5 +14,9 @@ package com.slmn.patient_management.user_structures;
 public class Doctor extends User {
     public Doctor (String givenName, String surname, String address, String password) {
         super("D", givenName, surname, address, password);
+    }
+
+    public Doctor(LinkedTreeMap object) {
+        super(object);
     }
 }

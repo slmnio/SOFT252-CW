@@ -5,6 +5,8 @@
  */
 package com.slmn.patient_management.user_structures;
 
+import com.google.gson.internal.LinkedTreeMap;
+
 /**
  *
  * @author Jill
@@ -22,4 +24,9 @@ public class Patient extends User {
         this.sex = sex;
     }
 
+    public Patient(LinkedTreeMap object) {
+        super(object);
+        this.age = (int) object.get("age");
+        this.sex = (String) object.get("sex");
+    }
 }

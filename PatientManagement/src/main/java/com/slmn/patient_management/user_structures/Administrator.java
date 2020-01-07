@@ -5,6 +5,10 @@
  */
 package com.slmn.patient_management.user_structures;
 
+import com.google.gson.internal.LinkedTreeMap;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author solca
@@ -13,5 +17,8 @@ public class Administrator extends User {
     
     public Administrator(String givenName, String surname, String address, String password) {
         super("A", givenName, surname, address, password);
+    }
+    public Administrator(LinkedTreeMap object) {
+        super(object);
     }
 }

@@ -5,11 +5,16 @@
  */
 package com.slmn.patient_management.user_structures;
 
+import com.google.gson.internal.LinkedTreeMap;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+
 /**
  *
  * @author solca
  */
-public abstract class User /*implements GSONFillable*/ {
+public abstract class User {
     private String ID;
     
     private String givenName;
@@ -17,8 +22,26 @@ public abstract class User /*implements GSONFillable*/ {
     private String address;
     private String password;
     static final private int IDLength = 4;
+
     
     // age and gender aren't required for all users, they can be added in subs
+
+    public User() {
+        this.ID = "";
+        this.givenName = "";
+        this.surname = "";
+        this.address = "";
+        this.password = "";
+    }
+
+    public User(LinkedTreeMap object) {
+        this.ID = (String) object.get("ID");
+        this.givenName = (String) object.get("givenName");
+        this.surname = (String) object.get("surname");
+        this.address = (String) object.get("address");
+        this.password = (String) object.get("passsword");
+    }
+
     
     public User(String code, String givenName, String surname, String address, String password) {
         this.ID = this.generateID(code);
@@ -29,12 +52,14 @@ public abstract class User /*implements GSONFillable*/ {
         this.password = password;
     }
 
-    public static void createAppropriateUser(Object object) {
-        User user;
-
-
-
+    public static User createAppropriateUser(LinkedTreeMap object) {
+        if (((String) object.get("ID")).startsWith("A")) return new Administrator(object);
+        if (((String) object.get("ID")).startsWith("D")) return new Doctor(object);
+        if (((String) object.get("ID")).startsWith("S")) return new Secretary(object);
+        if (((String) object.get("ID")).startsWith("P")) return new Patient(object);
+        return new Patient(object);
     }
+
     
     private String generateID(String code) {
         // only allow ADPS for code - enum?
@@ -57,6 +82,9 @@ public abstract class User /*implements GSONFillable*/ {
     public String getFullName() { return String.format("%s %s", this.givenName, this.surname); }
     public String getAddress() { return this.address; }
     public String getID() { return this.ID; }
+
+    public void setID(String ID) { this.ID = ID; }
+    public void setGivenName(String givenName) { this.givenName = givenName; }
 
     public boolean passwordMatches(String attempt) { return this.password.equals(attempt); }
 
