@@ -1,9 +1,5 @@
 package com.slmn.patient_management.io;
 
-
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -18,7 +14,7 @@ public class JSONFile {
     }
 
     public String read() throws FileNotFoundException {
-        String fileContent = new Scanner(new File(this.filename)).next();
+        String fileContent = (new Scanner(new File(this.filename)).useDelimiter("\n")).next();
         System.out.println("File output:");
         System.out.println(fileContent);
         return fileContent;

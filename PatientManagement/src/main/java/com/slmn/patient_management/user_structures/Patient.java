@@ -26,7 +26,9 @@ public class Patient extends User {
 
     public Patient(LinkedTreeMap object) {
         super(object);
-        this.age = (int) object.get("age");
+
+        // Gson imports numbers as double, have to cast it from the object then cast again to the class
+        this.age = (int)((double) object.get("age"));
         this.sex = (String) object.get("sex");
     }
 }

@@ -12,17 +12,9 @@ public class JSONArrayDecoder {
         this.decoder = decoder;
     }
 
-
-
     public ArrayList decode() {
-        ArrayList output;
-
         JSONArrayFile file = new JSONArrayFile(this.filename);
         ArrayList objects = file.readOrCreateEmpty();
-
-
-        output = decoder.run(objects);
-
-        return output;
+        return decoder.run(objects);
     }
 }
