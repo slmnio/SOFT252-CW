@@ -6,6 +6,8 @@
 package com.slmn.patient_management.user_structures;
 
 import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.drug_structures.Medicine;
+import com.slmn.patient_management.drug_structures.Prescription;
 
 /**
  *
@@ -30,5 +32,9 @@ public class Patient extends User {
         // Gson imports numbers as double, have to cast it from the object then cast again to the class
         this.age = (int)((double) object.get("age"));
         this.sex = (String) object.get("sex");
+    }
+
+    public Prescription createPrescription(Medicine medicine, int quantity, String dosage) {
+        return new Prescription(this, medicine, quantity, dosage);
     }
 }

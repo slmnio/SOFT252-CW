@@ -1,9 +1,17 @@
 package com.slmn.patient_management.drug_structures;
 
+import com.slmn.patient_management.user_structures.*;
+
 public class Prescription {
     private Medicine medicine;
     private int quantity;
     private String dosage;
+    private Patient patient;
+
+    public Prescription(Patient patient, Medicine medicine, int quantity, String dosage) {
+        this(medicine, quantity, dosage);
+        this.patient = patient;
+    }
 
     public Prescription(Medicine medicine, int quantity, String dosage) {
         this.medicine = medicine;
