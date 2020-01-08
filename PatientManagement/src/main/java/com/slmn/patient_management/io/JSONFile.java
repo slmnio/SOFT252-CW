@@ -14,12 +14,12 @@ public class JSONFile {
     }
 
     public String read() throws FileNotFoundException {
-        String fileContent = (new Scanner(new File(this.filename)).useDelimiter("\n")).next();
+        String fileContent = (new Scanner(new File(String.format("data/%s", this.filename))).useDelimiter("\n")).next();
         return fileContent;
     }
 
     public String readOrCreate(String defaultText) {
-        File file = new File(this.filename);
+        File file = new File(String.format("data/%s", this.filename));
         if (!file.isFile()) {
             // return early
             try {
