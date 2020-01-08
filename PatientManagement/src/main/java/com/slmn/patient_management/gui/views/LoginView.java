@@ -1,13 +1,15 @@
 package com.slmn.patient_management.gui.views;
 
 import com.slmn.patient_management.gui.controllers.AuthController;
+import com.slmn.patient_management.gui.structures.ClosableFrame;
 import com.slmn.patient_management.gui.structures.SwitchableFrame;
+import com.slmn.patient_management.gui.structures.ViewWithFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginView extends SwitchableFrame {
+public class LoginView extends ViewWithFrame {
     private JPanel mainPanel;
     private JTextField txtUsername;
     private JLabel lblTitle;
@@ -30,9 +32,10 @@ public class LoginView extends SwitchableFrame {
     }
 
     @Override
-    public JFrame getFrame() {
-        return SwitchableFrame.createFrame("Login", new LoginView().mainPanel);
+    public SwitchableFrame getFrame() {
+        return new ClosableFrame("Login", this.mainPanel);
     }
+
 
 
     public void setData(AuthController data) {

@@ -2,7 +2,7 @@ package com.slmn.patient_management.core;
 
 import com.slmn.patient_management.drug_structures.Medicine;
 import com.slmn.patient_management.drug_structures.Prescription;
-import com.slmn.patient_management.gui.structures.SwitchableFrame;
+import com.slmn.patient_management.gui.structures.ViewWithFrame;
 import com.slmn.patient_management.gui.views.LoginView;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.*;
@@ -19,7 +19,7 @@ public class Main {
     }
 
     public static JFrame frame = null;
-    public static void switchFrame(SwitchableFrame frameForm) {
+    public static void switchView(ViewWithFrame frameForm) {
         JFrame newFrame = frameForm.getFrame();
         if (frame != null) frame.dispose();
         newFrame.setVisible(true);
@@ -30,7 +30,7 @@ public class Main {
         // Main entry point of the program
         SystemDatabase.connect();
         //Main.test();
-        Main.switchFrame(new LoginView());
+        Main.switchView(new LoginView());
     }
     public static void test() {
 
