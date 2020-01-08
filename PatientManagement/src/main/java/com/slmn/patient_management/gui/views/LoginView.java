@@ -1,12 +1,13 @@
 package com.slmn.patient_management.gui.views;
 
 import com.slmn.patient_management.gui.controllers.AuthController;
+import com.slmn.patient_management.gui.structures.SwitchableFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginView {
+public class LoginView extends SwitchableFrame {
     private JPanel panel1;
     private JTextField txtUsername;
     private JLabel lblTitle;
@@ -28,13 +29,14 @@ public class LoginView {
         });
     }
 
-    public static void main(String[] args) {
+    public JFrame getFrame() {
         JFrame frame = new JFrame("LoginView");
         frame.setContentPane(new LoginView().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setVisible(true);
+        return frame;
     }
+
 
     public void setData(AuthController data) {
         txtUsername.setText(data.getUsername());

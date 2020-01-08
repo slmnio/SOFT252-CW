@@ -59,5 +59,11 @@ public class AuthController {
 
         // finish auth
         Main.setAuthenticatedUser(user);
+
+        if (Main.authenticatedUser.isAdmin()) System.out.println("Admin logged in");
+        if (Main.authenticatedUser.isDoctor()) System.out.println("Doctor logged in");
+        if (Main.authenticatedUser.isSecretary()) System.out.println("Secretary logged in");
+        if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
+
     }
 }

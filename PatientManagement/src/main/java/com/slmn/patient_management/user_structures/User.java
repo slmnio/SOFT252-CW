@@ -7,9 +7,6 @@ package com.slmn.patient_management.user_structures;
 
 import com.google.gson.internal.LinkedTreeMap;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-
 /**
  *
  * @author solca
@@ -90,4 +87,9 @@ public abstract class User {
         if (attempt == null) attempt = "";
         return this.password.equals(attempt);
     }
+
+    public boolean isAdmin() { return Administrator.class.equals(this.getClass()); }
+    public boolean isSecretary() { return Secretary.class.equals(this.getClass()); }
+    public boolean isDoctor() { return Doctor.class.equals(this.getClass()); }
+    public boolean isPatient() { return Patient.class.equals(this.getClass()); }
 }

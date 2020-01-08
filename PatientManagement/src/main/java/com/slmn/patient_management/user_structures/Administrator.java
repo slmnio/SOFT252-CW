@@ -7,8 +7,6 @@ package com.slmn.patient_management.user_structures;
 
 import com.google.gson.internal.LinkedTreeMap;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author solca

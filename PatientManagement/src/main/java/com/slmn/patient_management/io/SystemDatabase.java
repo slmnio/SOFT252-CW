@@ -1,11 +1,12 @@
 package com.slmn.patient_management.io;
 
+import com.slmn.patient_management.drug_structures.Medicine;
+import com.slmn.patient_management.drug_structures.Prescription;
 import com.slmn.patient_management.io.decoders.JSONClassDecoder;
 import com.slmn.patient_management.io.decoders.MedicineDecoder;
 import com.slmn.patient_management.io.decoders.PrescriptionDecoder;
 import com.slmn.patient_management.io.decoders.UserDecoder;
 import com.slmn.patient_management.user_structures.*;
-import com.slmn.patient_management.drug_structures.*;
 
 import java.util.ArrayList;
 

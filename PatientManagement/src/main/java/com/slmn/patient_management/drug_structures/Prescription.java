@@ -2,7 +2,7 @@ package com.slmn.patient_management.drug_structures;
 
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
-import com.slmn.patient_management.user_structures.*;
+import com.slmn.patient_management.user_structures.Patient;
 
 public class Prescription {
     private Medicine medicine;
