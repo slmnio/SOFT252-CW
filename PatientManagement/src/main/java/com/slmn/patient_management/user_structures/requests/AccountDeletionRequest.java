@@ -35,6 +35,11 @@ public class AccountDeletionRequest implements AccountRequest {
     }
 
     @Override
+    public String getType() {
+        return this.type;
+    }
+
+    @Override
     public Patient getPatient() {
         return this.user;
     }

@@ -6,7 +6,7 @@ public interface AccountRequest {
     public void approve();
     public void decline();
     public void completeRequest();
-    public String type = "";
+    public String getType();
     
     public Patient getPatient();
 }
