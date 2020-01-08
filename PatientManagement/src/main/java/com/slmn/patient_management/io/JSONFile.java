@@ -9,17 +9,21 @@ import java.util.Scanner;
 public class JSONFile {
     private String filename;
 
+    private String getFilename() {
+        return String.format("data/%s", this.filename);
+    }
+
     public JSONFile(String filename) {
         this.filename = filename;
     }
 
     public String read() throws FileNotFoundException {
-        String fileContent = (new Scanner(new File(String.format("data/%s", this.filename))).useDelimiter("\n")).next();
+        String fileContent = (new Scanner(new File(this.getFilename())).useDelimiter("\n")).next();
         return fileContent;
     }
 
     public String readOrCreate(String defaultText) {
-        File file = new File(String.format("data/%s", this.filename));
+        File file = new File(this.getFilename());
         if (!file.isFile()) {
             // return early
             try {
