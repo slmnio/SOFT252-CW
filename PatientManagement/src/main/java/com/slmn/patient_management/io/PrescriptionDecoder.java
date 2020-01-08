@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class PrescriptionDecoder extends JSONClassDecoder {
         @Override
-        public ArrayList<Prescription> run(ArrayList<LinkedTreeMap> objects) {
+        public ArrayList<Prescription> decode(ArrayList<LinkedTreeMap> objects) {
             ArrayList<Prescription> output = new ArrayList<>();
             for (LinkedTreeMap object: objects) {
                 Prescription prescription = new Prescription(object);

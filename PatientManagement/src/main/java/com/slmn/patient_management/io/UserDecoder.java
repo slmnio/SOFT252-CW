@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class UserDecoder extends JSONClassDecoder {
     @Override
-    public ArrayList<User> run(ArrayList<LinkedTreeMap> objects) {
+    public ArrayList<User> decode(ArrayList<LinkedTreeMap> objects) {
 
         ArrayList<User> output = new ArrayList<>();
         for (LinkedTreeMap object: objects) {

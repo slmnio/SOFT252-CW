@@ -14,6 +14,11 @@ public class JSONArrayDecoder {
     public ArrayList decode() {
         JSONArrayFile file = new JSONArrayFile(this.filename);
         ArrayList objects = file.readOrCreateEmpty();
-        return decoder.run(objects);
+        return decoder.decode(objects);
+    }
+
+    public void encode(ArrayList objects) {
+        JSONArrayFile file = new JSONArrayFile(this.filename);
+        file.write(decoder.encode(objects));
     }
 }
