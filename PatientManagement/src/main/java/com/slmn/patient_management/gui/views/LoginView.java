@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class LoginView extends SwitchableFrame {
-    private JPanel panel1;
+    private JPanel mainPanel;
     private JTextField txtUsername;
     private JLabel lblTitle;
     private JLabel lblDescUsername;
@@ -29,12 +29,9 @@ public class LoginView extends SwitchableFrame {
         });
     }
 
+    @Override
     public JFrame getFrame() {
-        JFrame frame = new JFrame("LoginView");
-        frame.setContentPane(new LoginView().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        return frame;
+        return SwitchableFrame.createFrame("Login", new LoginView().mainPanel);
     }
 
 

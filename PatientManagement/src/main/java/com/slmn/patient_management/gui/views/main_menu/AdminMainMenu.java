@@ -15,10 +15,6 @@ public class AdminMainMenu extends SwitchableFrame {
 
     @Override
     public JFrame getFrame() {
-        JFrame frame = new JFrame("LoginView");
-        frame.setContentPane(new AdminMainMenu().mainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        return frame;
+        return SwitchableFrame.createFrame("Main Menu", new AdminMainMenu().mainPanel);
     }
 }
