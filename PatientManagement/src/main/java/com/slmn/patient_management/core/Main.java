@@ -29,14 +29,10 @@ public class Main {
     public static void main(String[] args) {
         // Main entry point of the program
         SystemDatabase.connect();
-        //Main.test();
+        Main.test();
         Main.switchView(new LoginView());
     }
     public static void test() {
-
-        for (User user: SystemDatabase.connect().doctors) {
-            System.out.println(user.describe());
-        }
 
         for (Prescription p: SystemDatabase.connect().prescriptions) {
             System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
@@ -44,14 +40,13 @@ public class Main {
 
         // Database write tests
 
-        Patient patient = SystemDatabase.connect().patients.get(0);
-        Medicine medicine = new Medicine("Pentadusplan", 20);
-
-        SystemDatabase.connect().medicines.add(medicine);
-
-        Prescription prescription = patient.createPrescription(medicine, 2, "Use sparingly when needed");
-
-        SystemDatabase.connect().prescriptions.add(prescription);
+        Patient patient = new Patient("Stirling", "Davis", "40 Belgrave Avenue", "password", 28, "Male");
+        System.out.println(patient.describe());
+        SystemDatabase.connect().patients.add(patient);
         SystemDatabase.connect().writeAll();
+
+        for (Patient p: SystemDatabase.connect().patients) {
+            System.out.println(p.describe());
+        }
     }
 }

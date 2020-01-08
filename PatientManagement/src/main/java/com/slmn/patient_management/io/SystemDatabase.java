@@ -84,6 +84,30 @@ public class SystemDatabase {
         file.write(items);
     }
 
+    public int getEnvWithDefault(String key, int fallback) {
+        if (!this.env.containsKey(key)) {
+            return fallback;
+        }
+        try {
+            return (int) ((double) this.env.get(key));
+        } catch (NullPointerException e) {
+            System.out.println(String.format("No value for key [%s]", key));
+            return fallback;
+        }
+    }
+    public String getEnvWithDefault(String key, String fallback) {
+        if (!this.env.containsKey(key)) {
+            System.out.println(String.format("No value for key [%s]", key));
+            return fallback;
+        }
+        try {
+            return (String) this.env.get(key);
+        } catch (NullPointerException e) {
+            System.out.println(String.format("No value (error) for key [%s]", key));
+            return fallback;
+        }
+    }
+
     // Collection searching
     public User getUser(String ID) {
         ArrayList<User> users = new ArrayList<User>();

@@ -70,8 +70,7 @@ public abstract class User {
         // only allow ADPS for code - enum?
         // get general settings json, auto increment
 
-        int prev = (int) SystemDatabase.connect().env.get("PREVIOUS_ID");
-        if (prev == 0) prev = 1;
+        int prev = (int) SystemDatabase.connect().getEnvWithDefault("PREVIOUS_ID", 1);
         int newID = ++prev;
         SystemDatabase.connect().env.put("PREVIOUS_ID", newID);
 
