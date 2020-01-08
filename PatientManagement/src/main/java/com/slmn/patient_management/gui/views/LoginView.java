@@ -15,7 +15,7 @@ public class LoginView extends SwitchableFrame {
     private JButton btnLogin;
     private JButton btnRequestAccount;
     private JLabel lblDescPassword;
-    private JTextField txtPassword;
+    private JPasswordField txtPassword;
 
     public LoginView() {
         AuthController authController = new AuthController();
