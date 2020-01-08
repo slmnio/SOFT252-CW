@@ -1,6 +1,7 @@
 package com.slmn.patient_management.gui.controllers;
 
 import com.slmn.patient_management.core.Main;
+import com.slmn.patient_management.gui.views.main_menu.AdminMainMenu;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.User;
 
@@ -10,13 +11,7 @@ public class AuthController {
     private String username;
     private String password;
 
-    public AuthController() {
-
-    }
-
-    public void attempt() {
-
-    }
+    public AuthController() { }
 
     public String getUsername() {
         return username;
@@ -60,7 +55,7 @@ public class AuthController {
         // finish auth
         Main.setAuthenticatedUser(user);
 
-        if (Main.authenticatedUser.isAdmin()) System.out.println("Admin logged in");
+        if (Main.authenticatedUser.isAdmin()) Main.switchFrame(new AdminMainMenu());
         if (Main.authenticatedUser.isDoctor()) System.out.println("Doctor logged in");
         if (Main.authenticatedUser.isSecretary()) System.out.println("Secretary logged in");
         if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
