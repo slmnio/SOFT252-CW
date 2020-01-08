@@ -3,6 +3,11 @@ package com.slmn.patient_management.user_structures.requests;
 import com.slmn.patient_management.user_structures.User;
 
 public class AccountCreationRequest implements AccountRequest {
+    private User user = null;
+
+    public AccountCreationRequest(User user) {
+        this.user = user;
+    }
 
     @Override
     public void approve() {
@@ -18,6 +23,7 @@ public class AccountCreationRequest implements AccountRequest {
 
     private void create(User user) {
         // do user
+
     }
 
     @Override
