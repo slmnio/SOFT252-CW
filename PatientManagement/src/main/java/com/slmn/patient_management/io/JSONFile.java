@@ -63,7 +63,10 @@ public class JSONFile {
         try {
             PrintWriter out = new PrintWriter(file.getAbsolutePath());
             // out.println will overwrite the full file
+
+            System.out.println(String.format("Replacing file [%s] with %s", this.getFilename(), content));
             out.println(content);
+            out.close();
 
         } catch (FileNotFoundException e) {
             // unlikely to ever happen
