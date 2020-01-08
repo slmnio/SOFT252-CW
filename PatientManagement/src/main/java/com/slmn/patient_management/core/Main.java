@@ -29,7 +29,7 @@ public class Main {
     public static void main(String[] args) {
         // Main entry point of the program
         SystemDatabase.connect();
-        Main.test();
+        //Main.test();
         Main.switchView(new LoginView());
     }
     public static void test() {

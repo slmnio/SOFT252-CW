@@ -89,7 +89,7 @@ public class SystemDatabase {
             return fallback;
         }
         try {
-            return (int) ((double) this.env.get(key));
+            return (int) Math.floor((double) this.env.get(key));
         } catch (NullPointerException e) {
             System.out.println(String.format("No value for key [%s]", key));
             return fallback;
@@ -132,5 +132,17 @@ public class SystemDatabase {
             }
         }
         return null;
+    }
+
+    // Polymorphism to handle .pushUser() to whichever collection is correct
+    public void pushUser(Administrator user) { this.admins.add(user); };
+    public void pushUser(Doctor user) { this.doctors.add(user); };
+    public void pushUser(Secretary user) { this.secretaries.add(user); };
+    public void pushUser(Patient user) { this.patients.add(user); };
+    public void pushUser(User user) {
+        if (user.isAdmin()) SystemDatabase.connect().admins.add((Administrator) user);
+        if (user.isDoctor()) SystemDatabase.connect().doctors.add((Doctor) user);
+        if (user.isPatient()) SystemDatabase.connect().patients.add((Patient) user);
+        if (user.isSecretary()) SystemDatabase.connect().secretaries.add((Secretary) user);
     }
 }

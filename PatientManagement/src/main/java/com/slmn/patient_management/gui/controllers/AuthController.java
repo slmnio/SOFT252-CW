@@ -31,14 +31,6 @@ public class AuthController extends Controller {
         if (password == null) this.password = "";
     }
 
-    private void showMessage(String message, String title, int type) {
-        System.out.println(String.format("[Message] %s", message));
-        JOptionPane.showMessageDialog(null, message, title, type);
-    }
-
-    private void showErrorMessage(String message) {
-        this.showMessage(message, "Error", JOptionPane.ERROR_MESSAGE);
-    }
 
     public void attemptAuth() {
         User user = SystemDatabase.connect().getUser(this.getUsername());

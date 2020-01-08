@@ -50,7 +50,7 @@ public abstract class User {
     
     public User(String code, String givenName, String surname, String address, String password) {
         this.ID = this.generateID(code);
-        
+
         this.givenName = givenName;
         this.surname = surname;
         this.address = address;
@@ -63,6 +63,13 @@ public abstract class User {
         if (((String) object.get("ID")).startsWith("S")) return new Secretary(object);
         if (((String) object.get("ID")).startsWith("P")) return new Patient(object);
         return new Patient(object);
+    }
+
+    public static User createAppropriateUser(String code, String givenName, String surname, String address, String password) {
+        if (code.equals("A")) return new Administrator(givenName, surname, address, password);
+        if (code.equals("D")) return new Doctor(givenName, surname, address, password);
+        if (code.equals("S")) return new Secretary(givenName, surname, address, password);
+        return null;
     }
 
     
