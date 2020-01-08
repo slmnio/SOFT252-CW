@@ -4,6 +4,7 @@ import com.slmn.patient_management.gui.controllers.AccountCreatorController;
 import com.slmn.patient_management.gui.structures.SubFrame;
 import com.slmn.patient_management.gui.structures.SwitchableFrame;
 import com.slmn.patient_management.gui.structures.ViewWithFrame;
+import com.slmn.patient_management.gui.views.LoginView;
 import com.slmn.patient_management.gui.views.main_menu.AdminMainMenuView;
 import com.slmn.patient_management.user_structures.*;
 
@@ -27,7 +28,7 @@ public class AccountRequestCreateView extends ViewWithFrame {
 
     @Override
     public SwitchableFrame getFrame() {
-        if (frame == null) frame = new SubFrame("Account Creator", this.mainPanel, new AdminMainMenuView());
+        if (frame == null) frame = new SubFrame("Account Requester", this.mainPanel, new LoginView());
         return frame;
     }
 
