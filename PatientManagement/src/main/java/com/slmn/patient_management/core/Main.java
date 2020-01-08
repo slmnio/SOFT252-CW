@@ -33,5 +33,14 @@ public class Main {
         for (Prescription p: SystemDatabase.connect().prescriptions) {
             System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
         }
+
+        // Database write tests
+
+        Patient patient = SystemDatabase.connect().patients.get(0);
+        Medicine medicine = new Medicine("Pentadusplan", 20);
+
+        patient.createPrescription(medicine, 2, "Use sparingly when needed");
+
+        SystemDatabase.connect().writeAll();
     }
 }
