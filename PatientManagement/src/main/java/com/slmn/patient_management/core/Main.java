@@ -31,8 +31,6 @@ public class Main {
     }
     public static void test() {
         for (Prescription p: SystemDatabase.connect().prescriptions) {
-            System.out.println(p.getMedicineName());
-            System.out.println(p.getPatientID());
             System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
         }
     }

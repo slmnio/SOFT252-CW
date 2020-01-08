@@ -15,8 +15,6 @@ public class JSONFile {
 
     public String read() throws FileNotFoundException {
         String fileContent = (new Scanner(new File(this.filename)).useDelimiter("\n")).next();
-        System.out.println("File output:");
-        System.out.println(fileContent);
         return fileContent;
     }
 
@@ -26,12 +24,13 @@ public class JSONFile {
             // return early
             try {
                 System.out.println("Creating a new file at " + file.getAbsolutePath());
+
                 file.createNewFile();
                 PrintWriter out = new PrintWriter(file.getAbsolutePath());
                 out.println(defaultText);
                 out.close();
-                System.out.println("Default text:");
-                System.out.println(defaultText);
+
+                System.out.println(String.format("Default text: %s",defaultText));
             } catch (IOException e) {
                 System.out.println("New file couldn't be created - returning default text");
                 e.printStackTrace();

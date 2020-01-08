@@ -72,7 +72,6 @@ public class SystemDatabase {
         users.addAll(patients);
 
         for (User user: users) {
-            System.out.println(String.format("User match: %s %s", ID, user.getID()));
             if (user.getID().toUpperCase().equals(ID.toUpperCase())) {
                 return user;
             }

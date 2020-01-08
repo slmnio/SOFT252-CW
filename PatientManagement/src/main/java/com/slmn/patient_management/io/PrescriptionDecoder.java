@@ -12,8 +12,6 @@ public class PrescriptionDecoder extends JSONClassDecoder {
         @Override
         public ArrayList<Prescription> run(ArrayList<LinkedTreeMap> objects) {
             ArrayList<Prescription> output = new ArrayList<>();
-
-            System.out.println(String.format("Assembling %d objects", objects.size()));
             for (LinkedTreeMap object: objects) {
                 Prescription prescription = new Prescription(object);
                 output.add(prescription);
