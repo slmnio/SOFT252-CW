@@ -53,8 +53,22 @@ public class JSONFile {
         }
     }
 
-    public void write() {
+    public void write(String content) {
+        /* Don't need to write or create - the file will be created when the program starts if it's missing.
+           Technically, I should do another check here (for if a file is changed during program run)
+           But it should be fine
+        * */
 
+        File file = new File(this.getFilename());
+        try {
+            PrintWriter out = new PrintWriter(file.getAbsolutePath());
+            // out.println will overwrite the full file
+            out.println(content);
+
+        } catch (FileNotFoundException e) {
+            // unlikely to ever happen
+            e.printStackTrace();
+        }
     }
 
 }
