@@ -8,6 +8,8 @@ import com.slmn.patient_management.gui.structures.ViewWithFrame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class LoginView extends ViewWithFrame {
     private JPanel mainPanel;
@@ -25,11 +27,31 @@ public class LoginView extends ViewWithFrame {
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                getData(authController);
-                authController.attemptAuth();
+            }
+        });
+        txtPassword.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == 10) {
+                    submitForm(authController);
+                }
+            }
+        });
+        txtUsername.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == 10) {
+                    submitForm(authController);
+                }
             }
         });
     }
+
+    private void submitForm(AuthController authController) {
+        getData(authController);
+        authController.attemptAuth();
+    }
+
 
     @Override
     public SwitchableFrame getFrame() {
