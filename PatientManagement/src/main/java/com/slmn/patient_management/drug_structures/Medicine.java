@@ -6,8 +6,9 @@ public class Medicine {
     private String name;
     private int stockCount;
 
-    public Medicine(String name) {
+    public Medicine(String name, int stockCount) {
         this.name = name;
+        this.stockCount = stockCount;
     }
 
     public Medicine(LinkedTreeMap object) {

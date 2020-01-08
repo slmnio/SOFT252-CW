@@ -24,4 +24,10 @@ public class JSONArrayFile {
         JSONFile file = new JSONFile(this.filename);
         return gson.fromJson(file.read(), ArrayList.class);
     }
+
+    public void write(ArrayList list) {
+        Gson gson = new Gson();
+        JSONFile file = new JSONFile(this.filename);
+        file.write(gson.toJson(list));
+    }
 }

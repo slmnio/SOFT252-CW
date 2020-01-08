@@ -1,5 +1,7 @@
 package com.slmn.patient_management.io;
 
+import com.slmn.patient_management.io.decoders.JSONClassDecoder;
+
 import java.util.ArrayList;
 
 public class JSONArrayDecoder {
@@ -14,6 +16,11 @@ public class JSONArrayDecoder {
     public ArrayList decode() {
         JSONArrayFile file = new JSONArrayFile(this.filename);
         ArrayList objects = file.readOrCreateEmpty();
-        return decoder.run(objects);
+        return decoder.decode(objects);
+    }
+
+    public void encode(ArrayList objects) {
+        JSONArrayFile file = new JSONArrayFile(this.filename);
+        file.write(decoder.encode(objects));
     }
 }

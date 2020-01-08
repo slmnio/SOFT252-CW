@@ -24,7 +24,7 @@ public class Main {
             System.out.println(user.describe());
         }
 
-        Main.test();
+        //Main.test();
 
         LoginView.main(args);
 
@@ -33,5 +33,17 @@ public class Main {
         for (Prescription p: SystemDatabase.connect().prescriptions) {
             System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
         }
+
+        // Database write tests
+
+        Patient patient = SystemDatabase.connect().patients.get(0);
+        Medicine medicine = new Medicine("Pentadusplan", 20);
+
+        SystemDatabase.connect().medicines.add(medicine);
+
+        Prescription prescription = patient.createPrescription(medicine, 2, "Use sparingly when needed");
+
+        SystemDatabase.connect().prescriptions.add(prescription);
+        SystemDatabase.connect().writeAll();
     }
 }

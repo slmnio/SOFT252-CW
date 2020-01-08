@@ -1,8 +1,11 @@
 package com.slmn.patient_management.io;
 
+import com.slmn.patient_management.io.decoders.JSONClassDecoder;
+import com.slmn.patient_management.io.decoders.MedicineDecoder;
+import com.slmn.patient_management.io.decoders.PrescriptionDecoder;
+import com.slmn.patient_management.io.decoders.UserDecoder;
 import com.slmn.patient_management.user_structures.*;
 import com.slmn.patient_management.drug_structures.*;
-import com.slmn.patient_management.io.*;
 
 import java.util.ArrayList;
 
@@ -33,37 +36,38 @@ public class SystemDatabase {
         /*
         Shouldn't need to load the data at any other point other than start, as long as it gets written back timely
         * */
-        this.admins = this.loadUsers("admins.json");
-        this.secretaries = this.loadUsers("secretaries.json");
-        this.doctors = this.loadUsers("doctors.json");
-        this.patients = this.loadUsers("patients.json");
-        this.medicines = this.loadMedicines();
-        this.prescriptions = this.loadPrescriptions();
+        this.admins = this.load("admins.json", new UserDecoder());
+        this.secretaries = this.load("secretaries.json", new UserDecoder());
+        this.doctors = this.load("doctors.json", new UserDecoder());
+        this.patients = this.load("patients.json", new UserDecoder());
+        this.medicines = this.load("medicines.json", new MedicineDecoder());
+        this.prescriptions = this.load("prescriptions.json", new PrescriptionDecoder());
     }
 
-    public void write() {
+    public void writeAll() {
         /*
          * Write everything back to their files.
          * Won't be large enough to cause any problems. Also avoids problems of part-saving data with dependencies
          * */
-
+        this.write("admins.json", this.admins, new UserDecoder());
+        this.write("secretaries.json", this.secretaries, new UserDecoder());
+        this.write("doctors.json", this.doctors, new UserDecoder());
+        this.write("patients.json", this.patients, new UserDecoder());
+        this.write("medicines.json", this.medicines, new MedicineDecoder());
+        this.write("prescriptions.json", this.prescriptions, new PrescriptionDecoder());
     }
 
-    private ArrayList loadMedicines() {
-        JSONArrayDecoder decoder = new JSONArrayDecoder("medicines.json", new MedicineDecoder());
+    private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {
+        JSONArrayDecoder decoder = new JSONArrayDecoder(filename, decoderPlugin);
+        decoder.encode(users);
+    }
+
+    private ArrayList load(String filename, JSONClassDecoder decoderPlugin) {
+        JSONArrayDecoder decoder = new JSONArrayDecoder(filename, decoderPlugin);
         return decoder.decode();
     }
 
-    private ArrayList loadUsers(String filename) {
-        JSONArrayDecoder decoder = new JSONArrayDecoder(filename, new UserDecoder());
-        return decoder.decode();
-    }
-
-    private ArrayList loadPrescriptions() {
-        JSONArrayDecoder decoder = new JSONArrayDecoder("prescriptions.json", new PrescriptionDecoder());
-        return decoder.decode();
-    }
-
+    // Collection searching
     public User getUser(String ID) {
         ArrayList<User> users = new ArrayList<User>();
         users.addAll(admins);

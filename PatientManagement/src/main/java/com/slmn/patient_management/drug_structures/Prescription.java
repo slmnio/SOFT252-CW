@@ -20,7 +20,7 @@ public class Prescription {
     public Prescription(LinkedTreeMap object) {
         this.quantity = (int) ((double)object.get("quantity"));
         this.dosage = (String) object.get("dosage");
-        this.medicine_name = (String) object.get("medicine");
+        this.medicine_name = (String) object.get("medicine_name");
         this.patient_id = (String) object.get("patient_id");
     }
 
