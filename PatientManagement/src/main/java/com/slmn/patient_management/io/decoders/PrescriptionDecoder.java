@@ -1,10 +1,7 @@
-package com.slmn.patient_management.io;
+package com.slmn.patient_management.io.decoders;
 
 import com.google.gson.internal.LinkedTreeMap;
-import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.drug_structures.Prescription;
-import com.slmn.patient_management.user_structures.Patient;
-import com.slmn.patient_management.user_structures.User;
 
 import java.util.ArrayList;
 

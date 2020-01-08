@@ -1,5 +1,7 @@
 package com.slmn.patient_management.io;
 
+import com.slmn.patient_management.io.decoders.JSONClassDecoder;
+
 import java.util.ArrayList;
 
 public class JSONArrayDecoder {

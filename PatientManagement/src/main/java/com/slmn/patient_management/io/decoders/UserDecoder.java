@@ -1,4 +1,4 @@
-package com.slmn.patient_management.io;
+package com.slmn.patient_management.io.decoders;
 
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.user_structures.*;
@@ -16,5 +16,10 @@ public class UserDecoder extends JSONClassDecoder {
         }
 
         return output;
+    }
+
+    @Override
+    public ArrayList encode(ArrayList objects) {
+        return (ArrayList<Object>) objects;
     }
 }
