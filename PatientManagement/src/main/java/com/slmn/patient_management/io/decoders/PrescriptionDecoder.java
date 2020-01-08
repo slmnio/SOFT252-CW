@@ -19,15 +19,6 @@ public class PrescriptionDecoder extends JSONClassDecoder {
 
     @Override
     public ArrayList encode(ArrayList objects) {
-            /*
-            *
-    private Medicine medicine;
-    private String medicine_name;
-    private int quantity;
-    private String dosage;
-    private Patient patient;
-    private String patient_id;
-            * */
 
         ArrayList<LinkedTreeMap> output = new ArrayList<>();
 
@@ -39,7 +30,6 @@ public class PrescriptionDecoder extends JSONClassDecoder {
             map.put("quantity", p.getQuantity());
             map.put("dosage", p.getDosage());
             map.put("patient_id", p.getPatient().getID());
-
 
             output.add(map);
         }

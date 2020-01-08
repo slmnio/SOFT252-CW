@@ -17,9 +17,4 @@ public class UserDecoder extends JSONClassDecoder {
 
         return output;
     }
-
-    @Override
-    public ArrayList encode(ArrayList objects) {
-        return (ArrayList<Object>) objects;
-    }
 }
