@@ -1,6 +1,7 @@
 package com.slmn.patient_management.gui.views;
 
 import com.slmn.patient_management.gui.controllers.AuthController;
+import com.slmn.patient_management.gui.controllers.BasicRoutingController;
 import com.slmn.patient_management.gui.structures.ClosableFrame;
 import com.slmn.patient_management.gui.structures.SwitchableFrame;
 import com.slmn.patient_management.gui.structures.ViewWithFrame;
@@ -45,6 +46,9 @@ public class LoginView extends ViewWithFrame {
                 }
             }
         });
+
+        BasicRoutingController router = new BasicRoutingController();
+        btnRequestAccount.addActionListener(e -> router.routeToAccountRequester());
     }
 
     private void submitForm(AuthController authController) {

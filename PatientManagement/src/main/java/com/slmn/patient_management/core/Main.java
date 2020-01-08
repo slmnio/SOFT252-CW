@@ -6,6 +6,9 @@ import com.slmn.patient_management.gui.structures.ViewWithFrame;
 import com.slmn.patient_management.gui.views.LoginView;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.*;
+import com.slmn.patient_management.user_structures.requests.AccountCreationRequest;
+import com.slmn.patient_management.user_structures.requests.AccountDeletionRequest;
+import com.slmn.patient_management.user_structures.requests.AccountRequest;
 
 import javax.swing.*;
 
@@ -29,17 +32,29 @@ public class Main {
     public static void main(String[] args) {
         // Main entry point of the program
         SystemDatabase.connect();
-        //Main.test();
+        Main.test();
         Main.switchView(new LoginView());
     }
     public static void test() {
+
+        /*
+        AccountRequest r = new AccountDeletionRequest(SystemDatabase.connect().patients.get(0));
+        SystemDatabase.connect().accountRequests.add(r);
+        SystemDatabase.connect().writeAll();
+
+         */
+
+        for (AccountRequest request: SystemDatabase.connect().accountRequests) {
+            System.out.println(String.format("Request (%s): %s", request.getType(), request.getPatient().describe()));
+        }
+
 
         for (Prescription p: SystemDatabase.connect().prescriptions) {
             System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
         }
 
         // Database write tests
-
+        /*
         Patient patient = new Patient("Stirling", "Davis", "40 Belgrave Avenue", "password", 28, "Male");
         System.out.println(patient.describe());
         SystemDatabase.connect().patients.add(patient);
@@ -48,5 +63,6 @@ public class Main {
         for (Patient p: SystemDatabase.connect().patients) {
             System.out.println(p.describe());
         }
+         */
     }
 }

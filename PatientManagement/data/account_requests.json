@@ -1,0 +1,1 @@
+[{"patient":{"age":40,"sex":"Male","ID":"P0003","givenName":"John","surname":"Patientman","address":"46 Notadoctor St","password":"password"},"request_type":"AccountCreationRequest"},{"patient":{"age":20,"sex":"Male","ID":"P0010","givenName":"James","surname":"Trifle","address":"205 West Newborne","password":"password"},"request_type":"AccountCreationRequest"}]
