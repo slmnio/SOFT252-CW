@@ -1,6 +1,5 @@
 package com.slmn.patient_management.io;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class JSONArrayDecoder {

@@ -2,25 +2,38 @@ package com.slmn.patient_management.core;
 
 import com.slmn.patient_management.drug_structures.Medicine;
 import com.slmn.patient_management.drug_structures.Prescription;
+import com.slmn.patient_management.gui.views.LoginView;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.*;
 
 public class Main {
-    public static SystemDatabase database;
+
+    public static User authenticatedUser = null;
+
+    public static void setAuthenticatedUser(User user) {
+        Main.authenticatedUser = user;
+        System.out.println(String.format("New user authenticated: %s", user.describe()));
+    }
+
     public static void main(String[] args) {
         // Main entry point of the program
 
-        Main.database = new SystemDatabase();
+        SystemDatabase.connect();
 
-        for (User user: Main.database.doctors) {
+        for (User user: SystemDatabase.connect().doctors) {
             System.out.println(user.describe());
         }
 
         Main.test();
+
+        LoginView.main(args);
+
     }
     public static void test() {
-        Medicine m1 = new Medicine("Monoolyfeancolfox");
-        Prescription prescription = new Prescription(m1, 2, "Twice daily");
-        System.out.println("Prescription dispensed:\n" + prescription);
+        for (Prescription p: SystemDatabase.connect().prescriptions) {
+            System.out.println(p.getMedicineName());
+            System.out.println(p.getPatientID());
+            System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
+        }
     }
 }

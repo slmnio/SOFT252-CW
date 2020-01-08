@@ -39,7 +39,7 @@ public abstract class User {
         this.givenName = (String) object.get("givenName");
         this.surname = (String) object.get("surname");
         this.address = (String) object.get("address");
-        this.password = (String) object.get("passsword");
+        this.password = (String) object.get("password");
     }
 
     
@@ -86,7 +86,8 @@ public abstract class User {
     public void setID(String ID) { this.ID = ID; }
     public void setGivenName(String givenName) { this.givenName = givenName; }
 
-    public boolean passwordMatches(String attempt) { return this.password.equals(attempt); }
-
-    
+    public boolean passwordMatches(String attempt) {
+        if (attempt == null) attempt = "";
+        return this.password.equals(attempt);
+    }
 }
