@@ -3,7 +3,6 @@ package com.slmn.patient_management.io.decoders;
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.drug_structures.Prescription;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class PrescriptionDecoder extends JSONClassDecoder {

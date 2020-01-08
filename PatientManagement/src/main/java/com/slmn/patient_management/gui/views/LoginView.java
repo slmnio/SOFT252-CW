@@ -1,20 +1,23 @@
 package com.slmn.patient_management.gui.views;
 
 import com.slmn.patient_management.gui.controllers.AuthController;
+import com.slmn.patient_management.gui.structures.ClosableFrame;
+import com.slmn.patient_management.gui.structures.SwitchableFrame;
+import com.slmn.patient_management.gui.structures.ViewWithFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginView {
-    private JPanel panel1;
+public class LoginView extends ViewWithFrame {
+    private JPanel mainPanel;
     private JTextField txtUsername;
     private JLabel lblTitle;
     private JLabel lblDescUsername;
     private JButton btnLogin;
     private JButton btnRequestAccount;
     private JLabel lblDescPassword;
-    private JTextField txtPassword;
+    private JPasswordField txtPassword;
 
     public LoginView() {
         AuthController authController = new AuthController();
@@ -28,13 +31,12 @@ public class LoginView {
         });
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("LoginView");
-        frame.setContentPane(new LoginView().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+    @Override
+    public SwitchableFrame getFrame() {
+        return new ClosableFrame("Login", this.mainPanel);
     }
+
+
 
     public void setData(AuthController data) {
         txtUsername.setText(data.getUsername());
