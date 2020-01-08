@@ -3,11 +3,9 @@ package com.slmn.patient_management.io;
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.drug_structures.Medicine;
 import com.slmn.patient_management.drug_structures.Prescription;
-import com.slmn.patient_management.io.decoders.JSONClassDecoder;
-import com.slmn.patient_management.io.decoders.MedicineDecoder;
-import com.slmn.patient_management.io.decoders.PrescriptionDecoder;
-import com.slmn.patient_management.io.decoders.UserDecoder;
+import com.slmn.patient_management.io.decoders.*;
 import com.slmn.patient_management.user_structures.*;
+import com.slmn.patient_management.user_structures.requests.AccountRequest;
 
 import java.util.ArrayList;
 
@@ -21,6 +19,8 @@ public class SystemDatabase {
     public ArrayList<Prescription> prescriptions;
 
     public LinkedTreeMap env;
+
+    public ArrayList<AccountRequest> accountRequests;
 
     // Singleton
 
@@ -47,6 +47,8 @@ public class SystemDatabase {
         this.medicines = this.load("medicines.json", new MedicineDecoder());
         this.prescriptions = this.load("prescriptions.json", new PrescriptionDecoder());
 
+        this.accountRequests = this.load("account_requests.json", new AccountRequestDecoder());
+
         this.env = this.loadObject("env.json");
     }
 
@@ -61,6 +63,8 @@ public class SystemDatabase {
         this.write("patients.json", this.patients, new UserDecoder());
         this.write("medicines.json", this.medicines, new MedicineDecoder());
         this.write("prescriptions.json", this.prescriptions, new PrescriptionDecoder());
+
+        this.write("account_requests.json", this.accountRequests, new AccountRequestDecoder());
 
         this.writeObject("env.json", this.env);
     }

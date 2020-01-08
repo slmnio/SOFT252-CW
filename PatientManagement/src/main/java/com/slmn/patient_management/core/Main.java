@@ -6,6 +6,7 @@ import com.slmn.patient_management.gui.structures.ViewWithFrame;
 import com.slmn.patient_management.gui.views.LoginView;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.*;
+import com.slmn.patient_management.user_structures.requests.AccountRequest;
 
 import javax.swing.*;
 
@@ -34,12 +35,17 @@ public class Main {
     }
     public static void test() {
 
+        for (AccountRequest request: SystemDatabase.connect().accountRequests) {
+            System.out.println(String.format("Request: %s", request.getPatient().describe()));
+        }
+
+
         for (Prescription p: SystemDatabase.connect().prescriptions) {
             System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
         }
 
         // Database write tests
-
+        /*
         Patient patient = new Patient("Stirling", "Davis", "40 Belgrave Avenue", "password", 28, "Male");
         System.out.println(patient.describe());
         SystemDatabase.connect().patients.add(patient);
@@ -48,5 +54,6 @@ public class Main {
         for (Patient p: SystemDatabase.connect().patients) {
             System.out.println(p.describe());
         }
+         */
     }
 }

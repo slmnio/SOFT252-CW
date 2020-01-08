@@ -1,11 +1,14 @@
 package com.slmn.patient_management.user_structures.requests;
 
-import com.slmn.patient_management.user_structures.User;
+import com.slmn.patient_management.user_structures.Patient;
 
 public class AccountDeletionRequest implements AccountRequest {
-    private User user = null;
+    private Patient user = null;
+    public String type = "Deletion";
 
-    public AccountDeletionRequest(User user) {
+
+
+    public AccountDeletionRequest(Patient user) {
         this.user = user;
     }
 
@@ -21,12 +24,18 @@ public class AccountDeletionRequest implements AccountRequest {
         // ignore
     }
 
-    private void delete(User user) {
+    private void delete(Patient user) {
+        // actually remove the user
 
     }
 
     @Override
     public void completeRequest() {
 
+    }
+
+    @Override
+    public Patient getPatient() {
+        return this.user;
     }
 }

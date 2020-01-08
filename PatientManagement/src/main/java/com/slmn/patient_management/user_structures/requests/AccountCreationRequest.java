@@ -1,11 +1,12 @@
 package com.slmn.patient_management.user_structures.requests;
 
-import com.slmn.patient_management.user_structures.User;
+import com.slmn.patient_management.user_structures.Patient;
 
 public class AccountCreationRequest implements AccountRequest {
-    private User user = null;
+    private Patient user = null;
+    public String type = "Creation";
 
-    public AccountCreationRequest(User user) {
+    public AccountCreationRequest(Patient user) {
         this.user = user;
     }
 
@@ -21,7 +22,7 @@ public class AccountCreationRequest implements AccountRequest {
         // ignore
     }
 
-    private void create(User user) {
+    private void create(Patient user) {
         // do user
 
     }
@@ -29,5 +30,10 @@ public class AccountCreationRequest implements AccountRequest {
     @Override
     public void completeRequest() {
 
+    }
+
+    @Override
+    public Patient getPatient() {
+        return this.user;
     }
 }
