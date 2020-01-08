@@ -6,6 +6,8 @@
 package com.slmn.patient_management.user_structures;
 
 import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.core.Main;
+import com.slmn.patient_management.io.SystemDatabase;
 
 /**
  *
@@ -30,6 +32,12 @@ public abstract class User {
         this.address = "";
         this.password = "";
     }
+
+    public User(Class type, LinkedTreeMap object) {
+        this(object);
+        this.ID = this.generateID(type.getSimpleName().substring(0,1));
+    }
+
 
     public User(LinkedTreeMap object) {
         this.ID = (String) object.get("ID");
@@ -61,9 +69,12 @@ public abstract class User {
     private String generateID(String code) {
         // only allow ADPS for code - enum?
         // get general settings json, auto increment
-        int prev = 85;
-        
+
+        int prev = (int) SystemDatabase.connect().env.get("PREVIOUS_ID");
+        if (prev == 0) prev = 1;
         int newID = ++prev;
+        SystemDatabase.connect().env.put("PREVIOUS_ID", newID);
+
         // should be (1 -> 0001) - 3 '0's to add
         int padCount = (User.IDLength - Integer.toString(newID).length());
         

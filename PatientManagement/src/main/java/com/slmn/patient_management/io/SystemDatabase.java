@@ -1,5 +1,6 @@
 package com.slmn.patient_management.io;
 
+import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.drug_structures.Medicine;
 import com.slmn.patient_management.drug_structures.Prescription;
 import com.slmn.patient_management.io.decoders.JSONClassDecoder;
@@ -18,6 +19,8 @@ public class SystemDatabase {
 
     public ArrayList<Medicine> medicines;
     public ArrayList<Prescription> prescriptions;
+
+    public LinkedTreeMap env;
 
     // Singleton
 
@@ -43,6 +46,8 @@ public class SystemDatabase {
         this.patients = this.load("patients.json", new UserDecoder());
         this.medicines = this.load("medicines.json", new MedicineDecoder());
         this.prescriptions = this.load("prescriptions.json", new PrescriptionDecoder());
+
+        this.env = this.loadObject("env.json");
     }
 
     public void writeAll() {
@@ -56,6 +61,8 @@ public class SystemDatabase {
         this.write("patients.json", this.patients, new UserDecoder());
         this.write("medicines.json", this.medicines, new MedicineDecoder());
         this.write("prescriptions.json", this.prescriptions, new PrescriptionDecoder());
+
+        this.writeObject("env.json", this.env);
     }
 
     private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {
@@ -66,6 +73,15 @@ public class SystemDatabase {
     private ArrayList load(String filename, JSONClassDecoder decoderPlugin) {
         JSONArrayDecoder decoder = new JSONArrayDecoder(filename, decoderPlugin);
         return decoder.decode();
+    }
+
+    private LinkedTreeMap loadObject(String filename) {
+        JSONObjectFile file = new JSONObjectFile(filename);
+        return file.readOrCreateEmpty();
+    }
+    private void writeObject(String filename, LinkedTreeMap items) {
+        JSONObjectFile file = new JSONObjectFile(filename);
+        file.write(items);
     }
 
     // Collection searching
