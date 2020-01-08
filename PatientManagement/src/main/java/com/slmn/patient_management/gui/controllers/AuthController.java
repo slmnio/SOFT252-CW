@@ -3,9 +3,12 @@ package com.slmn.patient_management.gui.controllers;
 import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.gui.views.main_menu.AdminMainMenuView;
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.notifications.Notification;
+import com.slmn.patient_management.notifications.NotificationHandler;
 import com.slmn.patient_management.user_structures.User;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class AuthController extends Controller {
     private String username;
@@ -51,6 +54,14 @@ public class AuthController extends Controller {
         if (Main.authenticatedUser.isDoctor()) System.out.println("Doctor logged in");
         if (Main.authenticatedUser.isSecretary()) System.out.println("Secretary logged in");
         if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
+
+
+        ArrayList<Notification> notifications = NotificationHandler.applicableNotifications(Main.authenticatedUser);
+
+        for (Notification notification: notifications) {
+            System.out.println(String.format("Notification: %s", notification.getContent()));
+        }
+
 
     }
 }

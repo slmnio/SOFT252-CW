@@ -10,11 +10,23 @@ public class NotificationHandler {
 
     }
 
-    public ArrayList<Notification> applicableNotifications(User user) {
+    public static ArrayList<Notification> applicableNotifications(User user) {
+        ArrayList<Notification> output = new ArrayList<>();
 
+        for (Notification notification: getNotifications()) {
+            if (notification.isApplicableToUser(user)) {
+                output.add(notification);
+            }
+        }
+
+        return output;
     }
 
-    private ArrayList<Notification> getNotifications() {
-        //return SystemDatabase.connect().notifications;
+    private static ArrayList<Notification> getNotifications() {
+        ArrayList<Notification> combined = new ArrayList<>();
+        combined.addAll(SystemDatabase.connect().specificUserNotifications);
+        combined.addAll(SystemDatabase.connect().userTypeNotifications);
+
+        return combined;
     }
 }
