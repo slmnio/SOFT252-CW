@@ -21,10 +21,10 @@ public class SurgeryDay {
         return String.format("%s:%s", zeropad((int) Math.floor(hour)), zeropad((int) Math.floor((hour - Math.floor(hour)) * 60)));
     }
 
-    public void generateDoctorSlots(Doctor doctor) {
+    public void generateDoctorSlots(String date, Doctor doctor) {
         this.generate();
         for (TimeSlot timeslot : timeSlots) {
-            if (doctor.hasAppointmentAt(timeslot)) {
+            if (doctor.hasAppointmentAt(date, timeslot)) {
                 timeslot.setOccupied(true);
             }
         }

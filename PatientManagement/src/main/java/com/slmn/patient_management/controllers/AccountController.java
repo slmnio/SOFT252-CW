@@ -66,7 +66,7 @@ public class AccountController extends Controller {
         this.removeSecretary(secretary);
     }
 
-    private void removeUser(User user) {
+    public void removeUser(User user) {
         System.out.println(String.format("Removing user %s", user.describe()));
         user.destroyDependencies();
 
@@ -75,6 +75,8 @@ public class AccountController extends Controller {
         if (user.isPatient()) SystemDatabase.connect().patients.remove(user);
         if (user.isSecretary()) SystemDatabase.connect().secretaries.remove(user);
         SystemDatabase.connect().writeAll();
+
+        this.showMessage(String.format("Removed %s %s", user.getClass().getSimpleName(), user.getFullName()), "User removed", JOptionPane.INFORMATION_MESSAGE);
     }
 
 }
