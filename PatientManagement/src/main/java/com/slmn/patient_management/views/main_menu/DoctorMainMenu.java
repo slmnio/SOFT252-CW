@@ -1,7 +1,9 @@
 package com.slmn.patient_management.views.main_menu;
 
 import com.slmn.patient_management.controllers.BasicRoutingController;
+import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
 import com.slmn.patient_management.views.structures.ClosableFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
@@ -19,6 +21,7 @@ public class DoctorMainMenu extends ViewWithFrame {
     private JComboBox cbxPatients;
     private JButton btnCreateMed;
     private JButton btnViewFeedback;
+    private JButton btnViewAppointments;
 
     public DoctorMainMenu() {
         update();
@@ -32,6 +35,7 @@ public class DoctorMainMenu extends ViewWithFrame {
         });
         btnCreateMed.addActionListener(e -> controller.routeToMedicineCreator());
         btnViewFeedback.addActionListener(e -> controller.routeToDoctorRatingDoctor());
+        btnViewAppointments.addActionListener(e -> controller.routeToAppointmentView((Doctor) Main.authenticatedUser));
     }
 
     private void update() {

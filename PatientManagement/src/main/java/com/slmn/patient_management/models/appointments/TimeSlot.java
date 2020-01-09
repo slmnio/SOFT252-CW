@@ -8,6 +8,15 @@ public class TimeSlot {
         this.displayTime = displayTime;
     }
 
+    @Override
+    public String toString() {
+        return displayTime;
+    }
+
+    public boolean isOccupied() {
+        return this.isOccupied;
+    }
+
     public void setOccupied(boolean occupied) {
         isOccupied = occupied;
     }

@@ -1,6 +1,9 @@
 package com.slmn.patient_management.core;
 
+import com.slmn.patient_management.controllers.AppointmentController;
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.appointments.Appointment;
+import com.slmn.patient_management.models.appointments.AppointmentRequest;
 import com.slmn.patient_management.models.appointments.SurgeryDay;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.models.users.User;
@@ -37,8 +40,8 @@ public class Main {
 
     public static void test() {
 
-        SurgeryDay day = new SurgeryDay();
-        day.generate();
+        //SurgeryDay day = new SurgeryDay();
+        //day.generateEmpty();
 
         /*
         AccountRequest r = new AccountDeletionRequest(SystemDatabase.connect().patients.get(0));
@@ -46,9 +49,17 @@ public class Main {
         SystemDatabase.connect().writeAll();
 
          */
+/*
+        AppointmentController controller = new AppointmentController();
 
-        for (AccountRequest request : SystemDatabase.connect().accountRequests) {
-            System.out.println(String.format("Request (%s): %s", request.getType(), request.getPatient().describe()));
+        Appointment a = controller.createAppo
+        AppointmentRequest ar = new AppointmentRequest(a);
+        */
+
+
+        for (AppointmentRequest request : SystemDatabase.connect().appointmentRequests) {
+            System.out.println(request);
+            System.out.println(request.getAppointment());
         }
 
 

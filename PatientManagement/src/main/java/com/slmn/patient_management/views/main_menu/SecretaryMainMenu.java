@@ -16,6 +16,7 @@ public class SecretaryMainMenu extends ViewWithFrame {
     private JButton btnNavDispense;
     private JButton btnNavMedStock;
     private JButton btnAccountManager;
+    private JButton btnAppointmentQueue;
 
     public SecretaryMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
@@ -23,6 +24,7 @@ public class SecretaryMainMenu extends ViewWithFrame {
         btnNavDispense.addActionListener(e -> controller.routeToPrescriptionDispenser());
         btnNavMedStock.addActionListener(e -> controller.routeToMedicineStock());
         btnAccountManager.addActionListener(e -> controller.routeToSecretaryAccountManager());
+        btnAppointmentQueue.addActionListener(e -> controller.routeToAppointmentQueue());
     }
 
     @Override

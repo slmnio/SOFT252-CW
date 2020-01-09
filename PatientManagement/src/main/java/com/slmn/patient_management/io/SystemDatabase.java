@@ -3,6 +3,7 @@ package com.slmn.patient_management.io;
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.decoders.*;
 import com.slmn.patient_management.models.appointments.Appointment;
+import com.slmn.patient_management.models.appointments.AppointmentRequest;
 import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.models.notifications.Notification;
@@ -33,6 +34,7 @@ public class SystemDatabase {
     public ArrayList<PatientRecord> patientRecords;
 
     public ArrayList<Appointment> appointments;
+    public ArrayList<AppointmentRequest> appointmentRequests;
 
     // Singleton
     private static SystemDatabase instance = null;
@@ -69,6 +71,7 @@ public class SystemDatabase {
         this.patientRecords = this.load("patient_records.json", new PatientRecordDecoder());
 
         this.appointments = this.load("appointments.json", new AppointmentDecoder());
+        this.appointmentRequests = this.load("appointment_requests.json", new AppointmentRequestDecoder());
     }
 
     public void writeAll() {
@@ -94,6 +97,7 @@ public class SystemDatabase {
         this.write("patient_records.json", this.patientRecords, new PatientRecordDecoder());
 
         this.write("appointments.json", this.appointments, new AppointmentDecoder());
+        this.write("appointment_requests.json", this.appointmentRequests, new AppointmentRequestDecoder());
     }
 
     private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {

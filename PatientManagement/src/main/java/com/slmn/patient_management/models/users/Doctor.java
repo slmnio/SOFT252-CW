@@ -60,8 +60,31 @@ public class Doctor extends User {
         return output;
     }
 
+    private ArrayList<Appointment> getAppointmentsOn(String date) {
+        ArrayList<Appointment> output = new ArrayList<>();
+        for (Appointment appointment : getAppointments()) {
+            if (appointment.getDate().equals(date)) output.add(appointment);
+        }
+        return output;
+    }
+
+    public Appointment getAppointmentAt(String date, TimeSlot timeslot) {
+        for (Appointment appointment : getAppointmentsOn(date)) {
+            if (appointment.getTimeSlot().equals(timeslot.toString())) return appointment;
+        }
+        return null;
+    }
+    public Appointment getAppointmentAt(String date, String timeslot) {
+        for (Appointment appointment : getAppointmentsOn(date)) {
+            if (appointment.getTimeSlot().equals(timeslot)) return appointment;
+        }
+        return null;
+    }
+
     public boolean hasAppointmentAt(String date, TimeSlot timeslot) {
-        // TODO: this lmao
-        return false;
+        return this.getAppointmentAt(date, timeslot) != null;
+    }
+    public boolean hasAppointmentAt(String date, String timeslot) {
+        return this.getAppointmentAt(date, timeslot) != null;
     }
 }

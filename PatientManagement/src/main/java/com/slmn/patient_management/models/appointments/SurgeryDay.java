@@ -7,6 +7,15 @@ import java.util.ArrayList;
 
 public class SurgeryDay {
     private ArrayList<TimeSlot> timeSlots;
+    private String date;
+
+    public SurgeryDay(String date) {
+        this.date = date;
+    }
+
+    public ArrayList<TimeSlot> getTimeSlots() {
+        return timeSlots;
+    }
 
     private String zeropad(int input) {
         String string = Integer.toString(input);
@@ -21,8 +30,7 @@ public class SurgeryDay {
         return String.format("%s:%s", zeropad((int) Math.floor(hour)), zeropad((int) Math.floor((hour - Math.floor(hour)) * 60)));
     }
 
-    public void generateDoctorSlots(String date, Doctor doctor) {
-        this.generate();
+    public void setDoctorOccupied(Doctor doctor) {
         for (TimeSlot timeslot : timeSlots) {
             if (doctor.hasAppointmentAt(date, timeslot)) {
                 timeslot.setOccupied(true);
@@ -30,7 +38,7 @@ public class SurgeryDay {
         }
     }
 
-    public void generate() {
+    public void generateEmpty() {
         this.timeSlots = new ArrayList<>();
         SystemDatabase database = SystemDatabase.connect();
 

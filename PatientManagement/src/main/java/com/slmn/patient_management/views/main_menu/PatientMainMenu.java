@@ -19,6 +19,7 @@ public class PatientMainMenu extends ViewWithFrame {
     private JButton btnRequestAccountDeletion;
     private JButton btnViewRecords;
     private JButton btnRateDoctors;
+    private JButton btnRequestAppointment;
 
     public PatientMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
@@ -37,6 +38,7 @@ public class PatientMainMenu extends ViewWithFrame {
                 }
             }
         });
+        btnRequestAppointment.addActionListener(e -> controller.routeToPatientAppointmentRequester());
     }
 
     private void close() {this.getFrame().dispose();}
