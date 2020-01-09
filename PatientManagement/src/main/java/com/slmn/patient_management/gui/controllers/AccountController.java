@@ -3,15 +3,14 @@ package com.slmn.patient_management.gui.controllers;
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.notifications.NotificationHandler;
-import com.slmn.patient_management.user_structures.Administrator;
-import com.slmn.patient_management.user_structures.Patient;
-import com.slmn.patient_management.user_structures.User;
+import com.slmn.patient_management.user_structures.*;
 import com.slmn.patient_management.user_structures.requests.AccountCreationRequest;
+import com.slmn.patient_management.user_structures.requests.AccountDeletionRequest;
 import com.slmn.patient_management.user_structures.requests.AccountRequest;
 
 import javax.swing.*;
 
-public class AccountCreatorController extends Controller {
+public class AccountController extends Controller {
 
     public User createUser(String className, String givenName, String surname, String address, String password) {
         String code = className.substring(0,1);
@@ -37,14 +36,33 @@ public class AccountCreatorController extends Controller {
         NotificationHandler.notifySecretaries(String.format("A new patient account (ID %s) is ready to be approved.", requestedPatient.getID()));
     }
 
+    public AccountDeletionRequest requestTermination(Patient patient) {
+        return new AccountDeletionRequest(patient);
+    }
+
     public void approveRequest(AccountRequest request) {
         this.showMessage(String.format("%s's %s request has been approved.", request.getPatient().getFullName(), request.getType().toLowerCase()), "Request approved", JOptionPane.INFORMATION_MESSAGE);
         request.approve();
     }
+
     public void declineRequest(AccountRequest request) {
         this.showMessage(String.format("%s's %s request has been declined.", request.getPatient().getFullName(), request.getType().toLowerCase()), "Request approved", JOptionPane.INFORMATION_MESSAGE);
         request.decline();
     }
 
+    public void removePatient(Patient patient) { this.removeUser(patient); }
+    public void removeDoctor(Doctor doctor) { this.removeUser(doctor); }
+    public void removeSecretary(Secretary secretary) { this.removeSecretary(secretary); }
+
+    private void removeUser(User user) {
+        System.out.println(String.format("Removing user %s", user.describe()));
+        user.destroyDependencies();
+
+        if (user.isAdmin()) SystemDatabase.connect().admins.remove(user);
+        if (user.isDoctor()) SystemDatabase.connect().doctors.remove(user);
+        if (user.isPatient()) SystemDatabase.connect().patients.remove(user);
+        if (user.isSecretary()) SystemDatabase.connect().secretaries.remove(user);
+        SystemDatabase.connect().writeAll();
+    }
 
 }

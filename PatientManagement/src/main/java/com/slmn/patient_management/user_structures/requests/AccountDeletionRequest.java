@@ -27,6 +27,7 @@ public class AccountDeletionRequest implements AccountRequest {
 
     private void delete(Patient user) {
         // actually remove the user
+        user.destroyDependencies();
         SystemDatabase.connect().patients.remove(user);
     }
 

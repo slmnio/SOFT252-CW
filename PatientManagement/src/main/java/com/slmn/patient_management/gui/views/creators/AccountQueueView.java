@@ -1,6 +1,6 @@
 package com.slmn.patient_management.gui.views.creators;
 
-import com.slmn.patient_management.gui.controllers.AccountCreatorController;
+import com.slmn.patient_management.gui.controllers.AccountController;
 import com.slmn.patient_management.gui.structures.SubFrame;
 import com.slmn.patient_management.gui.structures.SwitchableFrame;
 import com.slmn.patient_management.gui.structures.ViewWithFrame;
@@ -23,7 +23,7 @@ public class AccountQueueView extends ViewWithFrame {
 
     public AccountQueueView() {
         updateBox();
-        AccountCreatorController controller = new AccountCreatorController();
+        AccountController controller = new AccountController();
 
         btnApprove.addActionListener(new ActionListener() {
             @Override

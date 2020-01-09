@@ -1,6 +1,6 @@
 package com.slmn.patient_management.gui.views.creators;
 
-import com.slmn.patient_management.gui.controllers.AccountCreatorController;
+import com.slmn.patient_management.gui.controllers.AccountController;
 import com.slmn.patient_management.gui.structures.SubFrame;
 import com.slmn.patient_management.gui.structures.SwitchableFrame;
 import com.slmn.patient_management.gui.structures.ViewWithFrame;
@@ -34,7 +34,7 @@ public class AccountCreatorView extends ViewWithFrame {
     }
 
     public AccountCreatorView() {
-        AccountCreatorController controller = new AccountCreatorController();
+        AccountController controller = new AccountController();
         rbtnAdmin.addActionListener(e -> this.userType = Administrator.class);
         rbtnDoctor.addActionListener(e -> this.userType = Doctor.class);
         rbtnSecretary.addActionListener(e -> this.userType = Secretary.class);

@@ -109,4 +109,8 @@ public abstract class User {
     public boolean isSecretary() { return Secretary.class.equals(this.getClass()); }
     public boolean isDoctor() { return Doctor.class.equals(this.getClass()); }
     public boolean isPatient() { return Patient.class.equals(this.getClass()); }
+
+
+    // Tells classes to remove their notifications/appointments etc
+    public abstract void destroyDependencies();
 }

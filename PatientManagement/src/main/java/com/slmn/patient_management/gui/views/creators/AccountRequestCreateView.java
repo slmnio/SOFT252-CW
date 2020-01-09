@@ -1,12 +1,10 @@
 package com.slmn.patient_management.gui.views.creators;
 
-import com.slmn.patient_management.gui.controllers.AccountCreatorController;
+import com.slmn.patient_management.gui.controllers.AccountController;
 import com.slmn.patient_management.gui.structures.SubFrame;
 import com.slmn.patient_management.gui.structures.SwitchableFrame;
 import com.slmn.patient_management.gui.structures.ViewWithFrame;
 import com.slmn.patient_management.gui.views.LoginView;
-import com.slmn.patient_management.gui.views.main_menu.AdminMainMenuView;
-import com.slmn.patient_management.user_structures.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -33,7 +31,7 @@ public class AccountRequestCreateView extends ViewWithFrame {
     }
 
     public AccountRequestCreateView() {
-        AccountCreatorController controller = new AccountCreatorController();
+        AccountController controller = new AccountController();
 
         btnSubmit.addActionListener(new ActionListener() {
             @Override
