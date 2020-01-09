@@ -6,6 +6,8 @@ import com.slmn.patient_management.models.notifications.Notification;
 import com.slmn.patient_management.models.users.User;
 import com.slmn.patient_management.views.NotificationView;
 import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.views.main_menu.DoctorMainMenu;
+import com.slmn.patient_management.views.main_menu.PatientMainMenu;
 import com.slmn.patient_management.views.main_menu.SecretaryMainMenu;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
 
@@ -55,9 +57,9 @@ public class AuthController extends Controller {
         ViewWithFrame next = null;
 
         if (Main.authenticatedUser.isAdmin()) next = (new AdminMainMenuView());
-        if (Main.authenticatedUser.isDoctor()) System.out.println("Doctor logged in");
+        if (Main.authenticatedUser.isDoctor()) next = (new DoctorMainMenu());
         if (Main.authenticatedUser.isSecretary()) next = (new SecretaryMainMenu());
-        if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
+        if (Main.authenticatedUser.isPatient()) next = (new PatientMainMenu());
 
 
         ArrayList<Notification> notifications = Main.authenticatedUser.getNotifications();

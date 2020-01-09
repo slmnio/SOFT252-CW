@@ -2,6 +2,7 @@ package com.slmn.patient_management.views;
 
 import com.slmn.patient_management.controllers.AuthController;
 import com.slmn.patient_management.controllers.BasicRoutingController;
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.views.structures.ClosableFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -21,6 +22,7 @@ public class LoginView extends ViewWithFrame {
     private JButton btnRequestAccount;
     private JLabel lblDescPassword;
     private JPasswordField txtPassword;
+    private JTextArea txtFirstAccounts;
 
     public LoginView() {
         AuthController authController = new AuthController();
@@ -50,6 +52,12 @@ public class LoginView extends ViewWithFrame {
 
         BasicRoutingController router = new BasicRoutingController();
         btnRequestAccount.addActionListener(e -> router.routeToAccountRequester());
+
+        try {
+            txtFirstAccounts.setText(String.format("First accounts of each type:\nPatient: %s\nDoctor: %s\nSecretary: %s\nAdmin: %s", SystemDatabase.connect().patients.get(0).getCredentials(), SystemDatabase.connect().doctors.get(0).getCredentials(), SystemDatabase.connect().secretaries.get(0).getCredentials(), SystemDatabase.connect().admins.get(0).getCredentials()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void submitForm(AuthController authController) {

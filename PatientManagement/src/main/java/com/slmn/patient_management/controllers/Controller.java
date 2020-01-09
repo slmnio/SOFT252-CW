@@ -11,4 +11,5 @@ public abstract class Controller {
     void showErrorMessage(String message) {
         this.showMessage(message, "Error", JOptionPane.ERROR_MESSAGE);
     }
+    void showInfoMessage(String message, String title) { this.showMessage(message, title, JOptionPane.INFORMATION_MESSAGE); }
 }

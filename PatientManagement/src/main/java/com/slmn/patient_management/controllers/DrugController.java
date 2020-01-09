@@ -18,6 +18,7 @@ public class DrugController extends Controller {
         Prescription prescription = new Prescription(patient, medicine, quantity, dosage);
         SystemDatabase.connect().prescriptions.add(prescription);
         SystemDatabase.connect().writeAll();
+        this.showInfoMessage(String.format("Prescription of %dx %s created for %s", prescription.getQuantity(), prescription.getMedicine(), prescription.getPatient().getFullName()), "Prescription created");
     }
 
     public void createMedicine(String name) {
@@ -26,6 +27,7 @@ public class DrugController extends Controller {
 
         NotificationHandler.notifySecretaries(String.format("A new drug: \"%s\" requires stock to be ordered.", medicine.getName()));
         // handler writes to db
+        this.showInfoMessage(String.format("Medicine \"%s\" has been created and sent to a secretary for ordering.", medicine.getName()), "Medicine created");
     }
 
     public ArrayList<Prescription> getPrescriptions(Patient patient) {

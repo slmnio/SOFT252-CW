@@ -149,4 +149,8 @@ public abstract class User {
     public ArrayList<Notification> getNotifications() {
         return NotificationHandler.applicableNotifications(this);
     }
+
+    public String getCredentials() {
+        return String.format("%s %s", this.getID(), this.password);
+    }
 }
