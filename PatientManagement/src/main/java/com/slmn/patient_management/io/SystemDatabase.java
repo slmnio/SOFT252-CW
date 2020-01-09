@@ -5,6 +5,7 @@ import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.io.decoders.*;
 import com.slmn.patient_management.models.notifications.*;
+import com.slmn.patient_management.models.reports.DoctorReport;
 import com.slmn.patient_management.models.users.*;
 import com.slmn.patient_management.models.users.requests.AccountRequest;
 
@@ -25,6 +26,8 @@ public class SystemDatabase {
 
     public ArrayList<Notification> specificUserNotifications;
     public ArrayList<Notification> userTypeNotifications;
+
+    public ArrayList<DoctorReport> doctorReports;
 
     // Singleton
 
@@ -57,6 +60,8 @@ public class SystemDatabase {
 
         this.specificUserNotifications = this.load("user_notifications.json", new UserNotificationDecoder());
         this.userTypeNotifications = this.load("usertype_notifications.json", new UserTypeNotificationDecoder());
+
+        this.doctorReports = this.load("doctor_reports.json", new DoctorReportDecoder());
     }
 
     public void writeAll() {
@@ -74,7 +79,6 @@ public class SystemDatabase {
         this.write("account_requests.json", this.accountRequests, new AccountRequestDecoder());
 
         this.writeObject("env.json", this.env);
-
 
         this.write("user_notifications.json", this.specificUserNotifications,new UserNotificationDecoder());
         this.write("usertype_notifications.json", this.userTypeNotifications, new UserTypeNotificationDecoder());

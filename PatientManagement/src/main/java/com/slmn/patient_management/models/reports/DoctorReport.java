@@ -1,5 +1,7 @@
 package com.slmn.patient_management.models.reports;
 
+import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.users.Doctor;
 
 public class DoctorReport {
@@ -8,6 +10,13 @@ public class DoctorReport {
     private String userComment;
     private int userRating;
     private String adminFeedback;
+
+    public DoctorReport(LinkedTreeMap map) {
+        this.doctor_id = (String) map.get("doctor_id");
+        this.userComment = (String) map.get("user_comment");
+        this.userRating = (int) ((double) map.get("user_rating"));
+        this.adminFeedback = (String) map.get("admin_feedback");
+    }
 
     public DoctorReport(Doctor doctor, String userComment, int userRating) {
         this.doctor = doctor;
@@ -20,7 +29,10 @@ public class DoctorReport {
     }
 
     public Doctor getDoctor() {
-        return doctor;
+        if (this.doctor == null && this.doctor_id != null) {
+            this.doctor = (Doctor) SystemDatabase.connect().getUser(this.doctor_id);
+        }
+        return this.doctor;
     }
 
     public int getUserRating() {
@@ -33,5 +45,9 @@ public class DoctorReport {
 
     public String getUserComment() {
         return userComment;
+    }
+
+    public String getDoctorID() {
+        return this.doctor_id;
     }
 }
