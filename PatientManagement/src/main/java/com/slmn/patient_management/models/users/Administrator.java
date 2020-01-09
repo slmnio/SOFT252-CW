@@ -6,6 +6,8 @@
 package com.slmn.patient_management.models.users;
 
 import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.notifications.Notification;
 
 /**
  *
@@ -18,5 +20,12 @@ public class Administrator extends User {
     }
     public Administrator(LinkedTreeMap object) {
         super(object);
+    }
+
+    @Override
+    public void destroyDependencies() {
+        for (Notification notification: SystemDatabase.connect().specificUserNotifications) {
+            if (notification.isApplicableToUser(this)) notification.dismiss();
+        }
     }
 }

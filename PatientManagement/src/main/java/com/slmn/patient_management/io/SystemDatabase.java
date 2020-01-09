@@ -5,7 +5,8 @@ import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.io.decoders.*;
 import com.slmn.patient_management.models.notifications.*;
-import com.slmn.patient_management.models.reports.DoctorReport;
+import com.slmn.patient_management.models.patient_services.DoctorReport;
+import com.slmn.patient_management.models.patient_services.PatientRecord;
 import com.slmn.patient_management.models.users.*;
 import com.slmn.patient_management.models.users.requests.AccountRequest;
 
@@ -29,8 +30,9 @@ public class SystemDatabase {
 
     public ArrayList<DoctorReport> doctorReports;
 
-    // Singleton
+    public ArrayList<PatientRecord> patientRecords;
 
+    // Singleton
     private static SystemDatabase instance = null;
     private static boolean loaded = false;
 
@@ -62,6 +64,8 @@ public class SystemDatabase {
         this.userTypeNotifications = this.load("usertype_notifications.json", new UserTypeNotificationDecoder());
 
         this.doctorReports = this.load("doctor_reports.json", new DoctorReportDecoder());
+
+        this.patientRecords = this.load("patient_records.json", new PatientRecordDecoder());
     }
 
     public void writeAll() {
@@ -82,6 +86,9 @@ public class SystemDatabase {
 
         this.write("user_notifications.json", this.specificUserNotifications,new UserNotificationDecoder());
         this.write("usertype_notifications.json", this.userTypeNotifications, new UserTypeNotificationDecoder());
+
+        this.write("doctor_reports.json", this.doctorReports, new DoctorReportDecoder());
+        this.write("patient_records.json", this.patientRecords, new PatientRecordDecoder());
     }
 
     private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {

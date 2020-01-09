@@ -1,4 +1,4 @@
-package com.slmn.patient_management.models.reports;
+package com.slmn.patient_management.models.patient_services;
 
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
@@ -49,5 +49,9 @@ public class DoctorReport {
 
     public String getDoctorID() {
         return this.doctor_id;
+    }
+
+    public void giveAdminFeedback(String adminFeedback) {
+        this.adminFeedback = adminFeedback;
     }
 }

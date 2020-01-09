@@ -1,17 +1,16 @@
 package com.slmn.patient_management.io.decoders;
 
 import com.google.gson.internal.LinkedTreeMap;
-import com.slmn.patient_management.models.patient_services.DoctorReport;
+import com.slmn.patient_management.models.patient_services.PatientRecord;
 
 import java.util.ArrayList;
 
-public class DoctorReportDecoder extends JSONClassDecoder {
-
+public class PatientRecordDecoder extends JSONClassDecoder {
     @Override
     public ArrayList decode(ArrayList<LinkedTreeMap> objects) {
-        ArrayList<DoctorReport> output = new ArrayList<>();
+        ArrayList<PatientRecord> output = new ArrayList<>();
         for (LinkedTreeMap object: objects) {
-            output.add(new DoctorReport(object));
+            output.add(new PatientRecord(object));
         }
         return output;
     }
@@ -19,19 +18,15 @@ public class DoctorReportDecoder extends JSONClassDecoder {
     @Override
     public ArrayList encode(ArrayList objects) {
         ArrayList<LinkedTreeMap> output = new ArrayList<>();
-
         for (Object object: objects) {
-            DoctorReport report = (DoctorReport) object;
+            PatientRecord patientRecord = (PatientRecord) object;
             LinkedTreeMap map = new LinkedTreeMap();
 
-            map.put("doctor_id", report.getDoctorID());
-            map.put("user_comment", report.getUserComment());
-            map.put("user_rating", report.getUserRating());
-            map.put("admin_feedback", report.getAdminFeedback());
+            map.put("patient_id", patientRecord.getPatient().getID());
+            map.put("content", patientRecord.getContent());
 
             output.add(map);
         }
-
         return output;
     }
 }

@@ -28,8 +28,10 @@ public class AccountController extends Controller {
         int age = Integer.parseInt(ageInput.trim());
         Patient requestedPatient = new Patient(givenName, surname, address, password, age, sex);
         System.out.println(String.format("Patient requested: %s", requestedPatient.describe()));
+
         SystemDatabase.connect().accountRequests.add(new AccountCreationRequest(requestedPatient));
         SystemDatabase.connect().writeAll();
+
         this.showMessage("Your account has been submitted for approval.\nA secretary will approve your account soon.", "Account submitted", JOptionPane.INFORMATION_MESSAGE);
 
         NotificationHandler.notifySecretaries(String.format("A new patient account (ID %s) is ready to be approved.", requestedPatient.getID()));
