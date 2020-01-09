@@ -4,6 +4,7 @@ import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.gui.structures.ViewWithFrame;
 import com.slmn.patient_management.gui.views.NotificationView;
 import com.slmn.patient_management.gui.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.gui.views.main_menu.SecretaryMainMenu;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.notifications.Notification;
 import com.slmn.patient_management.notifications.NotificationHandler;
@@ -56,7 +57,7 @@ public class AuthController extends Controller {
 
         if (Main.authenticatedUser.isAdmin()) next = (new AdminMainMenuView());
         if (Main.authenticatedUser.isDoctor()) System.out.println("Doctor logged in");
-        if (Main.authenticatedUser.isSecretary()) System.out.println("Secretary logged in");
+        if (Main.authenticatedUser.isSecretary()) next = (new SecretaryMainMenu());
         if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
 
 

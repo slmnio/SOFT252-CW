@@ -1,5 +1,6 @@
 package com.slmn.patient_management.user_structures.requests;
 
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.Patient;
 
 public class AccountDeletionRequest implements AccountRequest {
@@ -26,12 +27,12 @@ public class AccountDeletionRequest implements AccountRequest {
 
     private void delete(Patient user) {
         // actually remove the user
-
+        SystemDatabase.connect().patients.remove(user);
     }
 
     @Override
     public void completeRequest() {
-
+        SystemDatabase.connect().accountRequests.remove(this);
     }
 
     @Override

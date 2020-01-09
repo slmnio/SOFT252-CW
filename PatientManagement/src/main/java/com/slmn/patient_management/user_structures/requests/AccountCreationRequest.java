@@ -1,5 +1,6 @@
 package com.slmn.patient_management.user_structures.requests;
 
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.Patient;
 
 public class AccountCreationRequest implements AccountRequest {
@@ -24,12 +25,11 @@ public class AccountCreationRequest implements AccountRequest {
 
     private void create(Patient user) {
         // do user
-
+        SystemDatabase.connect().patients.add(user);
     }
-
-    @Override
     public void completeRequest() {
-
+        SystemDatabase.connect().accountRequests.remove(this);
+        SystemDatabase.connect().writeAll();
     }
 
     @Override

@@ -7,6 +7,7 @@ import com.slmn.patient_management.user_structures.Administrator;
 import com.slmn.patient_management.user_structures.Patient;
 import com.slmn.patient_management.user_structures.User;
 import com.slmn.patient_management.user_structures.requests.AccountCreationRequest;
+import com.slmn.patient_management.user_structures.requests.AccountRequest;
 
 import javax.swing.*;
 
@@ -35,4 +36,15 @@ public class AccountCreatorController extends Controller {
 
         NotificationHandler.notifySecretaries(String.format("A new patient account (ID %s) is ready to be approved.", requestedPatient.getID()));
     }
+
+    public void approveRequest(AccountRequest request) {
+        this.showMessage(String.format("%s's %s request has been approved.", request.getPatient().getFullName(), request.getType().toLowerCase()), "Request approved", JOptionPane.INFORMATION_MESSAGE);
+        request.approve();
+    }
+    public void declineRequest(AccountRequest request) {
+        this.showMessage(String.format("%s's %s request has been declined.", request.getPatient().getFullName(), request.getType().toLowerCase()), "Request approved", JOptionPane.INFORMATION_MESSAGE);
+        request.decline();
+    }
+
+
 }
