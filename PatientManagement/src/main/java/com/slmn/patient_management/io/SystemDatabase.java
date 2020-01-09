@@ -75,6 +75,10 @@ public class SystemDatabase {
         this.write("account_requests.json", this.accountRequests, new AccountRequestDecoder());
 
         this.writeObject("env.json", this.env);
+
+
+        this.write("user_notifications.json", this.specificUserNotifications,new UserNotificationDecoder());
+        this.write("usertype_notifications.json", this.userTypeNotifications, new UserTypeNotificationDecoder());
     }
 
     private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {

@@ -1,6 +1,8 @@
 package com.slmn.patient_management.gui.controllers;
 
 import com.slmn.patient_management.core.Main;
+import com.slmn.patient_management.gui.structures.ViewWithFrame;
+import com.slmn.patient_management.gui.views.NotificationView;
 import com.slmn.patient_management.gui.views.main_menu.AdminMainMenuView;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.notifications.Notification;
@@ -50,7 +52,9 @@ public class AuthController extends Controller {
         // finish auth
         Main.setAuthenticatedUser(user);
 
-        if (Main.authenticatedUser.isAdmin()) Main.switchView(new AdminMainMenuView());
+        ViewWithFrame next = null;
+
+        if (Main.authenticatedUser.isAdmin()) next = (new AdminMainMenuView());
         if (Main.authenticatedUser.isDoctor()) System.out.println("Doctor logged in");
         if (Main.authenticatedUser.isSecretary()) System.out.println("Secretary logged in");
         if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
@@ -58,10 +62,11 @@ public class AuthController extends Controller {
 
         ArrayList<Notification> notifications = NotificationHandler.applicableNotifications(Main.authenticatedUser);
 
-        for (Notification notification: notifications) {
-            System.out.println(String.format("Notification: %s", notification.getContent()));
+        if (notifications.size() > 0) {
+            Main.switchView(new NotificationView(next));
+        } else {
+            Main.switchView(next);
         }
-
 
     }
 }

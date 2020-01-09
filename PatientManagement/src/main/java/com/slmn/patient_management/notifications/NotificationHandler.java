@@ -46,4 +46,11 @@ public class NotificationHandler {
 
         return combined;
     }
+
+    public static void dismissAll(ArrayList<Notification> notifications) {
+        for (Notification notification: notifications) {
+            notification.dismiss();
+        }
+        SystemDatabase.connect().writeAll();
+    }
 }

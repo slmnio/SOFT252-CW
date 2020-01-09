@@ -1,6 +1,7 @@
 package com.slmn.patient_management.notifications;
 
 import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.user_structures.User;
 
 public class SpecificUserNotification extends Notification {
@@ -17,4 +18,9 @@ public class SpecificUserNotification extends Notification {
 
     @Override
     public boolean isApplicableToUser(User user) { return user.getID().equals(this.userID); }
+
+    @Override
+    public void dismiss() {
+        SystemDatabase.connect().specificUserNotifications.remove(this);
+    }
 }
