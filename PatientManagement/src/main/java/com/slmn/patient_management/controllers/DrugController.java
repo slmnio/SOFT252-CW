@@ -54,5 +54,19 @@ public class DrugController extends Controller {
     public void stockMedicine(Medicine medicine, String inputQuantity) {
         int quantity = Integer.parseInt(inputQuantity);
         medicine.increaseStock(quantity);
+        SystemDatabase.connect().writeAll();
+        showInfoMessage(String.format("Stock for %s has been increased by %d to %d", medicine.getName(), quantity, medicine.getStockCount()), "Stock increased");
+    }
+
+    public void handleDispensePrescription(Prescription prescription) {
+        if (!this.canDispensePrescription(prescription)) {
+            this.showErrorMessage("There is not enough stock to dispense this prescription");
+            return;
+        }
+
+        if (confirmMessage(String.format("Confirm dispension of %dx %s", prescription.getQuantity(), prescription.getMedicine().getName()), "Confirm dispension")) {
+            this.dispensePrescription(prescription);
+            this.showInfoMessage("Prescription dispensed.", "Prescription dispensed");
+        }
     }
 }

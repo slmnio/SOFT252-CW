@@ -54,7 +54,7 @@ public class LoginView extends ViewWithFrame {
         btnRequestAccount.addActionListener(e -> router.routeToAccountRequester());
 
         try {
-            txtFirstAccounts.setText(String.format("First accounts of each type:\nPatient: %s\nDoctor: %s\nSecretary: %s\nAdmin: %s", SystemDatabase.connect().patients.get(0).getCredentials(), SystemDatabase.connect().doctors.get(0).getCredentials(), SystemDatabase.connect().secretaries.get(0).getCredentials(), SystemDatabase.connect().admins.get(0).getCredentials()));
+            txtFirstAccounts.setText(String.format("For development/testing/assessment:\nFirst accounts of each type:\nPatient: %s\nDoctor: %s\nSecretary: %s\nAdmin: %s", SystemDatabase.connect().patients.get(0).getCredentials(), SystemDatabase.connect().doctors.get(0).getCredentials(), SystemDatabase.connect().secretaries.get(0).getCredentials(), SystemDatabase.connect().admins.get(0).getCredentials()));
         } catch (Exception e) {
             e.printStackTrace();
         }

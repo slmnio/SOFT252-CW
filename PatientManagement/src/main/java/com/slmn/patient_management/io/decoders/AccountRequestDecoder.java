@@ -19,7 +19,7 @@ public class AccountRequestDecoder extends JSONClassDecoder {
 
             Patient user = new Patient((LinkedTreeMap) map.get("patient"));
 
-            if (map.get("request_type") == "AccountDeletionRequest") {
+            if (map.get("request_type").equals("Deletion")) {
                 output.add(new AccountDeletionRequest(user));
             } else {
                 output.add(new AccountCreationRequest(user));
@@ -38,7 +38,7 @@ public class AccountRequestDecoder extends JSONClassDecoder {
             LinkedTreeMap map = new LinkedTreeMap();
 
             map.put("patient", request.getPatient());
-            map.put("request_type", request.getClass().getSimpleName());
+            map.put("request_type", request.getType());
 
             output.add(map);
         }

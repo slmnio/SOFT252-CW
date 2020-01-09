@@ -3,9 +3,7 @@ package com.slmn.patient_management.controllers;
 import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.models.users.Patient;
 import com.slmn.patient_management.models.users.User;
-import com.slmn.patient_management.views.AdminAccountManagerView;
-import com.slmn.patient_management.views.PrescriberView;
-import com.slmn.patient_management.views.PrescriptionListView;
+import com.slmn.patient_management.views.*;
 import com.slmn.patient_management.views.creators.AccountCreatorView;
 import com.slmn.patient_management.views.creators.AccountQueueView;
 import com.slmn.patient_management.views.creators.AccountRequestCreateView;
@@ -37,4 +35,10 @@ public class BasicRoutingController extends Controller {
     public void routeToPrescriptionViewer(Patient user, ViewWithFrame previous) {
         Main.switchView(new PrescriptionListView(user, previous));
     }
+
+    public void routeToPrescriptionDispenser() {
+        Main.switchView(new PrescriptionDispenserView());
+    }
+
+    public void routeToMedicineStock() { Main.switchView(new MedicineStockView());    }
 }

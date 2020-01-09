@@ -45,9 +45,10 @@ public class Patient extends User {
             if (notification.isApplicableToUser(this)) notification.dismiss();
         }
 
+        /*
         for (AccountRequest request : SystemDatabase.connect().accountRequests) {
             if (request.getPatient().equals(this)) request.decline();
-        }
+        }*/
 
         SystemDatabase.connect().prescriptions.removeIf(prescription -> prescription.getPatient().equals(this));
 

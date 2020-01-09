@@ -33,6 +33,7 @@ public class AccountDeletionRequest implements AccountRequest {
     @Override
     public void completeRequest() {
         SystemDatabase.connect().accountRequests.remove(this);
+        SystemDatabase.connect().writeAll();
     }
 
     @Override

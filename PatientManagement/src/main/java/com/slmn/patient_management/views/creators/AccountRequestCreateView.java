@@ -43,6 +43,7 @@ public class AccountRequestCreateView extends ViewWithFrame {
         });
     }
 
+
     private void close() {
         this.getFrame().dispose();
         // cleans it for next time

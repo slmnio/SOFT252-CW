@@ -1,6 +1,7 @@
 package com.slmn.patient_management.controllers;
 
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.notifications.Notification;
 import com.slmn.patient_management.models.notifications.NotificationHandler;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
@@ -40,8 +41,12 @@ public class AccountController extends Controller {
         NotificationHandler.notifySecretaries(String.format("A new patient account (ID %s) is ready to be approved.", requestedPatient.getID()));
     }
 
-    public AccountDeletionRequest requestTermination(Patient patient) {
-        return new AccountDeletionRequest(patient);
+    public void requestDeletion(Patient patient) {
+        AccountDeletionRequest request = new AccountDeletionRequest(patient);
+        SystemDatabase.connect().accountRequests.add(request);
+        SystemDatabase.connect().writeAll();
+        NotificationHandler.notifySecretaries(String.format("A patient (ID %s) has requested that their account be deleted.", patient.getID()));
+        this.showInfoMessage("You have successfully requested for your account to be deleted.\nA secretary will respond to your request soon.", "Deletion request succeeded");
     }
 
     public void approveRequest(AccountRequest request) {

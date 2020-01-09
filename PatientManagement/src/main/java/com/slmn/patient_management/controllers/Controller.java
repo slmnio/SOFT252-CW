@@ -12,4 +12,9 @@ public abstract class Controller {
         this.showMessage(message, "Error", JOptionPane.ERROR_MESSAGE);
     }
     void showInfoMessage(String message, String title) { this.showMessage(message, title, JOptionPane.INFORMATION_MESSAGE); }
+
+    boolean confirmMessage(String message, String title) {
+        int res = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+        return (res == JOptionPane.YES_OPTION);
+    }
 }
