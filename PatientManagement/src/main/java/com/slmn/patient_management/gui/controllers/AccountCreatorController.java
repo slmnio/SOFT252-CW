@@ -2,6 +2,7 @@ package com.slmn.patient_management.gui.controllers;
 
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.notifications.NotificationHandler;
 import com.slmn.patient_management.user_structures.Administrator;
 import com.slmn.patient_management.user_structures.Patient;
 import com.slmn.patient_management.user_structures.User;
@@ -31,5 +32,7 @@ public class AccountCreatorController extends Controller {
         SystemDatabase.connect().accountRequests.add(new AccountCreationRequest(requestedPatient));
         SystemDatabase.connect().writeAll();
         this.showMessage("Your account has been submitted for approval.\nA secretary will approve your account soon.", "Account submitted", JOptionPane.INFORMATION_MESSAGE);
+
+        NotificationHandler.notifySecretaries(String.format("A new patient account (ID %s) is ready to be approved.", requestedPatient.getID()));
     }
 }

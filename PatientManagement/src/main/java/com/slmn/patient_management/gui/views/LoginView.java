@@ -28,6 +28,7 @@ public class LoginView extends ViewWithFrame {
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                submitForm(authController);
             }
         });
         txtPassword.addKeyListener(new KeyAdapter() {

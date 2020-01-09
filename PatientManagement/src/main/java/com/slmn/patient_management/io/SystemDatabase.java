@@ -4,9 +4,11 @@ import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.drug_structures.Medicine;
 import com.slmn.patient_management.drug_structures.Prescription;
 import com.slmn.patient_management.io.decoders.*;
+import com.slmn.patient_management.notifications.*;
 import com.slmn.patient_management.user_structures.*;
 import com.slmn.patient_management.user_structures.requests.AccountRequest;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class SystemDatabase {
@@ -21,6 +23,9 @@ public class SystemDatabase {
     public LinkedTreeMap env;
 
     public ArrayList<AccountRequest> accountRequests;
+
+    public ArrayList<Notification> specificUserNotifications;
+    public ArrayList<Notification> userTypeNotifications;
 
     // Singleton
 
@@ -50,6 +55,9 @@ public class SystemDatabase {
         this.accountRequests = this.load("account_requests.json", new AccountRequestDecoder());
 
         this.env = this.loadObject("env.json");
+
+        this.specificUserNotifications = this.load("user_notifications.json", new UserNotificationDecoder());
+        this.userTypeNotifications = this.load("usertype_notifications.json", new UserTypeNotificationDecoder());
     }
 
     public void writeAll() {
@@ -67,6 +75,10 @@ public class SystemDatabase {
         this.write("account_requests.json", this.accountRequests, new AccountRequestDecoder());
 
         this.writeObject("env.json", this.env);
+
+
+        this.write("user_notifications.json", this.specificUserNotifications,new UserNotificationDecoder());
+        this.write("usertype_notifications.json", this.userTypeNotifications, new UserTypeNotificationDecoder());
     }
 
     private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {
