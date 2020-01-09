@@ -1,7 +1,7 @@
 package com.slmn.patient_management.io.decoders;
 
 import com.google.gson.internal.LinkedTreeMap;
-import com.slmn.patient_management.user_structures.User;
+import com.slmn.patient_management.models.users.User;
 
 import java.util.ArrayList;
 

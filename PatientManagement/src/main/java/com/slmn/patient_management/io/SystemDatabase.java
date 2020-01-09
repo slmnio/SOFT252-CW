@@ -1,14 +1,13 @@
 package com.slmn.patient_management.io;
 
 import com.google.gson.internal.LinkedTreeMap;
-import com.slmn.patient_management.drug_structures.Medicine;
-import com.slmn.patient_management.drug_structures.Prescription;
+import com.slmn.patient_management.models.drugs.Medicine;
+import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.io.decoders.*;
-import com.slmn.patient_management.notifications.*;
-import com.slmn.patient_management.user_structures.*;
-import com.slmn.patient_management.user_structures.requests.AccountRequest;
+import com.slmn.patient_management.models.notifications.*;
+import com.slmn.patient_management.models.users.*;
+import com.slmn.patient_management.models.users.requests.AccountRequest;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class SystemDatabase {

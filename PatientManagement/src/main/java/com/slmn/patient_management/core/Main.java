@@ -1,14 +1,11 @@
 package com.slmn.patient_management.core;
 
-import com.slmn.patient_management.drug_structures.Medicine;
-import com.slmn.patient_management.drug_structures.Prescription;
-import com.slmn.patient_management.gui.structures.ViewWithFrame;
-import com.slmn.patient_management.gui.views.LoginView;
+import com.slmn.patient_management.models.drugs.Prescription;
+import com.slmn.patient_management.views.structures.ViewWithFrame;
+import com.slmn.patient_management.views.LoginView;
 import com.slmn.patient_management.io.SystemDatabase;
-import com.slmn.patient_management.user_structures.*;
-import com.slmn.patient_management.user_structures.requests.AccountCreationRequest;
-import com.slmn.patient_management.user_structures.requests.AccountDeletionRequest;
-import com.slmn.patient_management.user_structures.requests.AccountRequest;
+import com.slmn.patient_management.models.users.*;
+import com.slmn.patient_management.models.users.requests.AccountRequest;
 
 import javax.swing.*;
 

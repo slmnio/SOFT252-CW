@@ -1,11 +1,10 @@
 package com.slmn.patient_management.io.decoders;
 
 import com.google.gson.internal.LinkedTreeMap;
-import com.slmn.patient_management.drug_structures.Prescription;
-import com.slmn.patient_management.user_structures.Patient;
-import com.slmn.patient_management.user_structures.requests.AccountCreationRequest;
-import com.slmn.patient_management.user_structures.requests.AccountDeletionRequest;
-import com.slmn.patient_management.user_structures.requests.AccountRequest;
+import com.slmn.patient_management.models.users.Patient;
+import com.slmn.patient_management.models.users.requests.AccountCreationRequest;
+import com.slmn.patient_management.models.users.requests.AccountDeletionRequest;
+import com.slmn.patient_management.models.users.requests.AccountRequest;
 
 import java.util.ArrayList;
 
