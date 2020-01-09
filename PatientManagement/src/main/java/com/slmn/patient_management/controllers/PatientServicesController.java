@@ -16,6 +16,9 @@ public class PatientServicesController extends Controller {
         DoctorReport report = new DoctorReport(doctor, comment, rating);
         SystemDatabase.connect().doctorReports.add(report);
         SystemDatabase.connect().writeAll();
+
+        this.showInfoMessage("You have rated that doctor.", "Doctor rated");
+
         return report;
     }
 

@@ -24,7 +24,7 @@ public class DoctorReportDecoder extends JSONClassDecoder {
             DoctorReport report = (DoctorReport) object;
             LinkedTreeMap map = new LinkedTreeMap();
 
-            map.put("doctor_id", report.getDoctorID());
+            map.put("doctor_id", report.getDoctor().getID());
             map.put("user_comment", report.getUserComment());
             map.put("user_rating", report.getUserRating());
             map.put("admin_feedback", report.getAdminFeedback());

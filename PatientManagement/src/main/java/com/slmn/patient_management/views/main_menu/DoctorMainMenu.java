@@ -17,6 +17,7 @@ public class DoctorMainMenu extends ViewWithFrame {
     private JPanel mainPanel;
     private JButton btnViewRecords;
     private JComboBox cbxPatients;
+    private JButton btnCreateMed;
 
     public DoctorMainMenu() {
         update();
@@ -28,6 +29,7 @@ public class DoctorMainMenu extends ViewWithFrame {
                 controller.routeToRecordsDoctorView(SystemDatabase.connect().patients.get(cbxPatients.getSelectedIndex()));
             }
         });
+        btnCreateMed.addActionListener(e -> controller.routeToMedicineCreator());
     }
 
     private void update() {

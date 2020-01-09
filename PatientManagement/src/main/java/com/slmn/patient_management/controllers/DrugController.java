@@ -23,8 +23,11 @@ public class DrugController extends Controller {
 
     public void createMedicine(String name) {
         Medicine medicine = new Medicine(name);
-        SystemDatabase.connect().medicines.add(medicine);
 
+        if (!this.confirmMessage(String.format("Confirm creating new drug \"%s\"?\nIt will be sent to a secretary for ordering once created.", medicine.getName()), "Confirm creating new drug")) {
+            return;
+        }
+        SystemDatabase.connect().medicines.add(medicine);
         NotificationHandler.notifySecretaries(String.format("A new drug: \"%s\" requires stock to be ordered.", medicine.getName()));
         // handler writes to db
         this.showInfoMessage(String.format("Medicine \"%s\" has been created and sent to a secretary for ordering.", medicine.getName()), "Medicine created");

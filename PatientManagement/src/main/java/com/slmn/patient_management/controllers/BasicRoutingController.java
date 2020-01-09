@@ -53,4 +53,12 @@ public class BasicRoutingController extends Controller {
     public void routeToSecretaryAccountManager() {
         Main.switchView(new PatientManagerView());
     }
+
+    public void routeToDoctorRatingPatient() {
+        Main.switchView(new DoctorRatingPatientView());
+    }
+
+    public void routeToMedicineCreator() {
+        Main.switchView(new MedicineCreatorView());
+    }
 }
