@@ -10,7 +10,10 @@ import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.Notification;
+import com.slmn.patient_management.models.patient_services.PatientRecord;
 import com.slmn.patient_management.models.users.requests.AccountRequest;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -52,6 +55,14 @@ public class Patient extends User {
         // appointments
 
         SystemDatabase.connect().writeAll();
+    }
+
+    public ArrayList<PatientRecord> getPatientRecords() {
+        ArrayList<PatientRecord> output = new ArrayList<>();
+        for (PatientRecord record : SystemDatabase.connect().patientRecords) {
+            if (record.getPatient().equals(this)) output.add(record);
+        }
+        return output;
     }
 
     public Prescription createPrescription(Medicine medicine, int quantity, String dosage) {

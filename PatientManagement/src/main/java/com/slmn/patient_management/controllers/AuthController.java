@@ -59,7 +59,7 @@ public class AuthController extends Controller {
         if (Main.authenticatedUser.isPatient()) System.out.println("Patient logged in");
 
 
-        ArrayList<Notification> notifications = MedicineMain.authenticatedUser);
+        ArrayList<Notification> notifications = Main.authenticatedUser.getNotifications();
 
         if (notifications.size() > 0) {
             Main.switchView(new NotificationView(next));

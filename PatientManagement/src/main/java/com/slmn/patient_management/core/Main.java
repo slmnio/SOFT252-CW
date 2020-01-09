@@ -1,5 +1,6 @@
 package com.slmn.patient_management.core;
 
+import com.slmn.patient_management.models.appointments.SurgeryDay;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
 import com.slmn.patient_management.views.LoginView;
@@ -33,6 +34,9 @@ public class Main {
         Main.switchView(new LoginView());
     }
     public static void test() {
+
+        SurgeryDay day = new SurgeryDay();
+        day.generate();
 
         /*
         AccountRequest r = new AccountDeletionRequest(SystemDatabase.connect().patients.get(0));
