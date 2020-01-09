@@ -17,7 +17,7 @@ public class SurgeryDay {
     }
 
     private String getTime(double hour) {
-        System.out.println("hour " + hour);
+        ///System.out.println("hour " + hour);
         return String.format("%s:%s", zeropad((int) Math.floor(hour)), zeropad((int) Math.floor((hour - Math.floor(hour)) * 60)));
     }
 

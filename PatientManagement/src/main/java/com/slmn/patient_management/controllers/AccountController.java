@@ -84,4 +84,10 @@ public class AccountController extends Controller {
         this.showMessage(String.format("Removed %s %s", user.getClass().getSimpleName(), user.getFullName()), "User removed", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    public void queryRemoveUser(User user) {
+        if (this.confirmMessage(String.format("Are you sure you want to remove %s?", user.getFullName()), "User deletion")) {
+            this.removeUser(user);
+        }
+    }
+
 }

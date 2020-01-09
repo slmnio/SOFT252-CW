@@ -15,12 +15,14 @@ public class SecretaryMainMenu extends ViewWithFrame {
     private JPanel mainPanel;
     private JButton btnNavDispense;
     private JButton btnNavMedStock;
+    private JButton btnAccountManager;
 
     public SecretaryMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
         btnAccountQueue.addActionListener(e -> controller.routeToAccountQueue());
         btnNavDispense.addActionListener(e -> controller.routeToPrescriptionDispenser());
         btnNavMedStock.addActionListener(e -> controller.routeToMedicineStock());
+        btnAccountManager.addActionListener(e -> controller.routeToSecretaryAccountManager());
     }
 
     @Override

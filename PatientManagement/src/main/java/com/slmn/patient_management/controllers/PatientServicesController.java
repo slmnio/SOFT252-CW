@@ -27,7 +27,7 @@ public class PatientServicesController extends Controller {
         PatientRecord patientRecord = new PatientRecord(patient, content);
         SystemDatabase.connect().patientRecords.add(patientRecord);
         SystemDatabase.connect().writeAll();
-        ;
+
         return patientRecord;
     }
 

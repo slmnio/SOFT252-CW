@@ -17,10 +17,12 @@ public class PatientMainMenu extends ViewWithFrame {
     private JPanel mainPanel;
     private JButton btnPrescriptions;
     private JButton btnRequestAccountDeletion;
+    private JButton btnViewRecords;
 
     public PatientMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
         btnPrescriptions.addActionListener(e -> controller.routeToPrescriptionViewer((Patient) Main.authenticatedUser, this));
+        btnViewRecords.addActionListener(e -> controller.routeToRecordsSelfView());
 
         btnRequestAccountDeletion.addActionListener(new ActionListener() {
             @Override
