@@ -1,7 +1,7 @@
 package com.slmn.patient_management.views;
 
 import com.slmn.patient_management.controllers.DrugController;
-import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.views.main_menu.AdminMainMenu;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -43,6 +43,6 @@ public class MedicineCreatorView extends ViewWithFrame {
     }
     @Override
     public SwitchableFrame getFrame() {
-        return new SubFrame("Medicine Creator", this.mainPanel, new AdminMainMenuView());
+        return new SubFrame("Medicine Creator", this.mainPanel, new AdminMainMenu());
     }
 }

@@ -1,10 +1,9 @@
 package com.slmn.patient_management.views;
 
 import com.slmn.patient_management.controllers.AccountController;
-import com.slmn.patient_management.controllers.PatientServicesController;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.users.User;
-import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.views.main_menu.AdminMainMenu;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -54,6 +53,6 @@ public class AdminAccountManagerView extends ViewWithFrame {
 
     @Override
     public SwitchableFrame getFrame() {
-        return new SubFrame("Account Manager", this.mainPanel, new AdminMainMenuView());
+        return new SubFrame("Account Manager", this.mainPanel, new AdminMainMenu());
     }
 }

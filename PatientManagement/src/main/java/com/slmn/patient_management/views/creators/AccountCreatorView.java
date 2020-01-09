@@ -5,7 +5,7 @@ import com.slmn.patient_management.models.users.Administrator;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Secretary;
 import com.slmn.patient_management.models.users.User;
-import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.views.main_menu.AdminMainMenu;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -32,7 +32,7 @@ public class AccountCreatorView extends ViewWithFrame {
 
     @Override
     public SwitchableFrame getFrame() {
-        if (frame == null) frame = new SubFrame("Account Creator", this.mainPanel, new AdminMainMenuView());
+        if (frame == null) frame = new SubFrame("Account Creator", this.mainPanel, new AdminMainMenu());
         return frame;
     }
 

@@ -5,7 +5,7 @@ import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.Notification;
 import com.slmn.patient_management.models.users.User;
 import com.slmn.patient_management.views.NotificationView;
-import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.views.main_menu.AdminMainMenu;
 import com.slmn.patient_management.views.main_menu.DoctorMainMenu;
 import com.slmn.patient_management.views.main_menu.PatientMainMenu;
 import com.slmn.patient_management.views.main_menu.SecretaryMainMenu;
@@ -56,7 +56,7 @@ public class AuthController extends Controller {
 
         ViewWithFrame next = null;
 
-        if (Main.authenticatedUser.isAdmin()) next = (new AdminMainMenuView());
+        if (Main.authenticatedUser.isAdmin()) next = (new AdminMainMenu());
         if (Main.authenticatedUser.isDoctor()) next = (new DoctorMainMenu());
         if (Main.authenticatedUser.isSecretary()) next = (new SecretaryMainMenu());
         if (Main.authenticatedUser.isPatient()) next = (new PatientMainMenu());

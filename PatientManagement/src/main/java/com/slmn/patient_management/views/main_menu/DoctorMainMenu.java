@@ -18,6 +18,7 @@ public class DoctorMainMenu extends ViewWithFrame {
     private JButton btnViewRecords;
     private JComboBox cbxPatients;
     private JButton btnCreateMed;
+    private JButton btnViewFeedback;
 
     public DoctorMainMenu() {
         update();
@@ -30,6 +31,7 @@ public class DoctorMainMenu extends ViewWithFrame {
             }
         });
         btnCreateMed.addActionListener(e -> controller.routeToMedicineCreator());
+        btnViewFeedback.addActionListener(e -> controller.routeToDoctorRatingDoctor());
     }
 
     private void update() {

@@ -24,6 +24,7 @@ public class PatientServicesController extends Controller {
 
     public void addFeedback(DoctorReport report, String feedback) {
         report.giveAdminFeedback(feedback);
+        SystemDatabase.connect().writeAll();
     }
 
     public PatientRecord createPatientRecord(Patient patient, String content) {

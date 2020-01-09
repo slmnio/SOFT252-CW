@@ -2,11 +2,12 @@ package com.slmn.patient_management.controllers;
 
 import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.models.users.Patient;
-import com.slmn.patient_management.models.users.User;
 import com.slmn.patient_management.views.*;
 import com.slmn.patient_management.views.creators.AccountCreatorView;
 import com.slmn.patient_management.views.creators.AccountQueueView;
 import com.slmn.patient_management.views.creators.AccountRequestCreateView;
+import com.slmn.patient_management.views.main_menu.AdminMainMenu;
+import com.slmn.patient_management.views.main_menu.DoctorMainMenu;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
 
 public class BasicRoutingController extends Controller {
@@ -60,5 +61,12 @@ public class BasicRoutingController extends Controller {
 
     public void routeToMedicineCreator() {
         Main.switchView(new MedicineCreatorView());
+    }
+
+    public void routeToDoctorRatingAdmin() {
+        Main.switchView(new DoctorRatingAdminView(true, new AdminMainMenu()));
+    }
+    public void routeToDoctorRatingDoctor() {
+        Main.switchView(new DoctorRatingAdminView(false, new DoctorMainMenu()));
     }
 }

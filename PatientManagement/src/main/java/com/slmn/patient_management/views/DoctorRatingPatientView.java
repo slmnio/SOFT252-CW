@@ -77,7 +77,6 @@ public class DoctorRatingPatientView extends ViewWithFrame {
     }
 
     private void checkButton() {
-        System.out.println(String.format("Button checks: %s %s %s %s",(SystemDatabase.connect().doctors.size() > 0), !txtRating.getText().equals(""), !txtComment.getText().equals(""), cbxDoctors.getSelectedIndex() != -1));
         btnSubmit.setEnabled((SystemDatabase.connect().doctors.size() > 0) && !txtRating.getText().equals("") && !txtComment.getText().equals("") && cbxDoctors.getSelectedIndex() != -1);
     }
 

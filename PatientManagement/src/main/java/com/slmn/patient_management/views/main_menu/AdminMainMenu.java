@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminMainMenuView extends ViewWithFrame {
+public class AdminMainMenu extends ViewWithFrame {
 
 
     private JLabel lblDescTitle;
@@ -18,7 +18,7 @@ public class AdminMainMenuView extends ViewWithFrame {
     private JPanel mainPanel;
     private JButton btnNavAccountManager;
 
-    public AdminMainMenuView() {
+    public AdminMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
 
         btnNavAccountCreator.addActionListener(e -> controller.routeToAccountCreator());
@@ -28,6 +28,7 @@ public class AdminMainMenuView extends ViewWithFrame {
                 controller.routeToAdminAccountManager();
             }
         });
+        btnNavDoctorRatings.addActionListener(e -> controller.routeToDoctorRatingAdmin());
     }
 
     @Override
