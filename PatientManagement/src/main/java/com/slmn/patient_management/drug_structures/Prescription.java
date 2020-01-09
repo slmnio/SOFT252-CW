@@ -39,6 +39,17 @@ public class Prescription {
         }
         return this.patient; 
     }
+
+
+    public boolean canDispense() { return this.getMedicine().getStockCount() >= this.quantity; }
+
+    public void dispense() {
+        if (canDispense()) {
+            this.getMedicine().dispense(this.quantity);
+        }
+    }
+
+
     public void setPatient(Patient patient) {
         if (this.patient != null) return;
         this.patient = patient;

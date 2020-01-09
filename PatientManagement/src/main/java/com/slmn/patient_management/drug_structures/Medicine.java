@@ -10,6 +10,10 @@ public class Medicine {
         this.name = name;
         this.stockCount = stockCount;
     }
+    public Medicine(String name) {
+        this.name = name;
+        this.stockCount = 0;
+    }
 
     public Medicine(LinkedTreeMap object) {
         this.name = (String) object.get("name");
@@ -20,7 +24,11 @@ public class Medicine {
 
     public int getStockCount() { return this.stockCount; }
 
-    public boolean canDispense(int requestCount) { return this.stockCount >= requestCount; }
+    private boolean canDispense(int requestCount) { return this.stockCount >= requestCount; }
+
+    public void increaseStock(int requestCount) {
+        this.stockCount += requestCount;
+    }
 
     public void dispense(int requestCount) {
         if (canDispense(requestCount)) {
