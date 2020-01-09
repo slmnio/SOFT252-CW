@@ -7,4 +7,8 @@ public class TimeSlot {
     public TimeSlot(String displayTime) {
         this.displayTime = displayTime;
     }
+
+    public void setOccupied(boolean occupied) {
+        isOccupied = occupied;
+    }
 }

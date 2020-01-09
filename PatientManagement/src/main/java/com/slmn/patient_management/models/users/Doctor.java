@@ -7,6 +7,7 @@ package com.slmn.patient_management.models.users;
 
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.appointments.TimeSlot;
 import com.slmn.patient_management.models.notifications.Notification;
 import com.slmn.patient_management.models.patient_services.DoctorReport;
 
@@ -49,5 +50,10 @@ public class Doctor extends User {
         double average = sum / this.getDoctorReports().size();
 
         return String.format("%.2f", average);
+    }
+
+    public boolean hasAppointmentAt(TimeSlot timeslot) {
+        // TODO: this lmao
+        return false;
     }
 }

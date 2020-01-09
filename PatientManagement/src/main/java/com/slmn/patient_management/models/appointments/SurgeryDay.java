@@ -2,6 +2,7 @@ package com.slmn.patient_management.models.appointments;
 
 import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.users.Doctor;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,17 @@ public class SurgeryDay {
         return String.format("%s:%s", zeropad((int) Math.floor(hour)), zeropad((int) Math.floor((hour - Math.floor(hour)) * 60)));
     }
 
+    public void generateDoctorSlots(Doctor doctor) {
+        this.generate();
+        for (TimeSlot timeslot: timeSlots) {
+            if (doctor.hasAppointmentAt(timeslot)) {
+                timeslot.setOccupied(true);
+            }
+        }
+    }
+
     public void generate() {
+        this.timeSlots = new ArrayList<>();
         SystemDatabase database = SystemDatabase.connect();
 
         int minutesPerSlot = database.getEnvWithDefault("APPOINTMENT_LENGTH", 60);

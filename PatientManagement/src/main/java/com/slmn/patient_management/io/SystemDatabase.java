@@ -1,6 +1,7 @@
 package com.slmn.patient_management.io;
 
 import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.models.appointments.Appointment;
 import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
 import com.slmn.patient_management.io.decoders.*;
@@ -29,8 +30,9 @@ public class SystemDatabase {
     public ArrayList<Notification> userTypeNotifications;
 
     public ArrayList<DoctorReport> doctorReports;
-
     public ArrayList<PatientRecord> patientRecords;
+
+    public ArrayList<Appointment> appointments;
 
     // Singleton
     private static SystemDatabase instance = null;
@@ -64,8 +66,9 @@ public class SystemDatabase {
         this.userTypeNotifications = this.load("usertype_notifications.json", new UserTypeNotificationDecoder());
 
         this.doctorReports = this.load("doctor_reports.json", new DoctorReportDecoder());
-
         this.patientRecords = this.load("patient_records.json", new PatientRecordDecoder());
+
+        this.appointments = this.load("appointments.json", new AppointmentDecoder());
     }
 
     public void writeAll() {
@@ -89,6 +92,8 @@ public class SystemDatabase {
 
         this.write("doctor_reports.json", this.doctorReports, new DoctorReportDecoder());
         this.write("patient_records.json", this.patientRecords, new PatientRecordDecoder());
+
+        this.write("appointments.json", this.appointments, new AppointmentDecoder());
     }
 
     private void write(String filename, ArrayList users, JSONClassDecoder decoderPlugin) {
@@ -165,6 +170,7 @@ public class SystemDatabase {
     public void pushUser(Doctor user) { this.doctors.add(user); };
     public void pushUser(Secretary user) { this.secretaries.add(user); };
     public void pushUser(Patient user) { this.patients.add(user); };
+
     public void pushUser(User user) {
         if (user.isAdmin()) SystemDatabase.connect().admins.add((Administrator) user);
         if (user.isDoctor()) SystemDatabase.connect().doctors.add((Doctor) user);
