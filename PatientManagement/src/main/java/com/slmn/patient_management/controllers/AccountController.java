@@ -2,7 +2,10 @@ package com.slmn.patient_management.controllers;
 
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.NotificationHandler;
-import com.slmn.patient_management.models.users.*;
+import com.slmn.patient_management.models.users.Doctor;
+import com.slmn.patient_management.models.users.Patient;
+import com.slmn.patient_management.models.users.Secretary;
+import com.slmn.patient_management.models.users.User;
 import com.slmn.patient_management.models.users.requests.AccountCreationRequest;
 import com.slmn.patient_management.models.users.requests.AccountDeletionRequest;
 import com.slmn.patient_management.models.users.requests.AccountRequest;
@@ -12,7 +15,7 @@ import javax.swing.*;
 public class AccountController extends Controller {
 
     public User createUser(String className, String givenName, String surname, String address, String password) {
-        String code = className.substring(0,1);
+        String code = className.substring(0, 1);
         User user = User.createAppropriateUser(code, givenName, surname, address, password);
         System.out.println(String.format("Created user: %s", user.describe()));
 
@@ -51,9 +54,17 @@ public class AccountController extends Controller {
         request.decline();
     }
 
-    public void removePatient(Patient patient) { this.removeUser(patient); }
-    public void removeDoctor(Doctor doctor) { this.removeUser(doctor); }
-    public void removeSecretary(Secretary secretary) { this.removeSecretary(secretary); }
+    public void removePatient(Patient patient) {
+        this.removeUser(patient);
+    }
+
+    public void removeDoctor(Doctor doctor) {
+        this.removeUser(doctor);
+    }
+
+    public void removeSecretary(Secretary secretary) {
+        this.removeSecretary(secretary);
+    }
 
     private void removeUser(User user) {
         System.out.println(String.format("Removing user %s", user.describe()));

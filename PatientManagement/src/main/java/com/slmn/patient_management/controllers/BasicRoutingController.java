@@ -5,7 +5,7 @@ import com.slmn.patient_management.views.creators.AccountCreatorView;
 import com.slmn.patient_management.views.creators.AccountQueueView;
 import com.slmn.patient_management.views.creators.AccountRequestCreateView;
 
-public class BasicRoutingController extends Controller  {
+public class BasicRoutingController extends Controller {
     public BasicRoutingController() {
 
     }
@@ -13,6 +13,12 @@ public class BasicRoutingController extends Controller  {
     public void routeToAccountCreator() {
         Main.switchView(new AccountCreatorView()); // to account creator form
     }
-    public void routeToAccountRequester() { Main.switchView(new AccountRequestCreateView()); }
-    public void routeToAccountQueue() { Main.switchView(new AccountQueueView()); }
+
+    public void routeToAccountRequester() {
+        Main.switchView(new AccountRequestCreateView());
+    }
+
+    public void routeToAccountQueue() {
+        Main.switchView(new AccountQueueView());
+    }
 }

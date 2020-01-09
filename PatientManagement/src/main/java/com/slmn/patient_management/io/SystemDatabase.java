@@ -1,11 +1,11 @@
 package com.slmn.patient_management.io;
 
 import com.google.gson.internal.LinkedTreeMap;
+import com.slmn.patient_management.io.decoders.*;
 import com.slmn.patient_management.models.appointments.Appointment;
 import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
-import com.slmn.patient_management.io.decoders.*;
-import com.slmn.patient_management.models.notifications.*;
+import com.slmn.patient_management.models.notifications.Notification;
 import com.slmn.patient_management.models.patient_services.DoctorReport;
 import com.slmn.patient_management.models.patient_services.PatientRecord;
 import com.slmn.patient_management.models.users.*;
@@ -87,7 +87,7 @@ public class SystemDatabase {
 
         this.writeObject("env.json", this.env);
 
-        this.write("user_notifications.json", this.specificUserNotifications,new UserNotificationDecoder());
+        this.write("user_notifications.json", this.specificUserNotifications, new UserNotificationDecoder());
         this.write("usertype_notifications.json", this.userTypeNotifications, new UserTypeNotificationDecoder());
 
         this.write("doctor_reports.json", this.doctorReports, new DoctorReportDecoder());
@@ -110,6 +110,7 @@ public class SystemDatabase {
         JSONObjectFile file = new JSONObjectFile(filename);
         return file.readOrCreateEmpty();
     }
+
     private void writeObject(String filename, LinkedTreeMap items) {
         JSONObjectFile file = new JSONObjectFile(filename);
         file.write(items);
@@ -126,6 +127,7 @@ public class SystemDatabase {
             return fallback;
         }
     }
+
     public String getEnvWithDefault(String key, String fallback) {
         if (!this.env.containsKey(key)) {
             System.out.println(String.format("No value for key [%s]", key));
@@ -147,7 +149,7 @@ public class SystemDatabase {
         users.addAll(secretaries);
         users.addAll(patients);
 
-        for (User user: users) {
+        for (User user : users) {
             if (user.getID().toUpperCase().equals(ID.toUpperCase())) {
                 return user;
             }
@@ -157,7 +159,7 @@ public class SystemDatabase {
     }
 
     public Medicine getMedicine(String medicineName) {
-        for (Medicine medicine: this.medicines) {
+        for (Medicine medicine : this.medicines) {
             if (medicineName.equals(medicine.getName())) {
                 return medicine;
             }
@@ -166,10 +168,29 @@ public class SystemDatabase {
     }
 
     // Polymorphism to handle .pushUser() to whichever collection is correct
-    public void pushUser(Administrator user) { this.admins.add(user); };
-    public void pushUser(Doctor user) { this.doctors.add(user); };
-    public void pushUser(Secretary user) { this.secretaries.add(user); };
-    public void pushUser(Patient user) { this.patients.add(user); };
+    public void pushUser(Administrator user) {
+        this.admins.add(user);
+    }
+
+    ;
+
+    public void pushUser(Doctor user) {
+        this.doctors.add(user);
+    }
+
+    ;
+
+    public void pushUser(Secretary user) {
+        this.secretaries.add(user);
+    }
+
+    ;
+
+    public void pushUser(Patient user) {
+        this.patients.add(user);
+    }
+
+    ;
 
     public void pushUser(User user) {
         if (user.isAdmin()) SystemDatabase.connect().admins.add((Administrator) user);

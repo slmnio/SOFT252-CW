@@ -3,9 +3,6 @@ package com.slmn.patient_management.io;
 import com.google.gson.Gson;
 import com.google.gson.internal.LinkedTreeMap;
 
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-
 public class JSONObjectFile {
     private String filename;
 

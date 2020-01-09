@@ -18,7 +18,7 @@ public class Prescription {
     }
 
     public Prescription(LinkedTreeMap object) {
-        this.quantity = (int) ((double)object.get("quantity"));
+        this.quantity = (int) ((double) object.get("quantity"));
         this.dosage = (String) object.get("dosage");
         this.medicine_name = (String) object.get("medicine_name");
         this.patient_id = (String) object.get("patient_id");
@@ -30,18 +30,25 @@ public class Prescription {
         this.dosage = dosage;
     }
 
-    public int getQuantity() { return quantity; }
-    public String getDosage() { return dosage; }
-    
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public String getDosage() {
+        return dosage;
+    }
+
     public Patient getPatient() {
         if (this.patient == null && this.patient_id != null) {
             this.setPatient((Patient) SystemDatabase.connect().getUser(this.patient_id));
         }
-        return this.patient; 
+        return this.patient;
     }
 
 
-    public boolean canDispense() { return this.getMedicine().getStockCount() >= this.quantity; }
+    public boolean canDispense() {
+        return this.getMedicine().getStockCount() >= this.quantity;
+    }
 
     public void dispense() {
         if (canDispense()) {
@@ -54,13 +61,14 @@ public class Prescription {
         if (this.patient != null) return;
         this.patient = patient;
     }
-    
+
     public String getPatientID() {
         if (this.patient_id == null && this.patient != null) {
             return this.patient.getID();
         }
         return this.patient_id;
     }
+
     public void setPatientID(String patient_id) {
         this.patient_id = patient_id;
     }
@@ -88,7 +96,7 @@ public class Prescription {
     public void setMedicineName(String medicine_name) {
         this.medicine_name = medicine_name;
     }
-    
+
     @Override
     public String toString() {
         return String.format("%d x %s (%s)", this.quantity, this.medicine, this.dosage);

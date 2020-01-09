@@ -6,22 +6,22 @@ import com.slmn.patient_management.models.drugs.Prescription;
 import java.util.ArrayList;
 
 public class PrescriptionDecoder extends JSONClassDecoder {
-        @Override
-        public ArrayList<Prescription> decode(ArrayList<LinkedTreeMap> objects) {
-            ArrayList<Prescription> output = new ArrayList<>();
-            for (LinkedTreeMap object: objects) {
-                Prescription prescription = new Prescription(object);
-                output.add(prescription);
-            }
-            return output;
+    @Override
+    public ArrayList<Prescription> decode(ArrayList<LinkedTreeMap> objects) {
+        ArrayList<Prescription> output = new ArrayList<>();
+        for (LinkedTreeMap object : objects) {
+            Prescription prescription = new Prescription(object);
+            output.add(prescription);
         }
+        return output;
+    }
 
     @Override
     public ArrayList encode(ArrayList objects) {
 
         ArrayList<LinkedTreeMap> output = new ArrayList<>();
 
-        for (Object object: objects) {
+        for (Object object : objects) {
             Prescription p = (Prescription) object;
             LinkedTreeMap map = new LinkedTreeMap();
 

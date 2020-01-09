@@ -1,12 +1,12 @@
 package com.slmn.patient_management.views.creators;
 
 import com.slmn.patient_management.controllers.AccountController;
+import com.slmn.patient_management.io.SystemDatabase;
+import com.slmn.patient_management.models.users.requests.AccountRequest;
+import com.slmn.patient_management.views.main_menu.SecretaryMainMenu;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
-import com.slmn.patient_management.views.main_menu.SecretaryMainMenu;
-import com.slmn.patient_management.io.SystemDatabase;
-import com.slmn.patient_management.models.users.requests.AccountRequest;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -41,7 +41,6 @@ public class AccountQueueView extends ViewWithFrame {
         });
 
 
-
         cbxQueue.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,8 +69,8 @@ public class AccountQueueView extends ViewWithFrame {
     public void updateBox() {
         cbxQueue.removeAllItems();
         ArrayList<AccountRequest> requests = SystemDatabase.connect().accountRequests;
-        for (AccountRequest request: requests) {
-            cbxQueue.addItem(String.format("[%s] ID %s %s", request.getType(),request.getPatient().getID(), request.getPatient().getFullName()));
+        for (AccountRequest request : requests) {
+            cbxQueue.addItem(String.format("[%s] ID %s %s", request.getType(), request.getPatient().getID(), request.getPatient().getFullName()));
         }
         updateRequest();
     }

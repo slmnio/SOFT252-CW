@@ -8,8 +8,8 @@ import java.awt.event.WindowEvent;
 
 public class SubFrame extends SwitchableFrame {
     /*
-    * Frame that should return to another frame when it's closed
-    * */
+     * Frame that should return to another frame when it's closed
+     * */
 
     public SubFrame(String title, JPanel panel, ViewWithFrame returnView) {
         this.setTitle(title);
@@ -25,8 +25,6 @@ public class SubFrame extends SwitchableFrame {
             }
         });
     }
-
-
 
 
     public static JFrame createFrame(String title, JPanel panel) {

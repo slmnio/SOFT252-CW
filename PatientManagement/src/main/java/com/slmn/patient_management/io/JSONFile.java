@@ -34,7 +34,7 @@ public class JSONFile {
                 out.println(defaultText);
                 out.close();
 
-                System.out.println(String.format("Default text: %s",defaultText));
+                System.out.println(String.format("Default text: %s", defaultText));
             } catch (IOException e) {
                 System.out.println("New file couldn't be created - returning default text");
                 e.printStackTrace();

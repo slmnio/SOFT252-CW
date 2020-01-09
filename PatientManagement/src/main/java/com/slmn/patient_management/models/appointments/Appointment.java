@@ -20,6 +20,7 @@ public class Appointment {
         this.doctor = doctor;
         this.patient = patient;
     }
+
     public Appointment(LinkedTreeMap map) {
         this.doctor_id = (String) map.get("doctor_id");
         this.patient_id = (String) map.get("patient_id");
@@ -42,7 +43,7 @@ public class Appointment {
     public void setDate(String date) {
         this.date = date;
     }
-    
+
     public Doctor getDoctor() {
         if (this.doctor == null && this.doctor_id != null) {
             this.doctor = (Doctor) SystemDatabase.connect().getUser(this.doctor_id);

@@ -7,7 +7,9 @@ public abstract class Notification {
 
     public abstract boolean isApplicableToUser(User user);
 
-    public String getContent() { return this.content; }
+    public String getContent() {
+        return this.content;
+    }
 
     public abstract void dismiss();
 }

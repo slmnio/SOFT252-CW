@@ -27,6 +27,7 @@ public class AccountCreationRequest implements AccountRequest {
         // do user
         SystemDatabase.connect().patients.add(user);
     }
+
     public void completeRequest() {
         SystemDatabase.connect().accountRequests.remove(this);
         SystemDatabase.connect().writeAll();

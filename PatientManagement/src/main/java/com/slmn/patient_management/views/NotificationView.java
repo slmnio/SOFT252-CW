@@ -1,11 +1,11 @@
 package com.slmn.patient_management.views;
 
 import com.slmn.patient_management.core.Main;
+import com.slmn.patient_management.models.notifications.Notification;
+import com.slmn.patient_management.models.notifications.NotificationHandler;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
-import com.slmn.patient_management.models.notifications.Notification;
-import com.slmn.patient_management.models.notifications.NotificationHandler;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -25,7 +25,7 @@ public class NotificationView extends ViewWithFrame {
         ArrayList<Notification> notifications = Main.authenticatedUser.getNotifications();
 
         DefaultListModel list = new DefaultListModel();
-        for (Notification notification: notifications) {
+        for (Notification notification : notifications) {
             list.addElement(notification.getContent());
         }
         lstNotifications.setModel(list);
@@ -45,6 +45,7 @@ public class NotificationView extends ViewWithFrame {
             }
         });
     }
+
     private void close() {
         this.getFrame().dispose();
         // cleans it for next time

@@ -10,6 +10,7 @@ public class Medicine {
         this.name = name;
         this.stockCount = stockCount;
     }
+
     public Medicine(String name) {
         this.name = name;
         this.stockCount = 0;
@@ -22,9 +23,13 @@ public class Medicine {
 
     // Shouldn't need getters/setters for name: no edits, can use constructor/tostring for set/get
 
-    public int getStockCount() { return this.stockCount; }
+    public int getStockCount() {
+        return this.stockCount;
+    }
 
-    private boolean canDispense(int requestCount) { return this.stockCount >= requestCount; }
+    private boolean canDispense(int requestCount) {
+        return this.stockCount >= requestCount;
+    }
 
     public void increaseStock(int requestCount) {
         this.stockCount += requestCount;
@@ -41,5 +46,7 @@ public class Medicine {
         return name;
     }
 
-    public String getName() { return this.toString(); }
+    public String getName() {
+        return this.toString();
+    }
 }

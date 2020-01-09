@@ -8,7 +8,6 @@ public class AccountDeletionRequest implements AccountRequest {
     public String type = "Deletion";
 
 
-
     public AccountDeletionRequest(Patient user) {
         this.user = user;
     }

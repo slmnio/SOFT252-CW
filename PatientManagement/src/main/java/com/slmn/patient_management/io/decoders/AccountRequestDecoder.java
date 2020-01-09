@@ -14,7 +14,7 @@ public class AccountRequestDecoder extends JSONClassDecoder {
     public ArrayList decode(ArrayList<LinkedTreeMap> objects) {
         ArrayList<AccountRequest> output = new ArrayList<>();
 
-        for (Object object: objects) {
+        for (Object object : objects) {
             LinkedTreeMap map = (LinkedTreeMap) object;
 
             Patient user = new Patient((LinkedTreeMap) map.get("patient"));
@@ -33,7 +33,7 @@ public class AccountRequestDecoder extends JSONClassDecoder {
     public ArrayList encode(ArrayList requests) {
         ArrayList<LinkedTreeMap> output = new ArrayList<>();
 
-        for (Object object: requests) {
+        for (Object object : requests) {
             AccountRequest request = (AccountRequest) object;
             LinkedTreeMap map = new LinkedTreeMap();
 

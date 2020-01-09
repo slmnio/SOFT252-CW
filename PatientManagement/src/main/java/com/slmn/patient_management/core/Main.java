@@ -1,12 +1,12 @@
 package com.slmn.patient_management.core;
 
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.appointments.SurgeryDay;
 import com.slmn.patient_management.models.drugs.Prescription;
-import com.slmn.patient_management.views.structures.ViewWithFrame;
-import com.slmn.patient_management.views.LoginView;
-import com.slmn.patient_management.io.SystemDatabase;
-import com.slmn.patient_management.models.users.*;
+import com.slmn.patient_management.models.users.User;
 import com.slmn.patient_management.models.users.requests.AccountRequest;
+import com.slmn.patient_management.views.LoginView;
+import com.slmn.patient_management.views.structures.ViewWithFrame;
 
 import javax.swing.*;
 
@@ -20,6 +20,7 @@ public class Main {
     }
 
     public static JFrame frame = null;
+
     public static void switchView(ViewWithFrame frameForm) {
         JFrame newFrame = frameForm.getFrame();
         if (frame != null) frame.dispose();
@@ -33,6 +34,7 @@ public class Main {
         Main.test();
         Main.switchView(new LoginView());
     }
+
     public static void test() {
 
         SurgeryDay day = new SurgeryDay();
@@ -45,13 +47,13 @@ public class Main {
 
          */
 
-        for (AccountRequest request: SystemDatabase.connect().accountRequests) {
+        for (AccountRequest request : SystemDatabase.connect().accountRequests) {
             System.out.println(String.format("Request (%s): %s", request.getType(), request.getPatient().describe()));
         }
 
 
-        for (Prescription p: SystemDatabase.connect().prescriptions) {
-            System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(),p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
+        for (Prescription p : SystemDatabase.connect().prescriptions) {
+            System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(), p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
         }
 
         // Database write tests

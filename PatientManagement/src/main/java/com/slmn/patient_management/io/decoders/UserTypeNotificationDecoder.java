@@ -10,7 +10,7 @@ public class UserTypeNotificationDecoder extends JSONClassDecoder {
     public ArrayList<UserTypeNotification> decode(ArrayList<LinkedTreeMap> objects) {
         ArrayList<UserTypeNotification> output = new ArrayList<>();
 
-        for (LinkedTreeMap object: objects) {
+        for (LinkedTreeMap object : objects) {
             UserTypeNotification notification = new UserTypeNotification(object);
             output.add(notification);
         }

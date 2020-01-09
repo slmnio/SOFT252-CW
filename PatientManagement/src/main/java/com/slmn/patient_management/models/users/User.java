@@ -13,19 +13,18 @@ import com.slmn.patient_management.models.notifications.NotificationHandler;
 import java.util.ArrayList;
 
 /**
- *
  * @author solca
  */
 public abstract class User {
     private String ID;
-    
+
     private String givenName;
     private String surname; // will be private with get/set
     private String address;
     private String password;
     static final private int IDLength = 4;
 
-    
+
     // age and gender aren't required for all users, they can be added in subs
 
     public User() {
@@ -38,7 +37,7 @@ public abstract class User {
 
     public User(Class type, LinkedTreeMap object) {
         this(object);
-        this.ID = this.generateID(type.getSimpleName().substring(0,1));
+        this.ID = this.generateID(type.getSimpleName().substring(0, 1));
     }
 
 
@@ -50,7 +49,7 @@ public abstract class User {
         this.password = (String) object.get("password");
     }
 
-    
+
     public User(String code, String givenName, String surname, String address, String password) {
         this.ID = this.generateID(code);
 
@@ -75,7 +74,7 @@ public abstract class User {
         return null;
     }
 
-    
+
     private String generateID(String code) {
         // only allow ADPS for code - enum?
         // get general settings json, auto increment
@@ -86,32 +85,62 @@ public abstract class User {
 
         // should be (1 -> 0001) - 3 '0's to add
         int padCount = (User.IDLength - Integer.toString(newID).length());
-        
+
         return String.format("%s%s%s", code, "0".repeat(padCount), newID);
     }
-    
+
     public String describe() {
         return String.format("[%s] %s: %s %s", this.getClass().getSimpleName(), this.ID, this.givenName, this.surname);
     }
-    
-    public String getGivenName() { return this.givenName; }
-    public String getSurname() { return this.surname; }
-    public String getFullName() { return String.format("%s %s", this.givenName, this.surname); }
-    public String getAddress() { return this.address; }
-    public String getID() { return this.ID; }
 
-    public void setID(String ID) { this.ID = ID; }
-    public void setGivenName(String givenName) { this.givenName = givenName; }
+    public String getGivenName() {
+        return this.givenName;
+    }
+
+    public String getSurname() {
+        return this.surname;
+    }
+
+    public String getFullName() {
+        return String.format("%s %s", this.givenName, this.surname);
+    }
+
+    public String getAddress() {
+        return this.address;
+    }
+
+    public String getID() {
+        return this.ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public void setGivenName(String givenName) {
+        this.givenName = givenName;
+    }
 
     public boolean passwordMatches(String attempt) {
         if (attempt == null) attempt = "";
         return this.password.equals(attempt);
     }
 
-    public boolean isAdmin() { return Administrator.class.equals(this.getClass()); }
-    public boolean isSecretary() { return Secretary.class.equals(this.getClass()); }
-    public boolean isDoctor() { return Doctor.class.equals(this.getClass()); }
-    public boolean isPatient() { return Patient.class.equals(this.getClass()); }
+    public boolean isAdmin() {
+        return Administrator.class.equals(this.getClass());
+    }
+
+    public boolean isSecretary() {
+        return Secretary.class.equals(this.getClass());
+    }
+
+    public boolean isDoctor() {
+        return Doctor.class.equals(this.getClass());
+    }
+
+    public boolean isPatient() {
+        return Patient.class.equals(this.getClass());
+    }
 
 
     // Tells classes to remove their notifications/appointments etc

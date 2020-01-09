@@ -10,7 +10,7 @@ public class UserDecoder extends JSONClassDecoder {
     public ArrayList<User> decode(ArrayList<LinkedTreeMap> objects) {
 
         ArrayList<User> output = new ArrayList<>();
-        for (LinkedTreeMap object: objects) {
+        for (LinkedTreeMap object : objects) {
             User user = User.createAppropriateUser(object);
             output.add(user);
         }

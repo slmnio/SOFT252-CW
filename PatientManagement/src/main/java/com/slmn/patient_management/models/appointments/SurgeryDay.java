@@ -1,6 +1,5 @@
 package com.slmn.patient_management.models.appointments;
 
-import com.google.gson.internal.LinkedTreeMap;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.users.Doctor;
 
@@ -24,7 +23,7 @@ public class SurgeryDay {
 
     public void generateDoctorSlots(Doctor doctor) {
         this.generate();
-        for (TimeSlot timeslot: timeSlots) {
+        for (TimeSlot timeslot : timeSlots) {
             if (doctor.hasAppointmentAt(timeslot)) {
                 timeslot.setOccupied(true);
             }
@@ -41,7 +40,7 @@ public class SurgeryDay {
         int hoursPerDay = ((int) database.getEnvWithDefault("SURGERY_CLOSE", 19)) - startHour - 1;
         int totalSlotCount = (hoursPerDay * slotsPerHour);
 
-        System.out.println(String.format("Minutes per slot: %d. Slots per hour: %d. Hours per day: %d. Slots in total: %d", minutesPerSlot,slotsPerHour, hoursPerDay, totalSlotCount));
+        System.out.println(String.format("Minutes per slot: %d. Slots per hour: %d. Hours per day: %d. Slots in total: %d", minutesPerSlot, slotsPerHour, hoursPerDay, totalSlotCount));
 
         for (int i = 0; i < totalSlotCount; i++) {
             String formattedTime = this.getTime(startHour + (i / (double) slotsPerHour));

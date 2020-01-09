@@ -10,21 +10,21 @@ import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.Notification;
 
 /**
- *
  * @author solca
  */
 public class Administrator extends User {
-    
+
     public Administrator(String givenName, String surname, String address, String password) {
         super("A", givenName, surname, address, password);
     }
+
     public Administrator(LinkedTreeMap object) {
         super(object);
     }
 
     @Override
     public void destroyDependencies() {
-        for (Notification notification: SystemDatabase.connect().specificUserNotifications) {
+        for (Notification notification : SystemDatabase.connect().specificUserNotifications) {
             if (notification.isApplicableToUser(this)) notification.dismiss();
         }
     }

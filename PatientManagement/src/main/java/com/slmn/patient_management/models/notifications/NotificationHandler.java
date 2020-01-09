@@ -16,21 +16,34 @@ public class NotificationHandler {
         SystemDatabase.connect().writeAll();
         return notification;
     }
+
     public static UserTypeNotification createUserNotification(Class userClass, String content) {
         UserTypeNotification notification = new UserTypeNotification(userClass.getSimpleName(), content);
         SystemDatabase.connect().userTypeNotifications.add(notification);
         SystemDatabase.connect().writeAll();
         return notification;
     }
-    public static UserTypeNotification notifyAdmins(String content) { return createUserNotification(Administrator.class, content); }
-    public static UserTypeNotification notifyDoctors(String content) { return createUserNotification(Doctor.class, content); }
-    public static UserTypeNotification notifyPatients(String content) { return createUserNotification(Patient.class, content); }
-    public static UserTypeNotification notifySecretaries(String content) { return createUserNotification(Secretary.class, content); }
+
+    public static UserTypeNotification notifyAdmins(String content) {
+        return createUserNotification(Administrator.class, content);
+    }
+
+    public static UserTypeNotification notifyDoctors(String content) {
+        return createUserNotification(Doctor.class, content);
+    }
+
+    public static UserTypeNotification notifyPatients(String content) {
+        return createUserNotification(Patient.class, content);
+    }
+
+    public static UserTypeNotification notifySecretaries(String content) {
+        return createUserNotification(Secretary.class, content);
+    }
 
     public static ArrayList<Notification> applicableNotifications(User user) {
         ArrayList<Notification> output = new ArrayList<>();
 
-        for (Notification notification: getNotifications()) {
+        for (Notification notification : getNotifications()) {
             if (notification.isApplicableToUser(user)) {
                 output.add(notification);
             }
@@ -48,7 +61,7 @@ public class NotificationHandler {
     }
 
     public static void dismissAll(ArrayList<Notification> notifications) {
-        for (Notification notification: notifications) {
+        for (Notification notification : notifications) {
             notification.dismiss();
         }
         SystemDatabase.connect().writeAll();

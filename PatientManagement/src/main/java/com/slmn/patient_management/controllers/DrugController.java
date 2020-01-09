@@ -1,8 +1,8 @@
 package com.slmn.patient_management.controllers;
 
+import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.drugs.Medicine;
 import com.slmn.patient_management.models.drugs.Prescription;
-import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.NotificationHandler;
 import com.slmn.patient_management.models.users.Patient;
 
@@ -19,6 +19,7 @@ public class DrugController extends Controller {
         SystemDatabase.connect().prescriptions.add(prescription);
         SystemDatabase.connect().writeAll();
     }
+
     public void createMedicine(String name) {
         Medicine medicine = new Medicine(name);
         SystemDatabase.connect().medicines.add(medicine);
@@ -26,9 +27,10 @@ public class DrugController extends Controller {
         NotificationHandler.notifySecretaries(String.format("A new drug: \"%s\" requires stock to be ordered.", medicine.getName()));
         // handler writes to db
     }
+
     public ArrayList<Prescription> getPrescriptions(Patient patient) {
         ArrayList<Prescription> output = new ArrayList<>();
-        for (Prescription prescription: SystemDatabase.connect().prescriptions) {
+        for (Prescription prescription : SystemDatabase.connect().prescriptions) {
             if (prescription.getPatient().equals(patient)) {
                 output.add(prescription);
             }
@@ -39,6 +41,7 @@ public class DrugController extends Controller {
     public boolean canDispensePrescription(Prescription prescription) {
         return prescription.canDispense();
     }
+
     public void dispensePrescription(Prescription prescription) {
         if (!canDispensePrescription(prescription)) return;
         prescription.dispense();

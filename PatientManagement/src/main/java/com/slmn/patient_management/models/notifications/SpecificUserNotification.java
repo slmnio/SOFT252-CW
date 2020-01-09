@@ -11,13 +11,16 @@ public class SpecificUserNotification extends Notification {
         this.userID = userID;
         this.content = content;
     }
+
     public SpecificUserNotification(LinkedTreeMap map) {
         this.userID = (String) map.get("userID");
         this.content = (String) map.get("content");
     }
 
     @Override
-    public boolean isApplicableToUser(User user) { return user.getID().equals(this.userID); }
+    public boolean isApplicableToUser(User user) {
+        return user.getID().equals(this.userID);
+    }
 
     @Override
     public void dismiss() {

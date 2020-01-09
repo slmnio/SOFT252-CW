@@ -10,11 +10,10 @@ import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.Notification;
 
 /**
- *
  * @author Jill
  */
 public class Secretary extends User {
-    public Secretary (String givenName, String surname, String address, String password) {
+    public Secretary(String givenName, String surname, String address, String password) {
         super("S", givenName, surname, address, password);
     }
 
@@ -24,7 +23,7 @@ public class Secretary extends User {
 
     @Override
     public void destroyDependencies() {
-        for (Notification notification: SystemDatabase.connect().specificUserNotifications) {
+        for (Notification notification : SystemDatabase.connect().specificUserNotifications) {
             if (notification.isApplicableToUser(this)) notification.dismiss();
         }
     }

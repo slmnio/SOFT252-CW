@@ -9,7 +9,7 @@ public class PatientRecordDecoder extends JSONClassDecoder {
     @Override
     public ArrayList decode(ArrayList<LinkedTreeMap> objects) {
         ArrayList<PatientRecord> output = new ArrayList<>();
-        for (LinkedTreeMap object: objects) {
+        for (LinkedTreeMap object : objects) {
             output.add(new PatientRecord(object));
         }
         return output;
@@ -18,7 +18,7 @@ public class PatientRecordDecoder extends JSONClassDecoder {
     @Override
     public ArrayList encode(ArrayList objects) {
         ArrayList<LinkedTreeMap> output = new ArrayList<>();
-        for (Object object: objects) {
+        for (Object object : objects) {
             PatientRecord patientRecord = (PatientRecord) object;
             LinkedTreeMap map = new LinkedTreeMap();
 

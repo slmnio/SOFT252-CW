@@ -64,7 +64,6 @@ public class LoginView extends ViewWithFrame {
     }
 
 
-
     public void setData(AuthController data) {
         txtUsername.setText(data.getUsername());
         txtPassword.setText(data.getPassword());

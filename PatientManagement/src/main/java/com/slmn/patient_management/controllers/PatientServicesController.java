@@ -26,10 +26,10 @@ public class PatientServicesController extends Controller {
     public PatientRecord createPatientRecord(Patient patient, String content) {
         PatientRecord patientRecord = new PatientRecord(patient, content);
         SystemDatabase.connect().patientRecords.add(patientRecord);
-        SystemDatabase.connect().writeAll();;
+        SystemDatabase.connect().writeAll();
+        ;
         return patientRecord;
     }
-
 
 
 }

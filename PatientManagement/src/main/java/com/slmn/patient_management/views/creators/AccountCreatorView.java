@@ -1,11 +1,14 @@
 package com.slmn.patient_management.views.creators;
 
 import com.slmn.patient_management.controllers.AccountController;
+import com.slmn.patient_management.models.users.Administrator;
+import com.slmn.patient_management.models.users.Doctor;
+import com.slmn.patient_management.models.users.Secretary;
+import com.slmn.patient_management.models.users.User;
+import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
-import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
-import com.slmn.patient_management.models.users.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -51,6 +54,7 @@ public class AccountCreatorView extends ViewWithFrame {
             }
         });
     }
+
     private void close() {
         this.getFrame().dispose();
         // cleans it for next time

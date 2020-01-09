@@ -13,6 +13,7 @@ public class PatientRecord {
         this.content = content;
         this.patient = patient;
     }
+
     public PatientRecord(LinkedTreeMap map) {
         this.patient_id = (String) map.get("patient_id");
         this.content = (String) map.get("content");

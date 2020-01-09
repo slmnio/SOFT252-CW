@@ -1,13 +1,13 @@
 package com.slmn.patient_management.controllers;
 
 import com.slmn.patient_management.core.Main;
-import com.slmn.patient_management.views.structures.ViewWithFrame;
-import com.slmn.patient_management.views.NotificationView;
-import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
-import com.slmn.patient_management.views.main_menu.SecretaryMainMenu;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.notifications.Notification;
 import com.slmn.patient_management.models.users.User;
+import com.slmn.patient_management.views.NotificationView;
+import com.slmn.patient_management.views.main_menu.AdminMainMenuView;
+import com.slmn.patient_management.views.main_menu.SecretaryMainMenu;
+import com.slmn.patient_management.views.structures.ViewWithFrame;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,8 @@ public class AuthController extends Controller {
     private String username;
     private String password;
 
-    public AuthController() { }
+    public AuthController() {
+    }
 
     public String getUsername() {
         return username;

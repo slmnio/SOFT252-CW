@@ -1,10 +1,10 @@
 package com.slmn.patient_management.views.creators;
 
 import com.slmn.patient_management.controllers.AccountController;
+import com.slmn.patient_management.views.LoginView;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
-import com.slmn.patient_management.views.LoginView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -37,11 +37,12 @@ public class AccountRequestCreateView extends ViewWithFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // String code, String givenName, String surname, String address, String password
-                controller.requestPatient(txtGivenName.getText(), txtSurname.getText(), txtAddress.getText(), txtPassword.getText(), txtAge.getText(),txtSex.getText());
+                controller.requestPatient(txtGivenName.getText(), txtSurname.getText(), txtAddress.getText(), txtPassword.getText(), txtAge.getText(), txtSex.getText());
                 close();
             }
         });
     }
+
     private void close() {
         this.getFrame().dispose();
         // cleans it for next time
