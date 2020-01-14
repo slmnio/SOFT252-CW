@@ -46,49 +46,6 @@ public class Main {
     public static void main(String[] args) {
         // Main entry point of the program
         SystemDatabase.connect();
-        Main.test();
         Main.switchView(new LoginView());
-    }
-
-    public static void test() {
-
-        //SurgeryDay day = new SurgeryDay();
-        //day.generateEmpty();
-
-        /*
-        AccountRequest r = new AccountDeletionRequest(SystemDatabase.connect().patients.get(0));
-        SystemDatabase.connect().accountRequests.add(r);
-        SystemDatabase.connect().writeAll();
-
-         */
-/*
-        AppointmentController controller = new AppointmentController();
-
-        Appointment a = controller.createAppo
-        AppointmentRequest ar = new AppointmentRequest(a);
-        */
-
-
-        for (AppointmentRequest request : SystemDatabase.connect().appointmentRequests) {
-            System.out.println(request);
-            System.out.println(request.getAppointment());
-        }
-
-
-        for (Prescription p : SystemDatabase.connect().prescriptions) {
-            System.out.println(String.format("[Prescription for %s]: Take %sx %s (%s)", p.getPatient().getFullName(), p.getQuantity(), p.getMedicine().getName(), p.getDosage()));
-        }
-
-        // Database write tests
-        /*
-        Patient patient = new Patient("Stirling", "Davis", "40 Belgrave Avenue", "password", 28, "Male");
-        System.out.println(patient.describe());
-        SystemDatabase.connect().patients.add(patient);
-        SystemDatabase.connect().writeAll();
-
-        for (Patient p: SystemDatabase.connect().patients) {
-            System.out.println(p.describe());
-        }
-         */
     }
 }
