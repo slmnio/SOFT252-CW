@@ -17,6 +17,8 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class UserAppointmentView extends ViewWithFrame {
@@ -42,6 +44,14 @@ public class UserAppointmentView extends ViewWithFrame {
 
         pnlDoctorControls.setVisible(isDoctor());
         updateTable();
+
+
+        btnPrescription.addActionListener(z -> {
+            System.out.println("Prescription clicked");
+
+            if (selectedInput == null) return;
+            controller.routeAppointmentPrescription(selectedInput);
+        });
     }
 
 
@@ -100,8 +110,6 @@ public class UserAppointmentView extends ViewWithFrame {
         if (isDoctor()) {
             // No need to add this event listener when the patients can't use them
             tblAppointments.getSelectionModel().addListSelectionListener(e -> {
-                if (!e.getValueIsAdjusting()) {
-                    int selectedIndex = e.getFirstIndex();
                 if (!e.getValueIsAdjusting()) { // final event in chain
                     selectedInput = getAppointments().get(tblAppointments.getSelectedRow());
                     btnNotes.setEnabled(selectedInput != null);

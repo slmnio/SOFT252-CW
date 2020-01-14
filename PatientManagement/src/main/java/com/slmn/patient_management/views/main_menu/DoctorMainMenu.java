@@ -28,12 +28,6 @@ public class DoctorMainMenu extends ViewWithFrame {
         update();
         BasicRoutingController controller = new BasicRoutingController();
         btnPrescribe.addActionListener(e -> controller.routeToPrescriber());
-        btnViewRecords.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.routeToRecordsDoctorView(SystemDatabase.connect().patients.get(cbxPatients.getSelectedIndex()));
-            }
-        });
         btnViewRecords.addActionListener(e -> controller.routeToRecordsDoctorView(SystemDatabase.connect().patients.get(cbxPatients.getSelectedIndex())));
         btnCreateMed.addActionListener(e -> controller.routeToMedicineCreator());
         btnViewFeedback.addActionListener(e -> controller.routeToDoctorRatingDoctor());

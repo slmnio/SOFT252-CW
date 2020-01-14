@@ -1,5 +1,6 @@
 package com.slmn.patient_management.controllers;
 
+import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.appointments.Appointment;
 import com.slmn.patient_management.models.appointments.AppointmentRequest;
@@ -8,6 +9,7 @@ import com.slmn.patient_management.models.appointments.TimeSlot;
 import com.slmn.patient_management.models.notifications.NotificationHandler;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
+import com.slmn.patient_management.views.PrescriberView;
 
 import java.util.ArrayList;
 
@@ -70,6 +72,10 @@ public class AppointmentController extends Controller {
     public void declineAppointmentRequest(AppointmentRequest appointmentRequest) {
         showInfoMessage(String.format("The appointment request with Dr %s has been declined.", appointmentRequest.getAppointment().getDoctor().getFullName()), "Appointment request declined");
         appointmentRequest.decline();
+    }
+
+    public void routeAppointmentPrescription(Appointment appointment) {
+        Main.popupFrame(new PrescriberView(appointment));
     }
 
 }
