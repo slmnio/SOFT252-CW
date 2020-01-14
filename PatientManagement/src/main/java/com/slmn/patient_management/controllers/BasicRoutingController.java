@@ -4,6 +4,7 @@ import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
 import com.slmn.patient_management.views.*;
+import com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView;
 import com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView;
 import com.slmn.patient_management.views.creators.AccountCreatorView;
 import com.slmn.patient_management.views.creators.AccountQueueView;
@@ -83,6 +84,9 @@ public class BasicRoutingController extends Controller {
 
     public void routeToPatientAppointmentRequester() {
         Main.switchView(new PatientAppointmentRequesterView());
+    }
+    public void routeToDoctorAppointmentRequester() {
+        Main.switchView(new DoctorAppointmentRequesterView());
     }
 
     public void routeToAppointmentQueue() {

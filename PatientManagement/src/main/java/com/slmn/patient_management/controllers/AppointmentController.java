@@ -41,7 +41,21 @@ public class AppointmentController extends Controller {
         SystemDatabase.connect().appointmentRequests.add(request);
         SystemDatabase.connect().writeAll();
         showInfoMessage(String.format("Your appointment with Dr %s has been requested.", request.getAppointment().getDoctor().getFullName()), "Request submitted");
-        NotificationHandler.notifySecretaries(String.format("A new appointment has been requested by %s %s", patient.getID(), patient.getFullName()));
+        NotificationHandler.notifySecretaries(String.format("A new appointment has been requested by %s %s with Dr %s", patient.getID(), patient.getFullName(), doctor.getSurname()));
+
+        return request;
+    }
+    public AppointmentRequest requestAppointment(Doctor doctor, Patient patient, String date, TimeSlot timeSlot) {
+        if (doctor.hasAppointmentAt(date, timeSlot)) {
+            showErrorMessage(String.format("Dr %s already has an appointment at that time.", doctor.getFullName()));
+            return null;
+        }
+
+        AppointmentRequest request = new AppointmentRequest(new Appointment(patient, doctor, date, timeSlot.toString()));
+        SystemDatabase.connect().appointmentRequests.add(request);
+        SystemDatabase.connect().writeAll();
+        showInfoMessage(String.format("Your appointment with %s has been requested.", request.getAppointment().getPatient().getFullName()), "Request submitted");
+        NotificationHandler.notifySecretaries(String.format("A new appointment has been requested by Dr %s with [ID: %s] %s", doctor.getSurname(), patient.getID(), patient.getFullName()));
 
         return request;
     }
