@@ -102,7 +102,8 @@ public class UserAppointmentView extends ViewWithFrame {
             tblAppointments.getSelectionModel().addListSelectionListener(e -> {
                 if (!e.getValueIsAdjusting()) {
                     int selectedIndex = e.getFirstIndex();
-                    selectedInput = getAppointments().get(selectedIndex);
+                if (!e.getValueIsAdjusting()) { // final event in chain
+                    selectedInput = getAppointments().get(tblAppointments.getSelectedRow());
                     btnNotes.setEnabled(selectedInput != null);
                     btnPrescription.setEnabled(selectedInput != null);
                 }
@@ -112,6 +113,7 @@ public class UserAppointmentView extends ViewWithFrame {
 
     @Override
     public SwitchableFrame getFrame() {
+        System.out.println("Framing Appt viewer");
         return new SubFrame("Appointment Viewer", this.mainPanel, this.returnView);
     }
 }

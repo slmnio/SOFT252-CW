@@ -37,6 +37,12 @@ public class Main {
         frame = newFrame;
     }
 
+    public static void popupFrame(ViewWithFrame frameForm) {
+        // No destruction
+        JFrame newFrame = frameForm.getFrame();
+        newFrame.setVisible(true);
+    }
+
     public static void main(String[] args) {
         // Main entry point of the program
         SystemDatabase.connect();

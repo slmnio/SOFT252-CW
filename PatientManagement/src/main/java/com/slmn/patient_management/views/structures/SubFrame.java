@@ -7,11 +7,15 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class SubFrame extends SwitchableFrame {
+    private String title;
+    private JPanel panel;
     /*
      * Frame that should return to another frame when it's closed
      * */
 
     public SubFrame(String title, JPanel panel, ViewWithFrame returnView) {
+        this.title = title;
+        this.panel = panel;
         this.setTitle(title);
         this.setContentPane(panel);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -21,7 +25,7 @@ public class SubFrame extends SwitchableFrame {
             @Override
             public void windowClosed(WindowEvent e) {
                 super.windowClosed(e);
-                Main.switchView(returnView);
+                if(returnView != null) Main.switchView(returnView);
             }
         });
     }

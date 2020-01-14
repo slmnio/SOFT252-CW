@@ -34,6 +34,7 @@ public class DoctorMainMenu extends ViewWithFrame {
                 controller.routeToRecordsDoctorView(SystemDatabase.connect().patients.get(cbxPatients.getSelectedIndex()));
             }
         });
+        btnViewRecords.addActionListener(e -> controller.routeToRecordsDoctorView(SystemDatabase.connect().patients.get(cbxPatients.getSelectedIndex())));
         btnCreateMed.addActionListener(e -> controller.routeToMedicineCreator());
         btnViewFeedback.addActionListener(e -> controller.routeToDoctorRatingDoctor());
         btnViewAppointments.addActionListener(e -> controller.routeToAppointmentView((Doctor) Main.authenticatedUser));
