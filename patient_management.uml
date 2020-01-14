@@ -1,0 +1,2634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.slmn.patient_management</OriginalElement>
+  <nodes>
+    <node x="1658.9379653267333" y="4994.0">com.slmn.patient_management.controllers.PatientServicesController</node>
+    <node x="1132.434022087511" y="947.0">com.slmn.patient_management.models.appointments.AppointmentRequest</node>
+    <node x="5493.4339423426945" y="6179.0">com.slmn.patient_management.controllers.AccountController</node>
+    <node x="5381.208511189101" y="1420.0">com.slmn.patient_management.io.decoders.DoctorReportDecoder</node>
+    <node x="10812.469415350723" y="1420.0">com.slmn.patient_management.io.decoders.PrescriptionDecoder</node>
+    <node x="11924.524970906277" y="601.0">com.slmn.patient_management.io.JSONFile</node>
+    <node x="10753.469415350723" y="936.0">com.slmn.patient_management.io.JSONArrayFile</node>
+    <node x="5712.3487150699675" y="8401.0">com.slmn.patient_management.views.creators.AccountCreatorView</node>
+    <node x="4584.537931868774" y="9068.0">com.slmn.patient_management.controllers.BasicRoutingController</node>
+    <node x="2841.4548388073426" y="893.0">com.slmn.patient_management.models.patient_services.DoctorReport</node>
+    <node x="473.352789063978" y="3192.0">com.slmn.patient_management.models.appointments.SurgeryDay</node>
+    <node x="6554.5418968881495" y="8511.0">com.slmn.patient_management.controllers.AuthController</node>
+    <node x="10985.057930160434" y="0.0">com.slmn.patient_management.models.drugs</node>
+    <node x="6244.236288966878" y="3234.0">com.slmn.patient_management.controllers.Controller</node>
+    <node x="5973.3487150699675" y="7047.0">com.slmn.patient_management.views.main_menu.AdminMainMenu</node>
+    <node x="4329.23967827343" y="8478.0">com.slmn.patient_management.views.DoctorRatingPatientView</node>
+    <node x="3739.2777857648784" y="4823.142857142857">com.slmn.patient_management.views.main_menu.DoctorMainMenu</node>
+    <node x="7417.850230221484" y="8522.0">com.slmn.patient_management.views.MedicineStockView</node>
+    <node x="7071.135944507198" y="6982.0">com.slmn.patient_management.views.creators.AccountRequestCreateView</node>
+    <node x="6398.0418968881495" y="7025.0">com.slmn.patient_management.views.main_menu.SecretaryMainMenu</node>
+    <node x="3996.7726075094465" y="8522.0">com.slmn.patient_management.views.PatientRecordsSelfView</node>
+    <node x="3087.5692377281666" y="6170.0">com.slmn.patient_management.views.DoctorRatingAdminView</node>
+    <node x="7737.640408792913" y="6192.0">com.slmn.patient_management.views.PrescriptionListView</node>
+    <node x="1170.8692518764392" y="8379.0">com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView</node>
+    <node x="1217.7442518764392" y="6159.0">com.slmn.patient_management.views.PatientRecordsDoctorView</node>
+    <node x="11148.146498684056" y="903.0">com.slmn.patient_management.models.notifications.UserTypeNotification</node>
+    <node x="6786.319674665927" y="9641.0">com.slmn.patient_management.views.LoginView</node>
+    <node x="10059.086723043032" y="1431.0">com.slmn.patient_management.io.decoders.UserTypeNotificationDecoder</node>
+    <node x="11030.969415350723" y="3179.0">com.slmn.patient_management.models.notifications.NotificationHandler</node>
+    <node x="2213.3563539588563" y="936.0">com.slmn.patient_management.models.patient_services.PatientRecord</node>
+    <node x="9686.086723043032" y="1431.0">com.slmn.patient_management.io.decoders.MedicineDecoder</node>
+    <node x="7545.424829358759" y="3279.0">com.slmn.patient_management.views.structures</node>
+    <node x="9870.215141698896" y="8543.0">com.slmn.patient_management.models.users.UserTest</node>
+    <node x="5016.222632818884" y="8489.0">com.slmn.patient_management.views.creators.AccountQueueView</node>
+    <node x="9053.345487429706" y="968.0">com.slmn.patient_management.io.decoders.JSONClassDecoder</node>
+    <node x="6816.135944507198" y="8456.0">com.slmn.patient_management.views.PrescriptionDispenserView</node>
+    <node x="7363.568980221484" y="7026.0">com.slmn.patient_management.views.NotificationView</node>
+    <node x="6727.881498259003" y="1717.0">com.slmn.patient_management.io.SystemDatabase</node>
+    <node x="9461.54403756863" y="4798.0">com.slmn.patient_management.models.users.User</node>
+    <node x="5022.708511189101" y="1420.0">com.slmn.patient_management.io.decoders.PatientRecordDecoder</node>
+    <node x="4710.222632818884" y="8434.0">com.slmn.patient_management.views.UserAppointmentView</node>
+    <node x="6512.863325459578" y="6214.0">com.slmn.patient_management.views.MedicineCreatorView</node>
+    <node x="1743.0887159342656" y="1420.0">com.slmn.patient_management.io.decoders.AppointmentRequestDecoder</node>
+    <node x="9089.000184581493" y="1431.0">com.slmn.patient_management.io.decoders.UserDecoder</node>
+    <node x="1455.8692518764392" y="8357.0">com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView</node>
+    <node x="2780.4548388073417" y="2770.0">com.slmn.patient_management.models.users.Doctor</node>
+    <node x="10969.445327173296" y="6246.0">com.slmn.patient_management.models.notifications.Notification</node>
+    <node x="5214.222632818884" y="8522.0">com.slmn.patient_management.views.PatientManagerView</node>
+    <node x="479.02778906397907" y="2015.0">com.slmn.patient_management.models.appointments.TimeSlot</node>
+    <node x="9776.965141698896" y="7123.0">com.slmn.patient_management.models.users.Administrator</node>
+    <node x="6155.4481468881495" y="8511.0">com.slmn.patient_management.views.AdminAccountManagerView</node>
+    <node x="1282.9617998652893" y="590.0">com.slmn.patient_management.models.appointments.Appointment</node>
+    <node x="11462.52497090628" y="1431.0">com.slmn.patient_management.io.decoders.UserNotificationDecoder</node>
+    <node x="2222.178006869938" y="1420.0">com.slmn.patient_management.io.decoders.AppointmentDecoder</node>
+    <node x="11946.024970906277" y="947.0">com.slmn.patient_management.io.JSONObjectFile</node>
+    <node x="3953.57215805925" y="6137.0">com.slmn.patient_management.views.PrescriberView</node>
+    <node x="12229.174970906279" y="655.0">com.slmn.patient_management.models.users.Secretary</node>
+    <node x="10494.086723043032" y="1388.0">com.slmn.patient_management.io.JSONArrayDecoder</node>
+    <node x="5710.736288966878" y="1420.0">com.slmn.patient_management.io.decoders.AccountRequestDecoder</node>
+    <node x="298.14372469635236" y="7035.0">com.slmn.patient_management.controllers.AppointmentController</node>
+    <node x="5966.625244221672" y="10150.0">com.slmn.patient_management.core.Main</node>
+    <node x="226.28261358524105" y="8379.0">com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView</node>
+    <node x="11700.02497090628" y="947.0">com.slmn.patient_management.models.notifications.SpecificUserNotification</node>
+    <node x="5605.47240007799" y="991.0">com.slmn.patient_management.models.users.requests</node>
+    <node x="8868.809889803739" y="4950.0">com.slmn.patient_management.controllers.DrugController</node>
+    <node x="5354.7893265418315" y="179.0">com.slmn.patient_management.models.users.Patient</node>
+    <node x="4992.746265202107" y="7004.0">com.slmn.patient_management.views.main_menu.PatientMainMenu</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.slmn.patient_management.models.users.Patient" target="com.slmn.patient_management.models.patient_services.PatientRecord">
+      <point x="-33.23076923076951" y="90.5" />
+      <point x="5483.558557311062" y="530.0" />
+      <point x="2271.856353958856" y="530.0" />
+      <point x="2271.856353958856" y="873.0" />
+      <point x="2236.5230206255233" y="873.0" />
+      <point x="-46.33333333333303" y="-69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.PatientRecordsSelfView">
+      <point x="-42.18181818181847" y="-246.5" />
+      <point x="4716.356113686956" y="8928.0" />
+      <point x="4155.022607509447" y="8928.0" />
+      <point x="52.75" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="37.75" y="-101.5" />
+      <point x="6667.7918968881495" y="8167.0" />
+      <point x="7716.140408792913" y="8167.0" />
+      <point x="7716.140408792913" y="4728.0" />
+      <point x="8572.713222215902" y="4728.0" />
+      <point x="8572.713222215902" y="2720.0" />
+      <point x="6932.5750466460995" y="2720.0" />
+      <point x="33.1935483870966" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.models.notifications.NotificationHandler">
+      <point x="60.0" y="-244.5" />
+      <point x="9711.54403756863" y="4698.0" />
+      <point x="11100.906915350723" y="4698.0" />
+      <point x="-116.5625" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView">
+      <point x="-158.18181818181847" y="-246.5" />
+      <point x="4600.356113686956" y="9038.0" />
+      <point x="419.78261358524105" y="9038.0" />
+      <point x="64.5" y="233.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.views.structures">
+      <point x="55.20833333333303" y="-233.5" />
+      <point x="1358.5775852097722" y="7787.0" />
+      <point x="4770.220967583059" y="7787.0" />
+      <point x="4770.220967583059" y="4048.0" />
+      <point x="7580.222448406377" y="4048.0" />
+      <point x="-44.202380952380736" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.DrugController" target="com.slmn.patient_management.models.notifications.NotificationHandler">
+      <point x="49.14285714285688" y="-92.5" />
+      <point x="9089.952746946597" y="4688.0" />
+      <point x="11054.281915350723" y="4688.0" />
+      <point x="-163.1875" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.DoctorMainMenu" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-92.91666666666652" y="-156.5" />
+      <point x="3855.003976241069" y="3628.0" />
+      <point x="3028.617338807342" y="3628.0" />
+      <point x="3028.617338807342" y="3129.0" />
+      <point x="3005.229838807342" y="3129.0" />
+      <point x="58.27500000000009" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-138.15277777777737" y="-366.5" />
+      <point x="6761.2287204812255" y="1667.0" />
+      <point x="2041.5887159342656" y="1667.0" />
+      <point x="2041.5887159342656" y="833.0" />
+      <point x="1393.0933788126576" y="833.0" />
+      <point x="42.631578947368325" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AccountRequestDecoder" target="com.slmn.patient_management.models.users.requests">
+      <point x="-57.600000000000364" y="-37.5" />
+      <point x="5797.136288966878" y="1298.0" />
+      <point x="5740.47240007799" y="1298.0" />
+      <point x="63.0" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsSelfView" target="com.slmn.patient_management.core.Main">
+      <point x="-52.75" y="90.5" />
+      <point x="4049.5226075094465" y="10080.0" />
+      <point x="6038.125244221672" y="10080.0" />
+      <point x="-45.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.JSONArrayDecoder">
+      <point x="52.402777777777374" y="-366.5" />
+      <point x="6951.78427603678" y="1577.0" />
+      <point x="10542.586723043032" y="1577.0" />
+      <point x="-48.5" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingPatientView" target="com.slmn.patient_management.views.structures">
+      <point x="39.1875" y="-134.5" />
+      <point x="4472.92717827343" y="7887.0" />
+      <point x="4971.246265202107" y="7887.0" />
+      <point x="4971.246265202107" y="4148.0" />
+      <point x="7599.031972215902" y="4148.0" />
+      <point x="-25.392857142856883" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.DrugController" target="com.slmn.patient_management.controllers.Controller">
+      <point x="-147.42857142857065" y="-92.5" />
+      <point x="8893.38131837517" y="3618.0" />
+      <point x="6454.673788966878" y="3618.0" />
+      <point x="80.9375" y="59.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.DoctorMainMenu" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-18.583333333333485" y="-156.5" />
+      <point x="3929.337309574402" y="3828.0" />
+      <point x="6513.736288966878" y="3828.0" />
+      <point x="6513.736288966878" y="2700.0" />
+      <point x="6855.123433742874" y="2700.0" />
+      <point x="-44.2580645161288" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountQueueView" target="com.slmn.patient_management.views.structures">
+      <point x="-19.777777777777374" y="-123.5" />
+      <point x="5085.444855041107" y="8017.0" />
+      <point x="5375.09596758306" y="8017.0" />
+      <point x="5375.09596758306" y="4238.0" />
+      <point x="7615.960543644473" y="4238.0" />
+      <point x="-8.464285714285325" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.requests" target="com.slmn.patient_management.models.users.Patient">
+      <point x="36.0" y="-14.5" />
+      <point x="5713.47240007799" y="560.0" />
+      <point x="5533.404711157216" y="560.0" />
+      <point x="16.615384615384755" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="154.9032258064517" y="366.5" />
+      <point x="7054.284724065454" y="2610.0" />
+      <point x="9265.713222215902" y="2610.0" />
+      <point x="9265.713222215902" y="3069.0" />
+      <point x="9852.04403756863" y="3069.0" />
+      <point x="9852.04403756863" y="5827.0" />
+      <point x="11057.334216062185" y="5827.0" />
+      <point x="-25.111111111111313" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineStockView" target="com.slmn.patient_management.controllers.DrugController">
+      <point x="35.4375" y="-90.5" />
+      <point x="7547.787730221484" y="8217.0" />
+      <point x="8792.309889803739" y="8217.0" />
+      <point x="8792.309889803739" y="5947.0" />
+      <point x="9161.20988980374" y="5947.0" />
+      <point x="120.39999999999964" y="92.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView">
+      <point x="-137.09090909090946" y="-246.5" />
+      <point x="4621.447022777864" y="9018.0" />
+      <point x="1369.6192518764392" y="9018.0" />
+      <point x="66.25" y="233.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.PatientMainMenu" target="com.slmn.patient_management.views.structures">
+      <point x="-60.25" y="-145.5" />
+      <point x="5052.996265202107" y="6892.0" />
+      <point x="5018.561741392583" y="6892.0" />
+      <point x="5018.561741392583" y="4168.0" />
+      <point x="7602.793876977807" y="4168.0" />
+      <point x="-21.630952380952294" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.notifications.UserTypeNotification">
+      <point x="-23.3125" y="-114.5" />
+      <point x="11194.156915350723" y="3159.0" />
+      <point x="11211.969415350723" y="3159.0" />
+      <point x="11211.969415350723" y="1358.0" />
+      <point x="11286.257609795168" y="1358.0" />
+      <point x="25.111111111111313" y="102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.AdminMainMenu" target="com.slmn.patient_management.core.Main">
+      <point x="31.857142857142662" y="102.5" />
+      <point x="6116.705857927111" y="8107.0" />
+      <point x="6140.4168968881495" y="8107.0" />
+      <point x="6140.4168968881495" y="10040.0" />
+      <point x="6077.125244221672" y="10040.0" />
+      <point x="-6.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.PatientRecordDecoder" target="com.slmn.patient_management.models.patient_services.PatientRecord">
+      <point x="0.0" y="-37.5" />
+      <point x="5166.708511189101" y="1168.0" />
+      <point x="2343.6688539588563" y="1168.0" />
+      <point x="60.8125" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Patient" target="com.slmn.patient_management.models.drugs">
+      <point x="-40.5" y="-90.5" />
+      <point x="5476.2893265418315" y="99.0" />
+      <point x="11012.732930160433" y="99.0" />
+      <point x="-33.82500000000073" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-44.0" y="-167.5" />
+      <point x="4030.57215805925" y="5397.0" />
+      <point x="2615.0587986600663" y="5397.0" />
+      <point x="2615.0587986600663" y="3638.0" />
+      <point x="4991.680733411324" y="3638.0" />
+      <point x="4991.680733411324" y="560.0" />
+      <point x="5508.481634234138" y="560.0" />
+      <point x="-8.307692307692378" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.PatientServicesController" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="98.125" y="-48.5" />
+      <point x="1914.0629653267333" y="3568.0" />
+      <point x="2390.3962986600663" y="3568.0" />
+      <point x="2390.3962986600663" y="3159.0" />
+      <point x="6020.236288966878" y="3159.0" />
+      <point x="6020.236288966878" y="2630.0" />
+      <point x="6777.671820839647" y="2630.0" />
+      <point x="-121.7096774193551" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsSelfView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-87.91666666666652" y="-90.5" />
+      <point x="4014.35594084278" y="7577.0" />
+      <point x="287.64372469635236" y="7577.0" />
+      <point x="287.64372469635236" y="6562.0" />
+      <point x="153.17347477342537" y="6562.0" />
+      <point x="153.17347477342537" y="6097.0" />
+      <point x="96.4230769230744" y="6097.0" />
+      <point x="96.4230769230744" y="4588.0" />
+      <point x="419.92490444859504" y="4588.0" />
+      <point x="419.92490444859504" y="440.0" />
+      <point x="5408.7893265418315" y="440.0" />
+      <point x="-108.0" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountQueueView" target="com.slmn.patient_management.views.main_menu.SecretaryMainMenu">
+      <point x="79.11111111111131" y="-123.5" />
+      <point x="5184.333743929996" y="8127.0" />
+      <point x="6434.0418968881495" y="8127.0" />
+      <point x="-72.0" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionDispenserView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="0.0" y="-156.5" />
+      <point x="6927.635944507198" y="8177.0" />
+      <point x="7727.140408792913" y="8177.0" />
+      <point x="7727.140408792913" y="4738.0" />
+      <point x="8583.713222215902" y="4738.0" />
+      <point x="8583.713222215902" y="2710.0" />
+      <point x="6943.639562775132" y="2710.0" />
+      <point x="44.2580645161288" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.PrescriberView">
+      <point x="-52.727272727272975" y="-246.5" />
+      <point x="4705.810659141501" y="8938.0" />
+      <point x="3785.2851468190756" y="8938.0" />
+      <point x="3785.2851468190756" y="6882.0" />
+      <point x="4135.07215805925" y="6882.0" />
+      <point x="60.5" y="167.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.SurgeryDay" target="com.slmn.patient_management.models.appointments.TimeSlot">
+      <point x="0.0" y="-101.5" />
+      <point x="569.852789063978" y="3159.0" />
+      <point x="583.6527890639791" y="3159.0" />
+      <point x="583.6527890639791" y="2750.0" />
+      <point x="561.1527890639791" y="2750.0" />
+      <point x="9.125" y="68.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientManagerView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-55.3125" y="-90.5" />
+      <point x="5247.410132818884" y="7427.0" />
+      <point x="4663.69715805925" y="7427.0" />
+      <point x="4663.69715805925" y="3868.0" />
+      <point x="6703.800682906272" y="3868.0" />
+      <point x="6703.800682906272" y="2740.0" />
+      <point x="6899.381498259003" y="2740.0" />
+      <point x="0.0" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.DoctorRatingPatientView">
+      <point x="-31.636363636363512" y="-246.5" />
+      <point x="4726.90156823241" y="8918.0" />
+      <point x="4433.73967827343" y="8918.0" />
+      <point x="0.0" y="134.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.main_menu.AdminMainMenu">
+      <point x="73.81818181818198" y="-246.5" />
+      <point x="4832.356113686956" y="8958.0" />
+      <point x="6029.121442342695" y="8958.0" />
+      <point x="6029.121442342695" y="8107.0" />
+      <point x="6052.991572212824" y="8107.0" />
+      <point x="-31.857142857142662" y="102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.NotificationView" target="com.slmn.patient_management.models.notifications.NotificationHandler">
+      <point x="80.0" y="-123.5" />
+      <point x="7539.568980221484" y="6942.0" />
+      <point x="11298.406915350723" y="6942.0" />
+      <point x="11298.406915350723" y="4698.0" />
+      <point x="11334.031915350723" y="4698.0" />
+      <point x="116.5625" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-100.0" y="-244.5" />
+      <point x="9551.54403756863" y="3548.0" />
+      <point x="8940.963222215902" y="3548.0" />
+      <point x="8940.963222215902" y="2630.0" />
+      <point x="7032.155691807389" y="2630.0" />
+      <point x="132.7741935483873" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.core.Main" target="com.slmn.patient_management.views.structures">
+      <point x="45.5" y="-102.5" />
+      <point x="6129.125244221672" y="10080.0" />
+      <point x="7323.659754031007" y="10080.0" />
+      <point x="7323.659754031007" y="4578.0" />
+      <point x="7679.912924596854" y="4578.0" />
+      <point x="55.48809523809541" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientManagerView" target="com.slmn.patient_management.views.main_menu.SecretaryMainMenu">
+      <point x="77.4375" y="-90.5" />
+      <point x="5380.160132818884" y="8137.0" />
+      <point x="6458.0418968881495" y="8137.0" />
+      <point x="-48.0" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.views.structures">
+      <point x="21.818181818181984" y="-211.5" />
+      <point x="5854.1668968881495" y="8107.0" />
+      <point x="5838.1214423426945" y="8107.0" />
+      <point x="5838.1214423426945" y="6782.0" />
+      <point x="6235.0390559790585" y="6782.0" />
+      <point x="6235.0390559790585" y="4328.0" />
+      <point x="7632.889115073043" y="4328.0" />
+      <point x="8.464285714285325" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView">
+      <point x="-126.54545454545496" y="-246.5" />
+      <point x="4631.992477323319" y="9008.0" />
+      <point x="1588.3692518764392" y="9008.0" />
+      <point x="0.0" y="255.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.DrugController" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-49.14285714285688" y="-92.5" />
+      <point x="8991.667032660884" y="3598.0" />
+      <point x="8929.963222215902" y="3598.0" />
+      <point x="8929.963222215902" y="2640.0" />
+      <point x="7021.091175678357" y="2640.0" />
+      <point x="121.7096774193551" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.AppointmentRequest" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-58.666666666666515" y="-58.5" />
+      <point x="1161.767355420845" y="843.0" />
+      <point x="1322.0407472337101" y="843.0" />
+      <point x="-28.421052631578732" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.creators.AccountRequestCreateView">
+      <point x="137.090909090909" y="-246.5" />
+      <point x="4895.628840959683" y="9018.0" />
+      <point x="6523.789624160877" y="9018.0" />
+      <point x="6523.789624160877" y="8107.0" />
+      <point x="7125.135944507198" y="8107.0" />
+      <point x="-54.0" y="167.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="69.9375" y="114.5" />
+      <point x="11287.406915350723" y="6057.0" />
+      <point x="11107.556438284408" y="6057.0" />
+      <point x="25.111111111111313" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.users.User">
+      <point x="143.8387096774195" y="366.5" />
+      <point x="7043.2202079364215" y="2620.0" />
+      <point x="8951.963222215902" y="2620.0" />
+      <point x="8951.963222215902" y="3538.0" />
+      <point x="9571.54403756863" y="3538.0" />
+      <point x="-80.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.UserAppointmentView" target="com.slmn.patient_management.controllers.AppointmentController">
+      <point x="-130.0" y="-178.5" />
+      <point x="4723.222632818884" y="7517.0" />
+      <point x="673.9770580296854" y="7517.0" />
+      <point x="150.33333333333326" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.models.users.Patient">
+      <point x="56.25" y="-125.5" />
+      <point x="5737.1839423426945" y="5857.0" />
+      <point x="7694.140408792913" y="5857.0" />
+      <point x="7694.140408792913" y="4708.0" />
+      <point x="8550.713222215902" y="4708.0" />
+      <point x="8550.713222215902" y="3089.0" />
+      <point x="9426.500184581493" y="3089.0" />
+      <point x="9426.500184581493" y="490.0" />
+      <point x="5591.558557311062" y="490.0" />
+      <point x="74.76923076923049" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.drugs" target="com.slmn.patient_management.models.drugs">
+      <point x="-58.42500000000018" y="14.5" />
+      <point x="10988.132930160433" y="49.0" />
+      <point x="10965.057930160434" y="49.0" />
+      <point x="10965.057930160434" y="21.75" />
+      <point x="-61.5" y="7.25" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.PatientMainMenu" target="com.slmn.patient_management.core.Main">
+      <point x="-15.0625" y="145.5" />
+      <point x="5098.183765202107" y="7937.0" />
+      <point x="4574.037931868774" y="7937.0" />
+      <point x="4574.037931868774" y="10070.0" />
+      <point x="6051.125244221672" y="10070.0" />
+      <point x="-32.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Doctor" target="com.slmn.patient_management.models.users.User">
+      <point x="91.57499999999982" y="124.5" />
+      <point x="3038.5298388073415" y="3109.0" />
+      <point x="4938.118233411324" y="3109.0" />
+      <point x="4938.118233411324" y="3588.0" />
+      <point x="9471.54403756863" y="3588.0" />
+      <point x="-180.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientManagerView" target="com.slmn.patient_management.views.structures">
+      <point x="11.0625" y="-90.5" />
+      <point x="5313.785132818884" y="8077.0" />
+      <point x="5482.0068590093615" y="8077.0" />
+      <point x="5482.0068590093615" y="4288.0" />
+      <point x="7625.365305549234" y="4288.0" />
+      <point x="0.9404761904761472" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.DoctorReportDecoder" target="com.slmn.patient_management.models.patient_services.DoctorReport">
+      <point x="-96.0" y="-37.5" />
+      <point x="5429.208511189101" y="1148.0" />
+      <point x="3030.1548388073425" y="1148.0" />
+      <point x="77.69999999999982" y="112.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.PatientServicesController" target="com.slmn.patient_management.models.patient_services.DoctorReport">
+      <point x="19.625" y="-48.5" />
+      <point x="1835.5629653267333" y="3498.0" />
+      <point x="2090.705236402102" y="3498.0" />
+      <point x="2090.705236402102" y="2570.0" />
+      <point x="2531.678006869938" y="2570.0" />
+      <point x="2531.678006869938" y="1298.0" />
+      <point x="2874.754838807343" y="1298.0" />
+      <point x="-77.69999999999982" y="112.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.DoctorMainMenu" target="com.slmn.patient_management.core.Main">
+      <point x="-49.55555555555566" y="156.5" />
+      <point x="3898.3650873521797" y="5747.0" />
+      <point x="3605.1942377281666" y="5747.0" />
+      <point x="3605.1942377281666" y="6832.0" />
+      <point x="3567.1487831827126" y="6832.0" />
+      <point x="3567.1487831827126" y="10090.0" />
+      <point x="6025.125244221672" y="10090.0" />
+      <point x="-58.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineCreatorView" target="com.slmn.patient_management.views.structures">
+      <point x="-15.08333333333394" y="-90.5" />
+      <point x="6588.279992126245" y="4418.0" />
+      <point x="7649.817686501616" y="4418.0" />
+      <point x="25.392857142856883" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-22.0" y="-167.5" />
+      <point x="4052.57215805925" y="5387.0" />
+      <point x="3454.5692377281666" y="5387.0" />
+      <point x="3454.5692377281666" y="3758.0" />
+      <point x="6233.736288966878" y="3758.0" />
+      <point x="6233.736288966878" y="2690.0" />
+      <point x="6844.058917613842" y="2690.0" />
+      <point x="-55.322580645161" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-121.45833333333303" y="-233.5" />
+      <point x="1181.9109185431062" y="7687.0" />
+      <point x="27.615384615382936" y="7687.0" />
+      <point x="27.615384615382936" y="4558.0" />
+      <point x="392.3095198332103" y="4558.0" />
+      <point x="392.3095198332103" y="410.0" />
+      <point x="5383.8662496187535" y="410.0" />
+      <point x="-132.92307692307713" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-61.153846153846644" y="-255.5" />
+      <point x="1527.2154057225925" y="7607.0" />
+      <point x="229.09109311740394" y="7607.0" />
+      <point x="229.09109311740394" y="6572.0" />
+      <point x="325.09109311740394" y="6572.0" />
+      <point x="325.09109311740394" y="4688.0" />
+      <point x="966.1570920026415" y="4688.0" />
+      <point x="966.1570920026415" y="2520.0" />
+      <point x="1028.4425171038565" y="2520.0" />
+      <point x="1028.4425171038565" y="793.0" />
+      <point x="1286.5144314442368" y="793.0" />
+      <point x="-63.94736842105249" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.views.main_menu.SecretaryMainMenu">
+      <point x="-22.649999999999636" y="-101.5" />
+      <point x="6607.39189688815" y="7367.0" />
+      <point x="6554.0418968881495" y="7367.0" />
+      <point x="48.0" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="18.75" y="-125.5" />
+      <point x="5699.6839423426945" y="3878.0" />
+      <point x="7470.960543644473" y="3878.0" />
+      <point x="7470.960543644473" y="2740.0" />
+      <point x="6910.446014388035" y="2740.0" />
+      <point x="11.0645161290322" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.models.appointments.TimeSlot">
+      <point x="-81.53846153846189" y="-255.5" />
+      <point x="1506.8307903379773" y="7617.0" />
+      <point x="142.17347477342537" y="7617.0" />
+      <point x="142.17347477342537" y="6572.0" />
+      <point x="203.827320927272" y="6572.0" />
+      <point x="203.827320927272" y="6117.0" />
+      <point x="280.2307692307659" y="6117.0" />
+      <point x="280.2307692307659" y="4658.0" />
+      <point x="676.852789063978" y="4658.0" />
+      <point x="676.852789063978" y="2580.0" />
+      <point x="579.4027890639791" y="2580.0" />
+      <point x="27.375" y="68.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Patient" target="com.slmn.patient_management.models.users.User">
+      <point x="124.61538461538476" y="90.5" />
+      <point x="5641.404711157216" y="430.0" />
+      <point x="9664.586723043032" y="430.0" />
+      <point x="9664.586723043032" y="3149.0" />
+      <point x="9431.713222215902" y="3149.0" />
+      <point x="9431.713222215902" y="3498.0" />
+      <point x="9651.54403756863" y="3498.0" />
+      <point x="0.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.views.structures">
+      <point x="44.0" y="-167.5" />
+      <point x="4118.57215805925" y="5837.0" />
+      <point x="4733.4590628211545" y="5837.0" />
+      <point x="4733.4590628211545" y="3998.0" />
+      <point x="7570.817686501616" y="3998.0" />
+      <point x="-53.60714285714312" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.AdminAccountManagerView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="65.3125" y="-101.5" />
+      <point x="6325.2606468881495" y="8157.0" />
+      <point x="7705.140408792913" y="8157.0" />
+      <point x="7705.140408792913" y="4718.0" />
+      <point x="8561.713222215902" y="4718.0" />
+      <point x="8561.713222215902" y="2730.0" />
+      <point x="6921.510530517067" y="2730.0" />
+      <point x="22.1290322580644" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.main_menu.PatientMainMenu">
+      <point x="0.0" y="-246.5" />
+      <point x="4758.537931868774" y="8888.0" />
+      <point x="4699.722632818884" y="8888.0" />
+      <point x="4699.722632818884" y="7967.0" />
+      <point x="5188.558765202107" y="7967.0" />
+      <point x="75.3125" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.JSONArrayDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="-72.75" y="-69.5" />
+      <point x="10518.336723043032" y="1248.0" />
+      <point x="9263.807025891245" y="1248.0" />
+      <point x="66.46153846153811" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-168.72727272727298" y="-246.5" />
+      <point x="4589.810659141501" y="9048.0" />
+      <point x="0.0" y="9048.0" />
+      <point x="0.0" y="4528.0" />
+      <point x="364.69413521782735" y="4528.0" />
+      <point x="364.69413521782735" y="380.0" />
+      <point x="5358.943172695677" y="380.0" />
+      <point x="-157.84615384615427" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AppointmentDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="96.0" y="-37.5" />
+      <point x="2462.178006869938" y="1328.0" />
+      <point x="9086.576256660475" y="1328.0" />
+      <point x="-110.76923076923049" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.PatientMainMenu" target="com.slmn.patient_management.controllers.AccountController">
+      <point x="100.41666666666652" y="-145.5" />
+      <point x="5213.662931868774" y="6862.0" />
+      <point x="5540.3089423426945" y="6862.0" />
+      <point x="-140.625" y="125.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.Appointment" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-33.75" y="-91.5" />
+      <point x="1316.7117998652893" y="500.0" />
+      <point x="5458.635480387986" y="500.0" />
+      <point x="-58.153846153845734" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Administrator" target="com.slmn.patient_management.models.users.User">
+      <point x="9.799999999999272" y="-26.5" />
+      <point x="9884.765141698896" y="6902.0" />
+      <point x="9876.165141698895" y="6902.0" />
+      <point x="9876.165141698895" y="6007.0" />
+      <point x="9651.54403756863" y="6007.0" />
+      <point x="0.0" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-69.9375" y="-114.5" />
+      <point x="11147.531915350723" y="3039.0" />
+      <point x="10742.969415350723" y="3039.0" />
+      <point x="10742.969415350723" y="813.0" />
+      <point x="10719.240569196878" y="813.0" />
+      <point x="10719.240569196878" y="400.0" />
+      <point x="5666.3277880802925" y="400.0" />
+      <point x="149.5384615384619" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsDoctorView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-81.81818181818198" y="-145.5" />
+      <point x="1248.4260700582572" y="5507.0" />
+      <point x="313.2307692307659" y="5507.0" />
+      <point x="313.2307692307659" y="4678.0" />
+      <point x="709.852789063978" y="4678.0" />
+      <point x="709.852789063978" y="470.0" />
+      <point x="5433.712403464908" y="470.0" />
+      <point x="-83.07692307692287" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.views.NotificationView">
+      <point x="22.649999999999636" y="-101.5" />
+      <point x="6652.691896888149" y="8117.0" />
+      <point x="7411.568980221484" y="8117.0" />
+      <point x="-48.0" y="123.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.UserAppointmentView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-26.0" y="-178.5" />
+      <point x="4827.222632818884" y="7477.0" />
+      <point x="4442.60340805925" y="7477.0" />
+      <point x="4442.60340805925" y="3848.0" />
+      <point x="6681.800682906272" y="3848.0" />
+      <point x="6681.800682906272" y="2720.0" />
+      <point x="6877.2524660009385" y="2720.0" />
+      <point x="-22.1290322580644" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.drugs">
+      <point x="100.04166666666697" y="-366.5" />
+      <point x="6999.423164925669" y="1627.0" />
+      <point x="11452.02497090628" y="1627.0" />
+      <point x="11452.02497090628" y="139.0" />
+      <point x="11068.082930160432" y="139.0" />
+      <point x="21.524999999999636" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.AdminAccountManagerView" target="com.slmn.patient_management.controllers.AccountController">
+      <point x="-65.3125" y="-101.5" />
+      <point x="6194.6356468881495" y="8087.0" />
+      <point x="5805.1214423426945" y="8087.0" />
+      <point x="5805.1214423426945" y="6732.0" />
+      <point x="5790.3089423426945" y="6732.0" />
+      <point x="109.375" y="125.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineStockView" target="com.slmn.patient_management.views.structures">
+      <point x="-11.8125" y="-90.5" />
+      <point x="7500.537730221484" y="8147.0" />
+      <point x="7588.912730221484" y="8147.0" />
+      <point x="7588.912730221484" y="4648.0" />
+      <point x="7693.07959126352" y="4648.0" />
+      <point x="68.65476190476147" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-66.0" y="-167.5" />
+      <point x="4008.57215805925" y="5407.0" />
+      <point x="2494.0587986600663" y="5407.0" />
+      <point x="2494.0587986600663" y="3438.0" />
+      <point x="1613.536084355319" y="3438.0" />
+      <point x="1613.536084355319" y="873.0" />
+      <point x="1364.6723261810785" y="873.0" />
+      <point x="14.210526315789139" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Doctor" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-90.81818181818198" y="-124.5" />
+      <point x="2856.1366569891597" y="2480.0" />
+      <point x="1631.641347513213" y="2480.0" />
+      <point x="1631.641347513213" y="853.0" />
+      <point x="1378.8828524968685" y="853.0" />
+      <point x="28.421052631579187" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.requests" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="27.0" y="14.5" />
+      <point x="5704.47240007799" y="1308.0" />
+      <point x="5700.236288966878" y="1308.0" />
+      <point x="5700.236288966878" y="1567.0" />
+      <point x="6856.506498259003" y="1567.0" />
+      <point x="-42.875" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.NotificationView" target="com.slmn.patient_management.core.Main">
+      <point x="48.0" y="123.5" />
+      <point x="7507.568980221484" y="8127.0" />
+      <point x="7407.350230221484" y="8127.0" />
+      <point x="7407.350230221484" y="10090.0" />
+      <point x="6142.125244221672" y="10090.0" />
+      <point x="58.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountQueueView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-39.55555555555566" y="-123.5" />
+      <point x="5065.66707726333" y="7447.0" />
+      <point x="4567.325630281472" y="7447.0" />
+      <point x="4567.325630281472" y="3858.0" />
+      <point x="6692.800682906272" y="3858.0" />
+      <point x="6692.800682906272" y="2730.0" />
+      <point x="6888.316982129971" y="2730.0" />
+      <point x="-11.0645161290322" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-101.92307692307713" y="-255.5" />
+      <point x="1486.446174953362" y="7627.0" />
+      <point x="131.17347477342537" y="7627.0" />
+      <point x="131.17347477342537" y="6542.0" />
+      <point x="64.76923076922867" y="6542.0" />
+      <point x="64.76923076922867" y="4578.0" />
+      <point x="411.61721214090267" y="4578.0" />
+      <point x="411.61721214090267" y="430.0" />
+      <point x="5400.481634234138" y="430.0" />
+      <point x="-116.30769230769238" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.UserNotificationDecoder">
+      <point x="109.56944444444434" y="-366.5" />
+      <point x="7008.950942703446" y="1637.0" />
+      <point x="11678.02497090628" y="1637.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.controllers.AppointmentController">
+      <point x="10.75" y="-233.5" />
+      <point x="366.03261358524105" y="7707.0" />
+      <point x="423.42150247412974" y="7707.0" />
+      <point x="-100.22222222222217" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.SecretaryMainMenu" target="com.slmn.patient_management.core.Main">
+      <point x="24.0" y="124.5" />
+      <point x="6530.0418968881495" y="8097.0" />
+      <point x="6534.789624160877" y="8097.0" />
+      <point x="6534.789624160877" y="10050.0" />
+      <point x="6090.125244221672" y="10050.0" />
+      <point x="6.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.DoctorReportDecoder">
+      <point x="-61.93055555555566" y="-366.5" />
+      <point x="6837.450942703446" y="1587.0" />
+      <point x="5525.208511189101" y="1587.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.UserAppointmentView">
+      <point x="10.545454545454504" y="-246.5" />
+      <point x="4769.083386414228" y="8898.0" />
+      <point x="4853.222632818884" y="8898.0" />
+      <point x="0.0" y="178.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionDispenserView" target="com.slmn.patient_management.views.structures">
+      <point x="-24.777777777777374" y="-156.5" />
+      <point x="6902.85816672942" y="8097.0" />
+      <point x="6889.080388951642" y="8097.0" />
+      <point x="6889.080388951642" y="4498.0" />
+      <point x="7664.865305549234" y="4498.0" />
+      <point x="40.44047619047615" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Secretary" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="73.5" y="26.5" />
+      <point x="12400.674970906279" y="863.0" />
+      <point x="12377.869415350724" y="863.0" />
+      <point x="12377.869415350724" y="6107.0" />
+      <point x="11182.889771617742" y="6107.0" />
+      <point x="100.44444444444525" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.views.main_menu.SecretaryMainMenu">
+      <point x="122.30769230769238" y="-255.5" />
+      <point x="1710.6769441841316" y="8117.0" />
+      <point x="6410.0418968881495" y="8117.0" />
+      <point x="-96.0" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.appointments.SurgeryDay">
+      <point x="-150.33333333333303" y="-114.5" />
+      <point x="373.31039136301933" y="6532.0" />
+      <point x="234.54847477342537" y="6532.0" />
+      <point x="234.54847477342537" y="4648.0" />
+      <point x="618.102789063978" y="4648.0" />
+      <point x="48.25" y="101.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-25.111111111111313" y="102.5" />
+      <point x="11236.035387572945" y="1338.0" />
+      <point x="11189.969415350723" y="1338.0" />
+      <point x="11189.969415350723" y="2750.0" />
+      <point x="3098.318475170978" y="2750.0" />
+      <point x="151.3636363636365" y="-124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.DrugController" target="com.slmn.patient_management.models.drugs">
+      <point x="98.28571428571377" y="-92.5" />
+      <point x="9139.095604089453" y="4728.0" />
+      <point x="12201.524970906277" y="4728.0" />
+      <point x="12201.524970906277" y="129.0" />
+      <point x="11074.232930160433" y="129.0" />
+      <point x="27.674999999999272" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-163.1875" y="-114.5" />
+      <point x="11054.281915350723" y="3059.0" />
+      <point x="3105.1298388073415" y="3059.0" />
+      <point x="158.17499999999973" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.views.main_menu.PatientMainMenu">
+      <point x="-52.850000000000364" y="-101.5" />
+      <point x="6577.191896888149" y="7387.0" />
+      <point x="5218.683765202107" y="7387.0" />
+      <point x="105.4375" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.DoctorReportDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="96.0" y="-37.5" />
+      <point x="5621.208511189101" y="1348.0" />
+      <point x="9130.883948968169" y="1348.0" />
+      <point x="-66.46153846153811" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.patient_services.PatientRecord">
+      <point x="-109.56944444444434" y="-366.5" />
+      <point x="6789.812053814558" y="1637.0" />
+      <point x="2520.678006869938" y="1637.0" />
+      <point x="2520.678006869938" y="1208.0" />
+      <point x="2291.5438539588563" y="1208.0" />
+      <point x="8.6875" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.MedicineDecoder" target="com.slmn.patient_management.models.drugs">
+      <point x="0.0" y="-26.5" />
+      <point x="9862.586723043032" y="1268.0" />
+      <point x="10720.969415350723" y="1268.0" />
+      <point x="10720.969415350723" y="833.0" />
+      <point x="10849.894415350722" y="833.0" />
+      <point x="10849.894415350722" y="139.0" />
+      <point x="11037.332930160432" y="139.0" />
+      <point x="-9.225000000000364" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.patient_services.DoctorReport">
+      <point x="-71.45833333333303" y="-366.5" />
+      <point x="6827.923164925669" y="1597.0" />
+      <point x="5332.208511189101" y="1597.0" />
+      <point x="5332.208511189101" y="1158.0" />
+      <point x="3007.9548388073426" y="1158.0" />
+      <point x="55.5" y="112.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.SecretaryMainMenu" target="com.slmn.patient_management.views.structures">
+      <point x="0.0" y="-124.5" />
+      <point x="6506.0418968881495" y="6882.0" />
+      <point x="6749.113325459578" y="6882.0" />
+      <point x="6749.113325459578" y="4448.0" />
+      <point x="7655.460543644473" y="4448.0" />
+      <point x="31.035714285713766" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.PatientRecordsDoctorView">
+      <point x="-147.63636363636397" y="-246.5" />
+      <point x="4610.90156823241" y="9028.0" />
+      <point x="820.3627460284861" y="9028.0" />
+      <point x="820.3627460284861" y="6592.0" />
+      <point x="1386.4942518764392" y="6592.0" />
+      <point x="56.25" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionDispenserView" target="com.slmn.patient_management.models.drugs">
+      <point x="74.33333333333394" y="-156.5" />
+      <point x="7001.9692778405315" y="8307.0" />
+      <point x="11989.046819049323" y="8307.0" />
+      <point x="11989.046819049323" y="6117.0" />
+      <point x="12435.674970906279" y="6117.0" />
+      <point x="12435.674970906279" y="99.0" />
+      <point x="11092.682930160434" y="99.0" />
+      <point x="46.125" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.core.Main">
+      <point x="-50.33333333333394" y="101.5" />
+      <point x="6579.708563554816" y="9018.0" />
+      <point x="6577.789624160877" y="9018.0" />
+      <point x="6577.789624160877" y="10060.0" />
+      <point x="6103.125244221672" y="10060.0" />
+      <point x="19.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.PatientServicesController" target="com.slmn.patient_management.controllers.Controller">
+      <point x="137.375" y="-48.5" />
+      <point x="1953.3129653267333" y="3768.0" />
+      <point x="6260.423788966878" y="3768.0" />
+      <point x="-113.3125" y="59.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.patient_services.PatientRecord" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="26.0625" y="69.5" />
+      <point x="2308.9188539588563" y="1198.0" />
+      <point x="5002.680733411324" y="1198.0" />
+      <point x="5002.680733411324" y="1627.0" />
+      <point x="6799.339831592335" y="1627.0" />
+      <point x="-100.04166666666697" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.SpecificUserNotification" target="com.slmn.patient_management.models.users.User">
+      <point x="64.57142857142935" y="58.5" />
+      <point x="11877.596399477708" y="1328.0" />
+      <point x="11937.02497090628" y="1328.0" />
+      <point x="11937.02497090628" y="4718.0" />
+      <point x="9751.54403756863" y="4718.0" />
+      <point x="100.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Patient" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="141.2307692307695" y="90.5" />
+      <point x="5658.020095772601" y="410.0" />
+      <point x="10698.586723043032" y="410.0" />
+      <point x="10698.586723043032" y="5817.0" />
+      <point x="11082.445327173296" y="5817.0" />
+      <point x="0.0" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Patient" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="58.153846153846644" y="90.5" />
+      <point x="5574.943172695677" y="510.0" />
+      <point x="6885.089831592336" y="510.0" />
+      <point x="-14.29166666666697" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.models.users.Administrator">
+      <point x="-25.33333333333394" y="244.5" />
+      <point x="9626.210704235298" y="6017.0" />
+      <point x="9865.165141698895" y="6017.0" />
+      <point x="-9.799999999999272" y="-26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.UserTypeNotificationDecoder" target="com.slmn.patient_management.models.notifications.UserTypeNotification">
+      <point x="138.33333333333303" y="-26.5" />
+      <point x="10404.920056376366" y="1318.0" />
+      <point x="11185.813165350723" y="1318.0" />
+      <point x="-75.33333333333394" y="102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.PrescriptionDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="-122.33333333333303" y="-37.5" />
+      <point x="10873.63608201739" y="1228.0" />
+      <point x="9308.114718198936" y="1228.0" />
+      <point x="110.76923076923049" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountRequestCreateView" target="com.slmn.patient_management.views.structures">
+      <point x="18.0" y="-167.5" />
+      <point x="7197.135944507198" y="6892.0" />
+      <point x="7209.635944507198" y="6892.0" />
+      <point x="7209.635944507198" y="4538.0" />
+      <point x="7672.389115073043" y="4538.0" />
+      <point x="47.964285714285325" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.views.main_menu.AdminMainMenu">
+      <point x="43.63636363636397" y="-211.5" />
+      <point x="5875.9850787063315" y="8107.0" />
+      <point x="5989.277286498539" y="8107.0" />
+      <point x="-95.57142857142844" y="102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.SecretaryMainMenu" target="com.slmn.patient_management.controllers.BasicRoutingController">
+      <point x="-24.0" y="124.5" />
+      <point x="6482.0418968881495" y="8147.0" />
+      <point x="6446.7918968881495" y="8147.0" />
+      <point x="6446.7918968881495" y="8998.0" />
+      <point x="4874.537931868774" y="8998.0" />
+      <point x="116.0" y="-246.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.PatientServicesController" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="58.875" y="-48.5" />
+      <point x="1874.8129653267333" y="3518.0" />
+      <point x="2138.8665380364755" y="3518.0" />
+      <point x="2138.8665380364755" y="3069.0" />
+      <point x="2805.4298388073416" y="3069.0" />
+      <point x="-141.5250000000001" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.UserNotificationDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="-143.66666666666606" y="-26.5" />
+      <point x="11534.358304239613" y="1218.0" />
+      <point x="9330.268564352784" y="1218.0" />
+      <point x="132.92307692307713" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.models.users.Administrator">
+      <point x="100.44444444444525" y="102.5" />
+      <point x="11361.590943128502" y="1358.0" />
+      <point x="11425.469415350723" y="1358.0" />
+      <point x="11425.469415350723" y="6962.0" />
+      <point x="9963.165141698897" y="6962.0" />
+      <point x="88.20000000000073" y="-26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.Notification" target="com.slmn.patient_management.models.users.User">
+      <point x="-75.33333333333394" y="-58.5" />
+      <point x="11007.111993839962" y="5847.0" />
+      <point x="9803.54403756863" y="5847.0" />
+      <point x="152.0" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.SpecificUserNotification" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-32.285714285713766" y="58.5" />
+      <point x="11780.739256620565" y="1358.0" />
+      <point x="11904.02497090628" y="1358.0" />
+      <point x="11904.02497090628" y="1647.0" />
+      <point x="7018.4787204812255" y="1647.0" />
+      <point x="119.09722222222263" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingAdminView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="0.0" y="-134.5" />
+      <point x="3219.0692377281666" y="5717.0" />
+      <point x="3339.5692377281666" y="5717.0" />
+      <point x="3339.5692377281666" y="3728.0" />
+      <point x="6118.736288966878" y="3728.0" />
+      <point x="6118.736288966878" y="2660.0" />
+      <point x="6810.8653692267435" y="2660.0" />
+      <point x="-88.5161290322585" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.DoctorRatingAdminView">
+      <point x="-105.4545454545455" y="-246.5" />
+      <point x="4653.083386414228" y="8988.0" />
+      <point x="2814.0421909445395" y="8988.0" />
+      <point x="2814.0421909445395" y="6762.0" />
+      <point x="3284.8192377281666" y="6762.0" />
+      <point x="65.75" y="134.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.PatientRecordDecoder">
+      <point x="-80.98611111111131" y="-366.5" />
+      <point x="6818.395387147892" y="1607.0" />
+      <point x="5166.708511189101" y="1607.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.PatientServicesController" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-137.375" y="-48.5" />
+      <point x="1678.5629653267333" y="3448.0" />
+      <point x="1191.7977802617506" y="3448.0" />
+      <point x="1191.7977802617506" y="2510.0" />
+      <point x="1015.9162013143823" y="2510.0" />
+      <point x="1015.9162013143823" y="490.0" />
+      <point x="5450.3277880802925" y="490.0" />
+      <point x="-66.46153846153811" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.models.users.Secretary">
+      <point x="56.5" y="-102.5" />
+      <point x="11317.646498684056" y="873.0" />
+      <point x="12237.341637572943" y="873.0" />
+      <point x="-89.83333333333394" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingAdminView" target="com.slmn.patient_management.core.Main">
+      <point x="-65.75" y="134.5" />
+      <point x="3153.3192377281666" y="6752.0" />
+      <point x="2803.0421909445395" y="6752.0" />
+      <point x="2803.0421909445395" y="10100.0" />
+      <point x="6012.125244221672" y="10100.0" />
+      <point x="-71.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="32.25" y="-233.5" />
+      <point x="387.53261358524105" y="7717.0" />
+      <point x="1286.8692518764392" y="7717.0" />
+      <point x="1286.8692518764392" y="6742.0" />
+      <point x="3077.0692377281666" y="6742.0" />
+      <point x="3077.0692377281666" y="5707.0" />
+      <point x="3263.0692377281666" y="5707.0" />
+      <point x="3263.0692377281666" y="3718.0" />
+      <point x="6042.236288966878" y="3718.0" />
+      <point x="6042.236288966878" y="2650.0" />
+      <point x="6799.800853097711" y="2650.0" />
+      <point x="-99.5806451612907" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-40.0" y="-244.5" />
+      <point x="9611.54403756863" y="3518.0" />
+      <point x="9324.617068369747" y="3518.0" />
+      <point x="9324.617068369747" y="3129.0" />
+      <point x="9557.490569196878" y="3129.0" />
+      <point x="9557.490569196878" y="450.0" />
+      <point x="5624.7893265418315" y="450.0" />
+      <point x="108.0" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-140.0" y="-244.5" />
+      <point x="9511.54403756863" y="3568.0" />
+      <point x="4960.118233411324" y="3568.0" />
+      <point x="4960.118233411324" y="3089.0" />
+      <point x="3071.8298388073417" y="3089.0" />
+      <point x="124.875" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.views.main_menu.DoctorMainMenu">
+      <point x="-7.549999999999272" y="-101.5" />
+      <point x="6622.49189688815" y="8097.0" />
+      <point x="6624.5418968881495" y="8097.0" />
+      <point x="6624.5418968881495" y="6742.0" />
+      <point x="6191.0390559790585" y="6742.0" />
+      <point x="6191.0390559790585" y="5317.0" />
+      <point x="4022.253976241069" y="5317.0" />
+      <point x="74.33333333333348" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.AdminAccountManagerView" target="com.slmn.patient_management.views.main_menu.AdminMainMenu">
+      <point x="-39.1875" y="-101.5" />
+      <point x="6220.7606468881495" y="8077.0" />
+      <point x="6148.563000784254" y="8077.0" />
+      <point x="63.71428571428578" y="102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.UserNotificationDecoder" target="com.slmn.patient_management.models.notifications.SpecificUserNotification">
+      <point x="0.0" y="-26.5" />
+      <point x="11678.02497090628" y="1368.0" />
+      <point x="11716.167828049136" y="1368.0" />
+      <point x="-96.85714285714312" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineStockView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="11.8125" y="-90.5" />
+      <point x="7524.162730221484" y="8187.0" />
+      <point x="7940.140408792913" y="8187.0" />
+      <point x="7940.140408792913" y="4748.0" />
+      <point x="8695.713222215902" y="4748.0" />
+      <point x="8695.713222215902" y="2700.0" />
+      <point x="6954.704078904164" y="2700.0" />
+      <point x="55.322580645161" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineCreatorView" target="com.slmn.patient_management.views.main_menu.DoctorMainMenu">
+      <point x="-75.41666666666606" y="-90.5" />
+      <point x="6527.946658792912" y="5307.0" />
+      <point x="4047.031754018846" y="5307.0" />
+      <point x="99.11111111111086" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-56.5" y="-102.5" />
+      <point x="11204.646498684056" y="813.0" />
+      <point x="10830.9174922738" y="813.0" />
+      <point x="10830.9174922738" y="390.0" />
+      <point x="5674.635480387986" y="390.0" />
+      <point x="157.84615384615427" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingAdminView" target="com.slmn.patient_management.controllers.PatientServicesController">
+      <point x="-116.88888888888891" y="-134.5" />
+      <point x="3102.180348839278" y="5477.0" />
+      <point x="1894.4379653267333" y="5477.0" />
+      <point x="78.5" y="48.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Administrator" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="49.0" y="-26.5" />
+      <point x="9923.965141698896" y="6922.0" />
+      <point x="11082.445327173296" y="6922.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.controllers.Controller">
+      <point x="-67.95000000000073" y="-101.5" />
+      <point x="6562.091896888149" y="7397.0" />
+      <point x="3621.2396922736207" y="7397.0" />
+      <point x="3621.2396922736207" y="6812.0" />
+      <point x="3522.6004877281666" y="6812.0" />
+      <point x="3522.6004877281666" y="3808.0" />
+      <point x="6389.923788966878" y="3808.0" />
+      <point x="16.1875" y="59.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.models.users.Secretary">
+      <point x="160.0" y="-244.5" />
+      <point x="9811.54403756863" y="4768.0" />
+      <point x="12344.869415350724" y="4768.0" />
+      <point x="12344.869415350724" y="833.0" />
+      <point x="12351.674970906279" y="833.0" />
+      <point x="24.5" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.DoctorMainMenu" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-55.75" y="-156.5" />
+      <point x="3892.1706429077353" y="3698.0" />
+      <point x="6009.236288966878" y="3698.0" />
+      <point x="6009.236288966878" y="530.0" />
+      <point x="5558.3277880802925" y="530.0" />
+      <point x="41.53846153846189" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingAdminView" target="com.slmn.patient_management.views.structures">
+      <point x="58.44444444444434" y="-134.5" />
+      <point x="3277.513682172611" y="5797.0" />
+      <point x="4698.578110440202" y="5797.0" />
+      <point x="4698.578110440202" y="3958.0" />
+      <point x="7563.293876977807" y="3958.0" />
+      <point x="-61.130952380952294" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionListView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="64.0" y="-112.5" />
+      <point x="7897.640408792913" y="5977.0" />
+      <point x="9234.309889803739" y="5977.0" />
+      <point x="9234.309889803739" y="3119.0" />
+      <point x="9549.182876889186" y="3119.0" />
+      <point x="9549.182876889186" y="460.0" />
+      <point x="5616.481634234138" y="460.0" />
+      <point x="99.69230769230762" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.users.User">
+      <point x="-69.9375" y="114.5" />
+      <point x="11147.531915350723" y="4708.0" />
+      <point x="9731.54403756863" y="4708.0" />
+      <point x="80.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Doctor" target="com.slmn.patient_management.models.appointments.TimeSlot">
+      <point x="-151.3636363636365" y="-124.5" />
+      <point x="2795.5912024437052" y="2500.0" />
+      <point x="615.9027890639791" y="2500.0" />
+      <point x="63.875" y="68.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingAdminView" target="com.slmn.patient_management.models.patient_services.DoctorReport">
+      <point x="-58.44444444444434" y="-134.5" />
+      <point x="3160.6247932837223" y="5457.0" />
+      <point x="2045.9913124156515" y="5457.0" />
+      <point x="2045.9913124156515" y="3508.0" />
+      <point x="2101.705236402102" y="3508.0" />
+      <point x="2101.705236402102" y="2580.0" />
+      <point x="2542.678006869938" y="2580.0" />
+      <point x="2542.678006869938" y="1308.0" />
+      <point x="2896.9548388073426" y="1308.0" />
+      <point x="-55.5" y="112.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.notifications.SpecificUserNotification">
+      <point x="116.5625" y="-114.5" />
+      <point x="11334.031915350723" y="3149.0" />
+      <point x="11926.02497090628" y="3149.0" />
+      <point x="11926.02497090628" y="1338.0" />
+      <point x="11845.310685191993" y="1338.0" />
+      <point x="32.285714285713766" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.JSONObjectFile">
+      <point x="138.15277777777737" y="-366.5" />
+      <point x="7037.53427603678" y="1667.0" />
+      <point x="12073.288859795166" y="1667.0" />
+      <point x="12073.288859795166" y="1368.0" />
+      <point x="12129.774970906277" y="1368.0" />
+      <point x="61.24999999999909" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsSelfView" target="com.slmn.patient_management.views.structures">
+      <point x="52.75" y="-90.5" />
+      <point x="4155.022607509447" y="7867.0" />
+      <point x="4839.982872344964" y="7867.0" />
+      <point x="4839.982872344964" y="4128.0" />
+      <point x="7595.270067453997" y="4128.0" />
+      <point x="-29.15476190476147" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineStockView" target="com.slmn.patient_management.models.drugs">
+      <point x="82.6875" y="-90.5" />
+      <point x="7595.037730221484" y="8337.0" />
+      <point x="12452.824970906277" y="8337.0" />
+      <point x="12452.824970906277" y="79.0" />
+      <point x="11104.982930160433" y="79.0" />
+      <point x="58.42499999999927" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.NotificationView" target="com.slmn.patient_management.views.structures">
+      <point x="-80.0" y="-123.5" />
+      <point x="7379.568980221484" y="6882.0" />
+      <point x="7411.068980221484" y="6882.0" />
+      <point x="7411.068980221484" y="4598.0" />
+      <point x="7683.674829358759" y="4598.0" />
+      <point x="59.25" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.users.Secretary">
+      <point x="166.7361111111113" y="-366.5" />
+      <point x="7066.117609370114" y="1697.0" />
+      <point x="12300.869415350724" y="1697.0" />
+      <point x="12300.869415350724" y="853.0" />
+      <point x="12286.341637572943" y="853.0" />
+      <point x="-40.83333333333394" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.NotificationView" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="48.0" y="-123.5" />
+      <point x="7507.568980221484" y="6912.0" />
+      <point x="11007.111993839962" y="6912.0" />
+      <point x="-75.33333333333394" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.AppointmentDecoder">
+      <point x="-119.09722222222172" y="-366.5" />
+      <point x="6780.28427603678" y="1647.0" />
+      <point x="2366.178006869938" y="1647.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.views.main_menu.DoctorMainMenu">
+      <point x="0.0" y="-167.5" />
+      <point x="4074.57215805925" y="5377.0" />
+      <point x="3997.476198463291" y="5377.0" />
+      <point x="49.55555555555566" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="14.29166666666697" y="-366.5" />
+      <point x="6913.673164925669" y="1368.0" />
+      <point x="9175.19164127586" y="1368.0" />
+      <point x="-22.153846153845734" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountRequestCreateView" target="com.slmn.patient_management.views.LoginView">
+      <point x="54.0" y="167.5" />
+      <point x="7233.135944507198" y="9601.0" />
+      <point x="6958.208563554816" y="9601.0" />
+      <point x="52.88888888888869" y="-189.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.structures" target="com.slmn.patient_management.core.Main">
+      <point x="70.53571428571377" y="14.5" />
+      <point x="7694.960543644473" y="4658.0" />
+      <point x="7648.259456411959" y="4658.0" />
+      <point x="7648.259456411959" y="10100.0" />
+      <point x="6155.125244221672" y="10100.0" />
+      <point x="71.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.models.drugs">
+      <point x="-110.0" y="-167.5" />
+      <point x="3964.57215805925" y="5427.0" />
+      <point x="336.09109311740394" y="5427.0" />
+      <point x="336.09109311740394" y="4518.0" />
+      <point x="148.30769230769147" y="4518.0" />
+      <point x="148.30769230769147" y="79.0" />
+      <point x="11000.432930160434" y="79.0" />
+      <point x="-46.125" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.MedicineDecoder">
+      <point x="33.347222222222626" y="-366.5" />
+      <point x="6932.7287204812255" y="1557.0" />
+      <point x="9862.586723043032" y="1557.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.drugs" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-21.524999999999636" y="14.5" />
+      <point x="11025.032930160432" y="119.0" />
+      <point x="5638.2893265418315" y="119.0" />
+      <point x="121.5" y="-90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="67.95000000000073" y="-101.5" />
+      <point x="6697.99189688815" y="8297.0" />
+      <point x="10475.79918647665" y="8297.0" />
+      <point x="10475.79918647665" y="6932.0" />
+      <point x="11157.77866050663" y="6932.0" />
+      <point x="75.33333333333394" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.patient_services.DoctorReport" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="11.099999999999909" y="112.5" />
+      <point x="2963.5548388073425" y="1308.0" />
+      <point x="2957.954838807342" y="1308.0" />
+      <point x="2957.954838807342" y="2580.0" />
+      <point x="2977.227566080069" y="2580.0" />
+      <point x="30.27272727272748" y="-124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.JSONArrayFile" target="com.slmn.patient_management.io.JSONFile">
+      <point x="-58.0" y="-69.5" />
+      <point x="10811.469415350723" y="853.0" />
+      <point x="11948.524970906277" y="853.0" />
+      <point x="-72.0" y="80.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientManagerView" target="com.slmn.patient_management.controllers.AccountController">
+      <point x="33.1875" y="-90.5" />
+      <point x="5335.910132818884" y="8097.0" />
+      <point x="5589.7464423426945" y="8097.0" />
+      <point x="5589.7464423426945" y="6892.0" />
+      <point x="5634.0589423426945" y="6892.0" />
+      <point x="-46.875" y="125.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="40.76923076923049" y="-255.5" />
+      <point x="1629.1384826456697" y="7747.0" />
+      <point x="2825.0421909445395" y="7747.0" />
+      <point x="2825.0421909445395" y="6782.0" />
+      <point x="3443.5692377281666" y="6782.0" />
+      <point x="3443.5692377281666" y="3748.0" />
+      <point x="6222.736288966878" y="3748.0" />
+      <point x="6222.736288966878" y="2680.0" />
+      <point x="6832.99440148481" y="2680.0" />
+      <point x="-66.3870967741932" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountRequestCreateView" target="com.slmn.patient_management.controllers.AccountController">
+      <point x="-90.0" y="-167.5" />
+      <point x="7089.135944507198" y="6732.0" />
+      <point x="5821.5589423426945" y="6732.0" />
+      <point x="140.625" y="125.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingPatientView" target="com.slmn.patient_management.controllers.PatientServicesController">
+      <point x="-91.4375" y="-134.5" />
+      <point x="4342.30217827343" y="7557.0" />
+      <point x="1259.3692518764392" y="7557.0" />
+      <point x="1259.3692518764392" y="6612.0" />
+      <point x="1634.8484185431062" y="6612.0" />
+      <point x="1634.8484185431062" y="5567.0" />
+      <point x="1789.7712986600663" y="5567.0" />
+      <point x="-26.16666666666697" y="48.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.core.Main" target="com.slmn.patient_management.views.LoginView">
+      <point x="32.5" y="-102.5" />
+      <point x="6116.125244221672" y="10070.0" />
+      <point x="6905.319674665927" y="10070.0" />
+      <point x="0.0" y="189.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.PatientMainMenu" target="com.slmn.patient_management.controllers.BasicRoutingController">
+      <point x="45.1875" y="145.5" />
+      <point x="5158.433765202107" y="7957.0" />
+      <point x="4671.787931868774" y="7957.0" />
+      <point x="4671.787931868774" y="8898.0" />
+      <point x="4747.99247732332" y="8898.0" />
+      <point x="-10.545454545454504" y="-246.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionListView" target="com.slmn.patient_management.models.drugs">
+      <point x="85.33333333333394" y="-112.5" />
+      <point x="7918.973742126247" y="6087.0" />
+      <point x="12218.674970906279" y="6087.0" />
+      <point x="12218.674970906279" y="109.0" />
+      <point x="11086.532930160432" y="109.0" />
+      <point x="39.975000000000364" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsSelfView" target="com.slmn.patient_management.views.main_menu.PatientMainMenu">
+      <point x="87.91666666666652" y="-90.5" />
+      <point x="4190.189274176113" y="7917.0" />
+      <point x="5037.933765202107" y="7917.0" />
+      <point x="-75.3125" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.users.Administrator">
+      <point x="88.5161290322585" y="366.5" />
+      <point x="6987.8976272912605" y="2670.0" />
+      <point x="8737.309889803739" y="2670.0" />
+      <point x="8737.309889803739" y="4778.0" />
+      <point x="7984.140408792913" y="4778.0" />
+      <point x="7984.140408792913" y="6902.0" />
+      <point x="9786.765141698896" y="6902.0" />
+      <point x="-88.20000000000073" y="-26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Administrator" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-68.60000000000036" y="-26.5" />
+      <point x="9806.365141698894" y="6892.0" />
+      <point x="8759.309889803739" y="6892.0" />
+      <point x="8759.309889803739" y="2660.0" />
+      <point x="6998.962143420293" y="2660.0" />
+      <point x="99.5806451612907" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsDoctorView" target="com.slmn.patient_management.models.patient_services.PatientRecord">
+      <point x="-20.45454545454504" y="-145.5" />
+      <point x="1309.7897064218942" y="5537.0" />
+      <point x="1636.4353195828353" y="5537.0" />
+      <point x="1636.4353195828353" y="3458.0" />
+      <point x="1833.4989864021018" y="3458.0" />
+      <point x="1833.4989864021018" y="2530.0" />
+      <point x="2091.7628752909905" y="2530.0" />
+      <point x="2091.7628752909905" y="1258.0" />
+      <point x="2239.4188539588563" y="1258.0" />
+      <point x="-43.4375" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="90.19999999999982" y="-114.5" />
+      <point x="613.8437246963522" y="6652.0" />
+      <point x="1684.3484185431062" y="6652.0" />
+      <point x="1684.3484185431062" y="5697.0" />
+      <point x="3252.0692377281666" y="5697.0" />
+      <point x="3252.0692377281666" y="3708.0" />
+      <point x="6031.236288966878" y="3708.0" />
+      <point x="6031.236288966878" y="2640.0" />
+      <point x="6788.736336968679" y="2640.0" />
+      <point x="-110.6451612903229" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.models.users.User">
+      <point x="52.850000000000364" y="-101.5" />
+      <point x="6682.89189688815" y="8287.0" />
+      <point x="9983.465141698896" y="8287.0" />
+      <point x="9983.465141698896" y="5987.0" />
+      <point x="9702.210704235298" y="5987.0" />
+      <point x="50.66666666666606" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-132.7741935483873" y="366.5" />
+      <point x="6766.607304710615" y="2620.0" />
+      <point x="3068.0457478982507" y="2620.0" />
+      <point x="121.09090909090901" y="-124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.UserDecoder">
+      <point x="23.819444444444343" y="-366.5" />
+      <point x="6923.200942703446" y="1547.0" />
+      <point x="9170.750184581493" y="1547.0" />
+      <point x="-81.75" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.views.structures">
+      <point x="96.75" y="-233.5" />
+      <point x="452.03261358524105" y="7767.0" />
+      <point x="4757.340015202107" y="7767.0" />
+      <point x="4757.340015202107" y="4028.0" />
+      <point x="7576.460543644473" y="4028.0" />
+      <point x="-47.964285714285325" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.creators.AccountQueueView">
+      <point x="21.09090909090901" y="-246.5" />
+      <point x="4779.628840959683" y="8908.0" />
+      <point x="5105.222632818884" y="8908.0" />
+      <point x="0.0" y="123.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.appointments.AppointmentRequest">
+      <point x="-30.066666666666606" y="-114.5" />
+      <point x="493.57705802968576" y="6492.0" />
+      <point x="438.8627460284861" y="6492.0" />
+      <point x="438.8627460284861" y="6107.0" />
+      <point x="925.9550157846261" y="6107.0" />
+      <point x="925.9550157846261" y="4758.0" />
+      <point x="1120.078758929616" y="4758.0" />
+      <point x="1120.078758929616" y="2570.0" />
+      <point x="1176.684022087511" y="2570.0" />
+      <point x="1176.684022087511" y="1368.0" />
+      <point x="1187.434022087511" y="1368.0" />
+      <point x="-33.0" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.patient_services.DoctorReport" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="33.30000000000018" y="112.5" />
+      <point x="2985.754838807343" y="1188.0" />
+      <point x="5012.208511189101" y="1188.0" />
+      <point x="5012.208511189101" y="1617.0" />
+      <point x="6808.867609370114" y="1617.0" />
+      <point x="-90.51388888888869" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.MedicineDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="-117.66666666666697" y="-26.5" />
+      <point x="9744.920056376366" y="1358.0" />
+      <point x="9219.499333583552" y="1358.0" />
+      <point x="22.153846153845734" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.SurgeryDay" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="38.600000000000364" y="-101.5" />
+      <point x="608.4527890639783" y="3159.0" />
+      <point x="594.6527890639791" y="3159.0" />
+      <point x="594.6527890639791" y="2590.0" />
+      <point x="6733.413756323518" y="2590.0" />
+      <point x="-165.9677419354839" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.MedicineStockView">
+      <point x="158.18181818181802" y="-246.5" />
+      <point x="4916.719750050592" y="9038.0" />
+      <point x="7512.350230221484" y="9038.0" />
+      <point x="0.0" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.UserDecoder" target="com.slmn.patient_management.models.users.User">
+      <point x="81.75" y="26.5" />
+      <point x="9334.250184581493" y="3079.0" />
+      <point x="8966.059889803739" y="3079.0" />
+      <point x="8966.059889803739" y="3528.0" />
+      <point x="9591.54403756863" y="3528.0" />
+      <point x="-60.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.core.Main">
+      <point x="-64.5" y="233.5" />
+      <point x="290.78261358524105" y="10120.0" />
+      <point x="5986.125244221672" y="10120.0" />
+      <point x="-97.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountQueueView" target="com.slmn.patient_management.models.users.requests">
+      <point x="-79.11111111111131" y="-123.5" />
+      <point x="5026.111521707773" y="7467.0" />
+      <point x="1909.3692518764392" y="7467.0" />
+      <point x="1909.3692518764392" y="6722.0" />
+      <point x="2347.3962986600663" y="6722.0" />
+      <point x="2347.3962986600663" y="5687.0" />
+      <point x="2626.0587986600663" y="5687.0" />
+      <point x="2626.0587986600663" y="3658.0" />
+      <point x="5343.208511189101" y="3658.0" />
+      <point x="5343.208511189101" y="1288.0" />
+      <point x="5614.47240007799" y="1288.0" />
+      <point x="-63.0" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.PrescriptionDecoder" target="com.slmn.patient_management.models.drugs">
+      <point x="0.0" y="-37.5" />
+      <point x="10995.969415350723" y="159.0" />
+      <point x="11049.632930160435" y="159.0" />
+      <point x="3.0750000000007276" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.Appointment" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="49.73684210526335" y="91.5" />
+      <point x="1400.1986419705527" y="823.0" />
+      <point x="2051.116493712043" y="823.0" />
+      <point x="2051.116493712043" y="1657.0" />
+      <point x="6770.756498259003" y="1657.0" />
+      <point x="-128.625" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-116.5625" y="-114.5" />
+      <point x="11100.906915350723" y="3049.0" />
+      <point x="9276.713222215902" y="3049.0" />
+      <point x="9276.713222215902" y="2600.0" />
+      <point x="7065.349240194486" y="2600.0" />
+      <point x="165.9677419354839" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.creators.AccountCreatorView">
+      <point x="42.18181818181802" y="-246.5" />
+      <point x="4800.719750050592" y="8928.0" />
+      <point x="5832.3487150699675" y="8928.0" />
+      <point x="0.0" y="211.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.views.main_menu.PatientMainMenu">
+      <point x="121.45833333333337" y="-233.5" />
+      <point x="1424.8275852097722" y="7907.0" />
+      <point x="5007.808765202107" y="7907.0" />
+      <point x="-105.4375" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.AdminAccountManagerView">
+      <point x="94.90909090909099" y="-246.5" />
+      <point x="4853.447022777865" y="8978.0" />
+      <point x="6259.9481468881495" y="8978.0" />
+      <point x="0.0" y="101.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AccountRequestDecoder" target="com.slmn.patient_management.models.users.Patient">
+      <point x="0.0" y="-37.5" />
+      <point x="5854.736288966878" y="1308.0" />
+      <point x="5878.0362889668795" y="1308.0" />
+      <point x="5878.0362889668795" y="550.0" />
+      <point x="5541.712403464908" y="550.0" />
+      <point x="24.923076923077133" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsDoctorView" target="com.slmn.patient_management.views.main_menu.DoctorMainMenu">
+      <point x="61.36363636363649" y="-145.5" />
+      <point x="1391.6078882400761" y="5727.0" />
+      <point x="3848.809531796624" y="5727.0" />
+      <point x="-99.11111111111131" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.LoginView" target="com.slmn.patient_management.controllers.AuthController">
+      <point x="-52.88888888888869" y="-189.5" />
+      <point x="6852.430785777038" y="9601.0" />
+      <point x="6630.0418968881495" y="9601.0" />
+      <point x="0.0" y="101.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AppointmentDecoder" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-96.0" y="-37.5" />
+      <point x="2270.178006869938" y="1228.0" />
+      <point x="2180.8563539588563" y="1228.0" />
+      <point x="2180.8563539588563" y="813.0" />
+      <point x="1407.3039051284468" y="813.0" />
+      <point x="56.842105263157464" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.AppointmentRequestDecoder">
+      <point x="-147.68055555555566" y="-366.5" />
+      <point x="6751.700942703446" y="1677.0" />
+      <point x="1887.0887159342656" y="1677.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.SpecificUserNotification" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="96.85714285714312" y="58.5" />
+      <point x="11909.882113763422" y="1318.0" />
+      <point x="11948.02497090628" y="1318.0" />
+      <point x="11948.02497090628" y="6077.0" />
+      <point x="11157.77866050663" y="6077.0" />
+      <point x="75.33333333333394" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.structures" target="com.slmn.patient_management.views.structures">
+      <point x="-78.05952380952385" y="14.5" />
+      <point x="7546.365305549234" y="3328.0" />
+      <point x="7525.424829358759" y="3328.0" />
+      <point x="7525.424829358759" y="3300.75" />
+      <point x="-79.0" y="7.25" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.users.Administrator">
+      <point x="163.1875" y="114.5" />
+      <point x="11380.656915350723" y="4708.0" />
+      <point x="11309.406915350723" y="4708.0" />
+      <point x="11309.406915350723" y="6952.0" />
+      <point x="9943.565141698895" y="6952.0" />
+      <point x="68.60000000000036" y="-26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-116.00000000000045" y="-246.5" />
+      <point x="4642.537931868774" y="8998.0" />
+      <point x="1731.3692518764392" y="8998.0" />
+      <point x="1731.3692518764392" y="6692.0" />
+      <point x="1920.3692518764392" y="6692.0" />
+      <point x="1920.3692518764392" y="5657.0" />
+      <point x="2357.3962986600663" y="5657.0" />
+      <point x="2357.3962986600663" y="3588.0" />
+      <point x="2467.3962986600663" y="3588.0" />
+      <point x="2467.3962986600663" y="3139.0" />
+      <point x="2921.979838807342" y="3139.0" />
+      <point x="-24.97499999999991" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.AppointmentRequest" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="33.0" y="58.5" />
+      <point x="1253.434022087511" y="1348.0" />
+      <point x="1339.930821197424" y="1348.0" />
+      <point x="1339.930821197424" y="1687.0" />
+      <point x="6742.173164925669" y="1687.0" />
+      <point x="-157.20833333333303" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.SurgeryDay" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="77.20000000000005" y="-101.5" />
+      <point x="647.0527890639778" y="3059.0" />
+      <point x="2788.7798388073415" y="3059.0" />
+      <point x="-158.17500000000018" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionListView" target="com.slmn.patient_management.controllers.DrugController">
+      <point x="21.33333333333394" y="-112.5" />
+      <point x="7854.973742126247" y="5917.0" />
+      <point x="9058.00988980374" y="5917.0" />
+      <point x="17.200000000000728" y="92.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.core.Main" target="com.slmn.patient_management.models.users.User">
+      <point x="97.5" y="-102.5" />
+      <point x="6181.125244221672" y="10120.0" />
+      <point x="10058.715141698896" y="10120.0" />
+      <point x="10058.715141698896" y="5967.0" />
+      <point x="9752.877370901966" y="5967.0" />
+      <point x="101.33333333333394" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.models.users.User">
+      <point x="65.45454545454595" y="-211.5" />
+      <point x="5897.8032605245135" y="8257.0" />
+      <point x="8836.309889803739" y="8257.0" />
+      <point x="8836.309889803739" y="6017.0" />
+      <point x="9550.210704235298" y="6017.0" />
+      <point x="-101.33333333333394" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.views.structures">
+      <point x="7.549999999999272" y="-101.5" />
+      <point x="6637.591896888149" y="8097.0" />
+      <point x="6789.803801650054" y="8097.0" />
+      <point x="6789.803801650054" y="4468.0" />
+      <point x="7659.222448406377" y="4468.0" />
+      <point x="34.797619047619264" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.models.users.requests">
+      <point x="-56.25" y="-125.5" />
+      <point x="5624.6839423426945" y="5337.0" />
+      <point x="3046.1601875489555" y="5337.0" />
+      <point x="3046.1601875489555" y="3688.0" />
+      <point x="5679.708511189101" y="3688.0" />
+      <point x="5679.708511189101" y="1308.0" />
+      <point x="5668.47240007799" y="1308.0" />
+      <point x="-9.0" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.core.Main">
+      <point x="-200.44444444444434" y="114.5" />
+      <point x="323.199280251908" y="8337.0" />
+      <point x="215.78261358524105" y="8337.0" />
+      <point x="215.78261358524105" y="10130.0" />
+      <point x="5973.125244221672" y="10130.0" />
+      <point x="-110.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.models.users.User">
+      <point x="0.0" y="102.5" />
+      <point x="11261.146498684056" y="1348.0" />
+      <point x="11200.969415350723" y="1348.0" />
+      <point x="11200.969415350723" y="3149.0" />
+      <point x="9682.071518982852" y="3149.0" />
+      <point x="9682.071518982852" y="4678.0" />
+      <point x="9691.54403756863" y="4678.0" />
+      <point x="40.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingPatientView" target="com.slmn.patient_management.views.main_menu.PatientMainMenu">
+      <point x="91.4375" y="-134.5" />
+      <point x="4525.17717827343" y="7927.0" />
+      <point x="5068.058765202107" y="7927.0" />
+      <point x="-45.1875" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.UserAppointmentView" target="com.slmn.patient_management.views.structures">
+      <point x="78.0" y="-178.5" />
+      <point x="4931.222632818884" y="8007.0" />
+      <point x="5336.899716152218" y="8007.0" />
+      <point x="5336.899716152218" y="4228.0" />
+      <point x="7614.07959126352" y="4228.0" />
+      <point x="-10.345238095238528" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.LoginView" target="com.slmn.patient_management.controllers.BasicRoutingController">
+      <point x="-105.77777777777783" y="-189.5" />
+      <point x="6799.5418968881495" y="9621.0" />
+      <point x="4758.537931868774" y="9621.0" />
+      <point x="0.0" y="246.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.AdminAccountManagerView" target="com.slmn.patient_management.views.structures">
+      <point x="39.1875" y="-101.5" />
+      <point x="6299.1356468881495" y="8107.0" />
+      <point x="6284.0106468881495" y="8107.0" />
+      <point x="6284.0106468881495" y="6852.0" />
+      <point x="6502.363325459578" y="6852.0" />
+      <point x="6502.363325459578" y="4398.0" />
+      <point x="7646.055781739711" y="4398.0" />
+      <point x="21.630952380952294" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.NotificationHandler" target="com.slmn.patient_management.models.users.Secretary">
+      <point x="163.1875" y="-114.5" />
+      <point x="11380.656915350723" y="3159.0" />
+      <point x="12311.869415350724" y="3159.0" />
+      <point x="12311.869415350724" y="843.0" />
+      <point x="12302.674970906279" y="843.0" />
+      <point x="-24.5" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsDoctorView" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-40.90909090909099" y="-145.5" />
+      <point x="1289.3351609673482" y="5517.0" />
+      <point x="1350.930821197424" y="5517.0" />
+      <point x="0.0" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.models.appointments.TimeSlot">
+      <point x="-99.375" y="-233.5" />
+      <point x="1203.9942518764392" y="7677.0" />
+      <point x="77.23076923076587" y="7677.0" />
+      <point x="77.23076923076587" y="6572.0" />
+      <point x="110.23076923076587" y="6572.0" />
+      <point x="110.23076923076587" y="6117.0" />
+      <point x="156.73076923076587" y="6117.0" />
+      <point x="156.73076923076587" y="4628.0" />
+      <point x="462.852789063978" y="4628.0" />
+      <point x="462.852789063978" y="2750.0" />
+      <point x="506.40278906397907" y="2750.0" />
+      <point x="-45.625" y="68.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingPatientView" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-39.1875" y="-134.5" />
+      <point x="4394.55217827343" y="7537.0" />
+      <point x="1742.3692518764392" y="7537.0" />
+      <point x="1742.3692518764392" y="6702.0" />
+      <point x="1931.3692518764392" y="6702.0" />
+      <point x="1931.3692518764392" y="5667.0" />
+      <point x="2368.3962986600663" y="5667.0" />
+      <point x="2368.3962986600663" y="3598.0" />
+      <point x="2478.3962986600663" y="3598.0" />
+      <point x="2478.3962986600663" y="3149.0" />
+      <point x="2938.629838807342" y="3149.0" />
+      <point x="-8.324999999999818" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.controllers.AccountController">
+      <point x="-87.27272727272793" y="-211.5" />
+      <point x="5745.07598779724" y="7407.0" />
+      <point x="5686.4339423426945" y="7407.0" />
+      <point x="5686.4339423426945" y="6892.0" />
+      <point x="5696.5589423426945" y="6892.0" />
+      <point x="15.625" y="125.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Doctor" target="com.slmn.patient_management.models.patient_services.DoctorReport">
+      <point x="-30.27272727272748" y="-124.5" />
+      <point x="2916.6821115346143" y="2580.0" />
+      <point x="2935.954838807342" y="2580.0" />
+      <point x="2935.954838807342" y="1308.0" />
+      <point x="2919.1548388073425" y="1308.0" />
+      <point x="-33.30000000000018" y="112.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AccountRequestDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="115.19999999999982" y="-37.5" />
+      <point x="5969.936288966879" y="1358.0" />
+      <point x="9153.037795122014" y="1358.0" />
+      <point x="-44.30769230769238" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="0.0" y="-255.5" />
+      <point x="1588.3692518764392" y="6672.0" />
+      <point x="1837.8692518764392" y="6672.0" />
+      <point x="1837.8692518764392" y="5637.0" />
+      <point x="2274.8962986600663" y="5637.0" />
+      <point x="2274.8962986600663" y="3558.0" />
+      <point x="2379.3962986600663" y="3558.0" />
+      <point x="2379.3962986600663" y="3119.0" />
+      <point x="2888.6798388073416" y="3119.0" />
+      <point x="-58.27500000000009" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.AccountRequestDecoder">
+      <point x="-33.34722222222172" y="-366.5" />
+      <point x="6866.03427603678" y="1557.0" />
+      <point x="5854.736288966878" y="1557.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.DrugController" target="com.slmn.patient_management.models.users.Patient">
+      <point x="0.0" y="-92.5" />
+      <point x="9040.809889803739" y="3099.0" />
+      <point x="9442.779030735339" y="3099.0" />
+      <point x="9442.779030735339" y="480.0" />
+      <point x="5599.8662496187535" y="480.0" />
+      <point x="83.07692307692287" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingAdminView" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-29.22222222222217" y="-134.5" />
+      <point x="3189.8470155059445" y="5447.0" />
+      <point x="2483.0587986600663" y="5447.0" />
+      <point x="2483.0587986600663" y="3618.0" />
+      <point x="3001.117338807342" y="3618.0" />
+      <point x="3001.117338807342" y="3149.0" />
+      <point x="2971.9298388073416" y="3149.0" />
+      <point x="24.97499999999991" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.appointments.AppointmentRequest">
+      <point x="-166.7361111111113" y="-366.5" />
+      <point x="6732.645387147892" y="1697.0" />
+      <point x="1330.4030434196457" y="1697.0" />
+      <point x="1330.4030434196457" y="1358.0" />
+      <point x="1231.434022087511" y="1358.0" />
+      <point x="11.0" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AppointmentRequestDecoder" target="com.slmn.patient_management.models.appointments.AppointmentRequest">
+      <point x="-96.0" y="-37.5" />
+      <point x="1791.0887159342656" y="1228.0" />
+      <point x="1275.434022087511" y="1228.0" />
+      <point x="55.0" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.UserTypeNotificationDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="-138.33333333333303" y="-26.5" />
+      <point x="10128.253389709698" y="1258.0" />
+      <point x="9241.6531797374" y="1258.0" />
+      <point x="44.30769230769238" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsSelfView" target="com.slmn.patient_management.models.patient_services.PatientRecord">
+      <point x="-52.75" y="-90.5" />
+      <point x="4049.5226075094465" y="7567.0" />
+      <point x="809.3627460284861" y="7567.0" />
+      <point x="809.3627460284861" y="6572.0" />
+      <point x="1122.362746028486" y="6572.0" />
+      <point x="1122.362746028486" y="5527.0" />
+      <point x="1369.036084355319" y="5527.0" />
+      <point x="1369.036084355319" y="3049.0" />
+      <point x="1803.3835834910205" y="3049.0" />
+      <point x="1803.3835834910205" y="2520.0" />
+      <point x="2080.7628752909905" y="2520.0" />
+      <point x="2080.7628752909905" y="1248.0" />
+      <point x="2222.0438539588563" y="1248.0" />
+      <point x="-60.8125" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.LoginView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="105.77777777777737" y="-189.5" />
+      <point x="7011.097452443704" y="9621.0" />
+      <point x="7951.140408792913" y="9621.0" />
+      <point x="7951.140408792913" y="4758.0" />
+      <point x="8706.713222215902" y="4758.0" />
+      <point x="8706.713222215902" y="2690.0" />
+      <point x="6965.768595033196" y="2690.0" />
+      <point x="66.3870967741932" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.DoctorMainMenu" target="com.slmn.patient_management.views.structures">
+      <point x="55.75" y="-156.5" />
+      <point x="4003.6706429077353" y="3908.0" />
+      <point x="7553.889115073043" y="3908.0" />
+      <point x="-70.53571428571468" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.views.PatientRecordsDoctorView">
+      <point x="30.066666666666606" y="-114.5" />
+      <point x="553.710391363019" y="6582.0" />
+      <point x="1273.9942518764392" y="6582.0" />
+      <point x="-56.25" y="145.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.models.users.Secretary">
+      <point x="168.75" y="-125.5" />
+      <point x="5849.6839423426945" y="6097.0" />
+      <point x="12366.869415350724" y="6097.0" />
+      <point x="12366.869415350724" y="853.0" />
+      <point x="12384.341637572943" y="853.0" />
+      <point x="57.16666666666606" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-210.46666666666715" y="-114.5" />
+      <point x="313.1770580296852" y="6552.0" />
+      <point x="187.327320927272" y="6552.0" />
+      <point x="187.327320927272" y="6087.0" />
+      <point x="130.57692307692014" y="6087.0" />
+      <point x="130.57692307692014" y="4598.0" />
+      <point x="428.2325967562865" y="4598.0" />
+      <point x="428.2325967562865" y="450.0" />
+      <point x="5417.097018849523" y="450.0" />
+      <point x="-99.69230769230762" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.models.users.Secretary">
+      <point x="109.09090909090992" y="-211.5" />
+      <point x="5941.439624160877" y="8317.0" />
+      <point x="12388.869415350724" y="8317.0" />
+      <point x="12388.869415350724" y="873.0" />
+      <point x="12417.00830423961" y="873.0" />
+      <point x="89.83333333333394" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.main_menu.DoctorMainMenu">
+      <point x="-84.36363636363649" y="-246.5" />
+      <point x="4674.174295505138" y="8968.0" />
+      <point x="3589.1487831827126" y="8968.0" />
+      <point x="3589.1487831827126" y="6842.0" />
+      <point x="3621.6942377281666" y="6842.0" />
+      <point x="3621.6942377281666" y="5757.0" />
+      <point x="3923.1428651299575" y="5757.0" />
+      <point x="-24.77777777777783" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.UserTypeNotificationDecoder">
+      <point x="42.875" y="-366.5" />
+      <point x="6942.256498259003" y="1567.0" />
+      <point x="10266.586723043032" y="1567.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.models.appointments.AppointmentRequest">
+      <point x="-53.75" y="-233.5" />
+      <point x="301.53261358524105" y="8297.0" />
+      <point x="66.23076923076587" y="8297.0" />
+      <point x="66.23076923076587" y="6582.0" />
+      <point x="378.14372469635236" y="6582.0" />
+      <point x="378.14372469635236" y="6087.0" />
+      <point x="806.1925171038565" y="6087.0" />
+      <point x="806.1925171038565" y="4738.0" />
+      <point x="1024.2977802617506" y="4738.0" />
+      <point x="1024.2977802617506" y="2570.0" />
+      <point x="1080.9030434196457" y="2570.0" />
+      <point x="1080.9030434196457" y="1358.0" />
+      <point x="1143.434022087511" y="1358.0" />
+      <point x="-77.0" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsDoctorView" target="com.slmn.patient_management.views.structures">
+      <point x="81.81818181818198" y="-145.5" />
+      <point x="1412.0624336946212" y="5767.0" />
+      <point x="4674.69715805925" y="5767.0" />
+      <point x="4674.69715805925" y="3928.0" />
+      <point x="7557.65101983495" y="3928.0" />
+      <point x="-66.77380952380918" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.UserAppointmentView" target="com.slmn.patient_management.models.users.User">
+      <point x="130.0" y="-178.5" />
+      <point x="4983.222632818884" y="8247.0" />
+      <point x="8825.309889803739" y="8247.0" />
+      <point x="8825.309889803739" y="6007.0" />
+      <point x="9524.877370901966" y="6007.0" />
+      <point x="-126.66666666666606" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.MedicineCreatorView">
+      <point x="105.4545454545455" y="-246.5" />
+      <point x="4863.99247732332" y="8988.0" />
+      <point x="6387.5418968881495" y="8988.0" />
+      <point x="6387.5418968881495" y="6862.0" />
+      <point x="6603.363325459578" y="6862.0" />
+      <point x="0.0" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Secretary" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-73.5" y="26.5" />
+      <point x="12253.674970906279" y="873.0" />
+      <point x="12281.813859795167" y="873.0" />
+      <point x="12281.813859795167" y="1677.0" />
+      <point x="7047.062053814558" y="1677.0" />
+      <point x="147.68055555555566" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.drugs" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-15.375" y="14.5" />
+      <point x="11031.182930160434" y="129.0" />
+      <point x="10843.744415350722" y="129.0" />
+      <point x="10843.744415350722" y="823.0" />
+      <point x="6904.145387147892" y="823.0" />
+      <point x="4.763888888888687" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.AppointmentRequestDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="96.0" y="-37.5" />
+      <point x="1983.0887159342656" y="1318.0" />
+      <point x="9064.42241050663" y="1318.0" />
+      <point x="-132.92307692307713" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-11.04166666666697" y="-233.5" />
+      <point x="1292.3275852097722" y="7717.0" />
+      <point x="1297.8692518764392" y="7717.0" />
+      <point x="1297.8692518764392" y="6642.0" />
+      <point x="1673.3484185431062" y="6642.0" />
+      <point x="1673.3484185431062" y="5617.0" />
+      <point x="2115.8754653267333" y="5617.0" />
+      <point x="2115.8754653267333" y="3548.0" />
+      <point x="2188.3665380364755" y="3548.0" />
+      <point x="2188.3665380364755" y="3099.0" />
+      <point x="2855.379838807342" y="3099.0" />
+      <point x="-91.57499999999982" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineCreatorView" target="com.slmn.patient_management.controllers.DrugController">
+      <point x="45.25" y="-90.5" />
+      <point x="6648.613325459578" y="5887.0" />
+      <point x="8954.809889803739" y="5887.0" />
+      <point x="-86.0" y="92.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.LoginView" target="com.slmn.patient_management.views.structures">
+      <point x="26.444444444444343" y="-189.5" />
+      <point x="6931.764119110371" y="9591.0" />
+      <point x="7060.635944507198" y="9591.0" />
+      <point x="7060.635944507198" y="4518.0" />
+      <point x="7668.627210311139" y="4518.0" />
+      <point x="44.202380952380736" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.UserDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="0.0" y="-26.5" />
+      <point x="9252.500184581493" y="1368.0" />
+      <point x="9197.345487429706" y="1368.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.JSONObjectFile" target="com.slmn.patient_management.io.JSONFile">
+      <point x="61.24999999999909" y="-58.5" />
+      <point x="12129.774970906277" y="863.0" />
+      <point x="12092.524970906277" y="863.0" />
+      <point x="72.0" y="80.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.views.PrescriberView">
+      <point x="180.4000000000001" y="-114.5" />
+      <point x="704.043724696352" y="6872.0" />
+      <point x="4014.07215805925" y="6872.0" />
+      <point x="-60.5" y="167.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.models.users.User">
+      <point x="93.75" y="-125.5" />
+      <point x="5774.6839423426945" y="5987.0" />
+      <point x="9474.210704235298" y="5987.0" />
+      <point x="-177.33333333333394" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="33.125" y="-233.5" />
+      <point x="1336.4942518764392" y="7737.0" />
+      <point x="2792.0421909445395" y="7737.0" />
+      <point x="2792.0421909445395" y="6772.0" />
+      <point x="3421.5692377281666" y="6772.0" />
+      <point x="3421.5692377281666" y="3738.0" />
+      <point x="6200.736288966878" y="3738.0" />
+      <point x="6200.736288966878" y="2670.0" />
+      <point x="6821.9298853557775" y="2670.0" />
+      <point x="-77.4516129032254" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.models.appointments.AppointmentRequest">
+      <point x="-77.29166666666697" y="-233.5" />
+      <point x="1226.0775852097722" y="7667.0" />
+      <point x="276.64372469635236" y="7667.0" />
+      <point x="276.64372469635236" y="6592.0" />
+      <point x="389.14372469635236" y="6592.0" />
+      <point x="389.14372469635236" y="6097.0" />
+      <point x="817.1925171038565" y="6097.0" />
+      <point x="817.1925171038565" y="4748.0" />
+      <point x="1035.2977802617506" y="4748.0" />
+      <point x="1035.2977802617506" y="2580.0" />
+      <point x="1091.9030434196457" y="2580.0" />
+      <point x="1091.9030434196457" y="1368.0" />
+      <point x="1165.434022087511" y="1368.0" />
+      <point x="-55.0" y="58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.UserTest" target="com.slmn.patient_management.models.users.Administrator">
+      <point x="-44.5" y="-69.5" />
+      <point x="9914.715141698896" y="8277.0" />
+      <point x="9923.965141698896" y="8277.0" />
+      <point x="49.0" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.appointments.Appointment" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="21.315789473684163" y="91.5" />
+      <point x="1371.7775893389735" y="863.0" />
+      <point x="1620.641347513213" y="863.0" />
+      <point x="1620.641347513213" y="2490.0" />
+      <point x="2825.8639297164327" y="2490.0" />
+      <point x="-121.09090909090901" y="-124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionDispenserView" target="com.slmn.patient_management.views.main_menu.SecretaryMainMenu">
+      <point x="-99.11111111111131" y="-156.5" />
+      <point x="6828.524833396086" y="7357.0" />
+      <point x="6578.0418968881495" y="7357.0" />
+      <point x="72.0" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-32.25" y="-233.5" />
+      <point x="323.03261358524105" y="8287.0" />
+      <point x="265.64372469635236" y="8287.0" />
+      <point x="265.64372469635236" y="6602.0" />
+      <point x="1623.8484185431062" y="6602.0" />
+      <point x="1623.8484185431062" y="5597.0" />
+      <point x="2077.3754653267333" y="5597.0" />
+      <point x="2077.3754653267333" y="3528.0" />
+      <point x="2149.8665380364755" y="3528.0" />
+      <point x="2149.8665380364755" y="3079.0" />
+      <point x="2822.0798388073417" y="3079.0" />
+      <point x="-124.875" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.UserTest" target="com.slmn.patient_management.models.users.User">
+      <point x="44.5" y="-69.5" />
+      <point x="10003.715141698896" y="8287.0" />
+      <point x="9994.465141698896" y="8287.0" />
+      <point x="9994.465141698896" y="5977.0" />
+      <point x="9727.54403756863" y="5977.0" />
+      <point x="76.0" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientManagerView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-77.4375" y="-90.5" />
+      <point x="5225.285132818884" y="7437.0" />
+      <point x="1898.3692518764392" y="7437.0" />
+      <point x="1898.3692518764392" y="6712.0" />
+      <point x="1953.3692518764392" y="6712.0" />
+      <point x="1953.3692518764392" y="5487.0" />
+      <point x="1150.4873846606106" y="5487.0" />
+      <point x="1150.4873846606106" y="4678.0" />
+      <point x="955.1570920026415" y="4678.0" />
+      <point x="955.1570920026415" y="480.0" />
+      <point x="5442.020095772601" y="480.0" />
+      <point x="-74.76923076923049" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.core.Main" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="84.5" y="-102.5" />
+      <point x="6168.125244221672" y="10110.0" />
+      <point x="7973.140408792913" y="10110.0" />
+      <point x="7973.140408792913" y="4768.0" />
+      <point x="8726.309889803739" y="4768.0" />
+      <point x="8726.309889803739" y="2680.0" />
+      <point x="6976.833111162228" y="2680.0" />
+      <point x="77.4516129032254" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.patient_services.PatientRecord" target="com.slmn.patient_management.models.users.Patient">
+      <point x="0.0" y="-69.5" />
+      <point x="2282.856353958856" y="540.0" />
+      <point x="5491.8662496187535" y="540.0" />
+      <point x="-24.923076923077133" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Doctor" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="60.545454545454504" y="-124.5" />
+      <point x="3007.5002933527962" y="2600.0" />
+      <point x="6744.47827245255" y="2600.0" />
+      <point x="-154.9032258064517" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.controllers.Controller">
+      <point x="120.26666666666642" y="-114.5" />
+      <point x="643.9103913630188" y="6792.0" />
+      <point x="3489.6004877281666" y="6792.0" />
+      <point x="3489.6004877281666" y="3778.0" />
+      <point x="6292.798788966878" y="3778.0" />
+      <point x="-80.9375" y="59.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.views.main_menu.DoctorMainMenu">
+      <point x="53.75" y="-233.5" />
+      <point x="409.03261358524105" y="7727.0" />
+      <point x="2273.1331407653283" y="7727.0" />
+      <point x="2273.1331407653283" y="6822.0" />
+      <point x="3594.1942377281666" y="6822.0" />
+      <point x="3594.1942377281666" y="5737.0" />
+      <point x="3873.587309574402" y="5737.0" />
+      <point x="-74.33333333333348" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.io.decoders.PrescriptionDecoder">
+      <point x="80.98611111111131" y="-366.5" />
+      <point x="6980.367609370114" y="1607.0" />
+      <point x="10995.969415350723" y="1607.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.PrescriptionListView">
+      <point x="168.72727272727252" y="-246.5" />
+      <point x="4927.265204596046" y="9048.0" />
+      <point x="7833.640408792913" y="9048.0" />
+      <point x="0.0" y="112.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.DoctorRatingPatientView" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-13.0625" y="-134.5" />
+      <point x="4420.67717827343" y="7527.0" />
+      <point x="4217.07215805925" y="7527.0" />
+      <point x="4217.07215805925" y="3838.0" />
+      <point x="6670.800682906272" y="3838.0" />
+      <point x="6670.800682906272" y="2710.0" />
+      <point x="6866.187949871906" y="2710.0" />
+      <point x="-33.1935483870966" y="366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriberView" target="com.slmn.patient_management.controllers.DrugController">
+      <point x="110.0" y="-167.5" />
+      <point x="4184.57215805925" y="5877.0" />
+      <point x="8920.409889803741" y="5877.0" />
+      <point x="-120.39999999999964" y="92.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.AdminAccountManagerView" target="com.slmn.patient_management.models.users.User">
+      <point x="91.4375" y="-101.5" />
+      <point x="6351.3856468881495" y="8267.0" />
+      <point x="8847.309889803739" y="8267.0" />
+      <point x="8847.309889803739" y="6027.0" />
+      <point x="9575.54403756863" y="6027.0" />
+      <point x="-76.0" y="244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-168.75" y="-125.5" />
+      <point x="5512.1839423426945" y="5367.0" />
+      <point x="2593.0587986600663" y="5367.0" />
+      <point x="2593.0587986600663" y="3628.0" />
+      <point x="3017.617338807342" y="3628.0" />
+      <point x="3017.617338807342" y="3139.0" />
+      <point x="2988.5798388073417" y="3139.0" />
+      <point x="41.625" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.decoders.PatientRecordDecoder" target="com.slmn.patient_management.io.decoders.JSONClassDecoder">
+      <point x="96.0" y="-37.5" />
+      <point x="5262.708511189101" y="1338.0" />
+      <point x="9108.730102814321" y="1338.0" />
+      <point x="-88.61538461538476" y="37.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.controllers.Controller">
+      <point x="-94.90909090909099" y="-246.5" />
+      <point x="4663.628840959683" y="8978.0" />
+      <point x="2876.5734409445395" y="8978.0" />
+      <point x="2876.5734409445395" y="6812.0" />
+      <point x="3511.6004877281666" y="6812.0" />
+      <point x="3511.6004877281666" y="3798.0" />
+      <point x="6357.548788966878" y="3798.0" />
+      <point x="-16.1875" y="59.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.PatientMainMenu" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-100.41666666666652" y="-145.5" />
+      <point x="5012.82959853544" y="6762.0" />
+      <point x="3361.0692377281666" y="6762.0" />
+      <point x="3361.0692377281666" y="5437.0" />
+      <point x="2604.0587986600663" y="5437.0" />
+      <point x="2604.0587986600663" y="3428.0" />
+      <point x="2489.3962986600663" y="3428.0" />
+      <point x="2489.3962986600663" y="2510.0" />
+      <point x="1732.5887159342656" y="2510.0" />
+      <point x="1732.5887159342656" y="1238.0" />
+      <point x="2202.8563539588563" y="1238.0" />
+      <point x="2202.8563539588563" y="520.0" />
+      <point x="5475.250865003369" y="520.0" />
+      <point x="-41.53846153846189" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionListView" target="com.slmn.patient_management.views.structures">
+      <point x="-64.0" y="-112.5" />
+      <point x="7769.640408792913" y="5837.0" />
+      <point x="7661.140408792913" y="5837.0" />
+      <point x="7661.140408792913" y="4678.0" />
+      <point x="7698.722448406377" y="4678.0" />
+      <point x="74.29761904761926" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.structures">
+      <point x="52.72727272727252" y="-246.5" />
+      <point x="4811.265204596046" y="8938.0" />
+      <point x="5962.8487150699675" y="8938.0" />
+      <point x="5962.8487150699675" y="6792.0" />
+      <point x="6290.320441260444" y="6792.0" />
+      <point x="6290.320441260444" y="4338.0" />
+      <point x="7634.770067453996" y="4338.0" />
+      <point x="10.345238095237619" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="75.33333333333394" y="102.5" />
+      <point x="11336.47983201739" y="1368.0" />
+      <point x="11414.469415350723" y="1368.0" />
+      <point x="11414.469415350723" y="6067.0" />
+      <point x="11132.667549395519" y="6067.0" />
+      <point x="50.222222222222626" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PatientRecordsDoctorView" target="com.slmn.patient_management.controllers.PatientServicesController">
+      <point x="20.454545454545496" y="-145.5" />
+      <point x="1350.6987973309842" y="5557.0" />
+      <point x="1737.4379653267333" y="5557.0" />
+      <point x="-78.5" y="48.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.models.appointments.TimeSlot">
+      <point x="-75.25" y="-233.5" />
+      <point x="280.03261358524105" y="8307.0" />
+      <point x="55.23076923076587" y="8307.0" />
+      <point x="55.23076923076587" y="6562.0" />
+      <point x="99.23076923076587" y="6562.0" />
+      <point x="99.23076923076587" y="6107.0" />
+      <point x="145.73076923076587" y="6107.0" />
+      <point x="145.73076923076587" y="4618.0" />
+      <point x="451.852789063978" y="4618.0" />
+      <point x="451.852789063978" y="2740.0" />
+      <point x="488.15278906397907" y="2740.0" />
+      <point x="-63.875" y="68.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.controllers.AppointmentController">
+      <point x="-20.384615384615472" y="-255.5" />
+      <point x="1567.984636491824" y="7587.0" />
+      <point x="623.865946918575" y="7587.0" />
+      <point x="100.22222222222217" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.notifications.UserTypeNotification" target="com.slmn.patient_management.io.SystemDatabase">
+      <point x="-50.222222222222626" y="102.5" />
+      <point x="11210.924276461834" y="1328.0" />
+      <point x="10715.086723043032" y="1328.0" />
+      <point x="10715.086723043032" y="1597.0" />
+      <point x="6970.839831592335" y="1597.0" />
+      <point x="71.45833333333303" y="-366.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.DoctorMainMenu" target="com.slmn.patient_management.controllers.BasicRoutingController">
+      <point x="0.0" y="156.5" />
+      <point x="3947.9206429077353" y="5747.0" />
+      <point x="3932.5267035137954" y="5747.0" />
+      <point x="3932.5267035137954" y="6852.0" />
+      <point x="3599.6942377281666" y="6852.0" />
+      <point x="3599.6942377281666" y="8958.0" />
+      <point x="4684.719750050592" y="8958.0" />
+      <point x="-73.81818181818198" y="-246.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.PatientServicesController" target="com.slmn.patient_management.models.patient_services.PatientRecord">
+      <point x="-58.875" y="-48.5" />
+      <point x="1757.0629653267333" y="3478.0" />
+      <point x="1855.4989864021018" y="3478.0" />
+      <point x="1855.4989864021018" y="2550.0" />
+      <point x="2141.971756869938" y="2550.0" />
+      <point x="2141.971756869938" y="1278.0" />
+      <point x="2274.1688539588563" y="1278.0" />
+      <point x="-8.6875" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.PatientManagerView">
+      <point x="31.636363636363512" y="-246.5" />
+      <point x="4790.174295505138" y="8918.0" />
+      <point x="5302.722632818884" y="8918.0" />
+      <point x="0.0" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.JSONArrayDecoder" target="com.slmn.patient_management.io.JSONArrayFile">
+      <point x="72.75" y="-69.5" />
+      <point x="10663.836723043032" y="1298.0" />
+      <point x="10927.469415350723" y="1298.0" />
+      <point x="58.0" y="69.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.notifications.NotificationHandler">
+      <point x="210.46666666666715" y="-114.5" />
+      <point x="734.1103913630195" y="6902.0" />
+      <point x="7962.140408792913" y="6902.0" />
+      <point x="7962.140408792913" y="6047.0" />
+      <point x="11276.406915350723" y="6047.0" />
+      <point x="11276.406915350723" y="4698.0" />
+      <point x="11240.781915350723" y="4698.0" />
+      <point x="23.3125" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.views.PrescriptionDispenserView">
+      <point x="147.6363636363635" y="-246.5" />
+      <point x="4906.174295505138" y="9028.0" />
+      <point x="6927.635944507198" y="9028.0" />
+      <point x="0.0" y="156.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.models.notifications.NotificationHandler">
+      <point x="131.25" y="-125.5" />
+      <point x="5812.1839423426945" y="6037.0" />
+      <point x="11265.406915350723" y="6037.0" />
+      <point x="11265.406915350723" y="4708.0" />
+      <point x="11194.156915350723" y="4708.0" />
+      <point x="-23.3125" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.AdminMainMenu" target="com.slmn.patient_management.controllers.BasicRoutingController">
+      <point x="0.0" y="102.5" />
+      <point x="6084.8487150699675" y="8968.0" />
+      <point x="4842.90156823241" y="8968.0" />
+      <point x="84.36363636363649" y="-246.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.DoctorAppointmentRequesterView" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-118.25" y="-233.5" />
+      <point x="237.03261358524105" y="8327.0" />
+      <point x="8.307692307691468" y="8327.0" />
+      <point x="8.307692307691468" y="4538.0" />
+      <point x="373.0018275255188" y="4538.0" />
+      <point x="373.0018275255188" y="390.0" />
+      <point x="5367.250865003369" y="390.0" />
+      <point x="-149.5384615384619" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Secretary" target="com.slmn.patient_management.models.users.User">
+      <point x="-8.16666666666606" y="26.5" />
+      <point x="12319.00830423961" y="873.0" />
+      <point x="12322.869415350724" y="873.0" />
+      <point x="12322.869415350724" y="4748.0" />
+      <point x="9771.54403756863" y="4748.0" />
+      <point x="120.0" y="-244.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.users.requests">
+      <point x="-52.402777777777374" y="-366.5" />
+      <point x="6846.9787204812255" y="1577.0" />
+      <point x="5690.708511189101" y="1577.0" />
+      <point x="5690.708511189101" y="1308.0" />
+      <point x="5686.47240007799" y="1308.0" />
+      <point x="9.0" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.PrescriptionDispenserView" target="com.slmn.patient_management.controllers.DrugController">
+      <point x="49.55555555555475" y="-156.5" />
+      <point x="6977.191500062752" y="8207.0" />
+      <point x="8781.309889803739" y="8207.0" />
+      <point x="8781.309889803739" y="5937.0" />
+      <point x="9126.809889803739" y="5937.0" />
+      <point x="86.0" y="92.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AuthController" target="com.slmn.patient_management.views.main_menu.AdminMainMenu">
+      <point x="-37.75" y="-101.5" />
+      <point x="6592.2918968881495" y="7377.0" />
+      <point x="6180.420143641396" y="7377.0" />
+      <point x="95.57142857142844" y="102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="-109.09090909090992" y="-211.5" />
+      <point x="5723.257805979058" y="7417.0" />
+      <point x="2887.5734409445395" y="7417.0" />
+      <point x="2887.5734409445395" y="6702.0" />
+      <point x="1942.3692518764392" y="6702.0" />
+      <point x="1942.3692518764392" y="5677.0" />
+      <point x="2379.3962986600663" y="5677.0" />
+      <point x="2379.3962986600663" y="3608.0" />
+      <point x="2955.2798388073425" y="3608.0" />
+      <point x="8.324999999999818" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.io.SystemDatabase" target="com.slmn.patient_management.models.users.Patient">
+      <point x="-23.819444444444343" y="-366.5" />
+      <point x="6875.562053814559" y="520.0" />
+      <point x="5566.635480387986" y="520.0" />
+      <point x="49.846153846154266" y="90.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.SecretaryAppointmentCreatorView" target="com.slmn.patient_management.views.structures">
+      <point x="101.92307692307713" y="-255.5" />
+      <point x="1690.2923287995163" y="7837.0" />
+      <point x="4816.101919964011" y="7837.0" />
+      <point x="4816.101919964011" y="4098.0" />
+      <point x="7589.627210311139" y="4098.0" />
+      <point x="-34.797619047619264" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.core.Main">
+      <point x="-66.25" y="233.5" />
+      <point x="1237.1192518764392" y="10110.0" />
+      <point x="5999.125244221672" y="10110.0" />
+      <point x="-84.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.MedicineStockView" target="com.slmn.patient_management.views.main_menu.SecretaryMainMenu">
+      <point x="-82.6875" y="-90.5" />
+      <point x="7429.662730221484" y="7347.0" />
+      <point x="6602.0418968881495" y="7347.0" />
+      <point x="96.0" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.appointments.PatientAppointmentRequesterView" target="com.slmn.patient_management.controllers.AppointmentController">
+      <point x="-55.20833333333326" y="-233.5" />
+      <point x="1248.1609185431062" y="7657.0" />
+      <point x="473.53261358524105" y="7657.0" />
+      <point x="-50.111111111111086" y="114.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountCreatorView" target="com.slmn.patient_management.models.users.Administrator">
+      <point x="87.27272727272793" y="-211.5" />
+      <point x="5919.621442342695" y="8277.0" />
+      <point x="9825.965141698896" y="8277.0" />
+      <point x="-49.0" y="26.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.BasicRoutingController" target="com.slmn.patient_management.core.Main">
+      <point x="-116.0" y="246.5" />
+      <point x="4642.537931868774" y="9621.0" />
+      <point x="4613.787931868774" y="9621.0" />
+      <point x="4613.787931868774" y="10060.0" />
+      <point x="6064.125244221672" y="10060.0" />
+      <point x="-19.5" y="-102.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-90.19999999999982" y="-114.5" />
+      <point x="433.44372469635255" y="6512.0" />
+      <point x="347.09109311740394" y="6512.0" />
+      <point x="347.09109311740394" y="4698.0" />
+      <point x="978.9425171038556" y="4698.0" />
+      <point x="978.9425171038556" y="2530.0" />
+      <point x="1035.5477802617506" y="2530.0" />
+      <point x="1035.5477802617506" y="803.0" />
+      <point x="1293.6196946021319" y="803.0" />
+      <point x="-56.842105263157464" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AccountController" target="com.slmn.patient_management.controllers.Controller">
+      <point x="-18.75" y="-125.5" />
+      <point x="5662.1839423426945" y="5327.0" />
+      <point x="3535.1181644958433" y="5327.0" />
+      <point x="3535.1181644958433" y="3818.0" />
+      <point x="6422.298788966878" y="3818.0" />
+      <point x="48.5625" y="59.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.main_menu.AdminMainMenu" target="com.slmn.patient_management.views.structures">
+      <point x="74.33333333333348" y="-102.5" />
+      <point x="6159.182048403301" y="6822.0" />
+      <point x="6400.427584117587" y="6822.0" />
+      <point x="6400.427584117587" y="4368.0" />
+      <point x="7640.412924596854" y="4368.0" />
+      <point x="15.988095238095411" y="14.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.Doctor" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="74.92500000000018" y="124.5" />
+      <point x="3021.879838807342" y="3119.0" />
+      <point x="4927.118233411324" y="3119.0" />
+      <point x="4927.118233411324" y="3628.0" />
+      <point x="7995.140408792913" y="3628.0" />
+      <point x="7995.140408792913" y="5857.0" />
+      <point x="10982.000882728851" y="5857.0" />
+      <point x="-100.44444444444525" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.appointments.TimeSlot">
+      <point x="-120.26666666666642" y="-114.5" />
+      <point x="403.37705802968594" y="6522.0" />
+      <point x="291.2307692307659" y="6522.0" />
+      <point x="291.2307692307659" y="4668.0" />
+      <point x="687.852789063978" y="4668.0" />
+      <point x="687.852789063978" y="2570.0" />
+      <point x="597.6527890639791" y="2570.0" />
+      <point x="45.625" y="68.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.UserAppointmentView" target="com.slmn.patient_management.models.appointments.Appointment">
+      <point x="-52.0" y="-178.5" />
+      <point x="4801.222632818884" y="7487.0" />
+      <point x="1753.3692518764392" y="7487.0" />
+      <point x="1753.3692518764392" y="6562.0" />
+      <point x="1111.362746028486" y="6562.0" />
+      <point x="1111.362746028486" y="6067.0" />
+      <point x="789.9425171038565" y="6067.0" />
+      <point x="789.9425171038565" y="4728.0" />
+      <point x="1008.0477802617506" y="4728.0" />
+      <point x="1008.0477802617506" y="2560.0" />
+      <point x="1064.6530434196457" y="2560.0" />
+      <point x="1064.6530434196457" y="833.0" />
+      <point x="1314.935484075815" y="833.0" />
+      <point x="-35.52631578947421" y="91.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.controllers.AppointmentController" target="com.slmn.patient_management.models.users.Doctor">
+      <point x="60.13333333333321" y="-114.5" />
+      <point x="583.7770580296856" y="6622.0" />
+      <point x="1645.8484185431062" y="6622.0" />
+      <point x="1645.8484185431062" y="5607.0" />
+      <point x="2093.8754653267333" y="5607.0" />
+      <point x="2093.8754653267333" y="3538.0" />
+      <point x="2166.3665380364755" y="3538.0" />
+      <point x="2166.3665380364755" y="3089.0" />
+      <point x="2838.729838807342" y="3089.0" />
+      <point x="-108.22499999999991" y="124.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.models.users.User" target="com.slmn.patient_management.models.notifications.Notification">
+      <point x="177.33333333333394" y="244.5" />
+      <point x="9828.877370901966" y="5837.0" />
+      <point x="11032.223104951074" y="5837.0" />
+      <point x="-50.222222222222626" y="-58.5" />
+    </edge>
+    <edge source="com.slmn.patient_management.views.creators.AccountQueueView" target="com.slmn.patient_management.controllers.AccountController">
+      <point x="39.55555555555566" y="-123.5" />
+      <point x="5144.778188374441" y="8047.0" />
+      <point x="5449.0068590093615" y="8047.0" />
+      <point x="5449.0068590093615" y="6872.0" />
+      <point x="5571.5589423426945" y="6872.0" />
+      <point x="-109.375" y="125.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8853975903614456" x="7392.596937780867" y="2131.340191595907" />
+  <SelectedNodes>
+    <node>com.slmn.patient_management.io.SystemDatabase</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
