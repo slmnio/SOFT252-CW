@@ -18,16 +18,22 @@ class UserTest {
 
     @Test
     void getFullName() {
-        assertEquals(admin.getFullName(), "Solomon Cammack");
+        assertEquals("Solomon Cammack", admin.getFullName(), "User class concatenates name properly");
     }
 
     @Test
     void getID() {
         // test later when id is pulled from a central store
+        assertTrue(admin.getID().startsWith("A"), "Admin ID starts with A");
     }
 
     @Test
     void passwordMatches() {
-        assertTrue(admin.passwordMatches("password"));
+        assertTrue(admin.passwordMatches("password"), "Password auth");
+    }
+
+    @Test
+    void isAdmin() {
+        assertTrue(admin.isAdmin(), "Check that self-class booleans work");
     }
 }
