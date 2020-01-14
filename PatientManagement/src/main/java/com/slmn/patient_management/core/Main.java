@@ -22,6 +22,12 @@ public class Main {
         System.out.println(String.format("New user authenticated: %s", user.describe()));
     }
 
+    public static void logout() {
+        Main.authenticatedUser = null;
+        System.out.println("User logged out, returning to login");
+        Main.switchView(new LoginView());
+    }
+
     public static JFrame frame = null;
 
     public static void switchView(ViewWithFrame frameForm) {

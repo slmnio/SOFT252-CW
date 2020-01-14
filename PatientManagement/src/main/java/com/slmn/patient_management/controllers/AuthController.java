@@ -20,6 +20,10 @@ public class AuthController extends Controller {
     public AuthController() {
     }
 
+    public void logout() {
+        Main.logout();
+    }
+
     public String getUsername() {
         return username;
     }

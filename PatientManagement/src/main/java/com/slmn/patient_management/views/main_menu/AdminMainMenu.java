@@ -1,6 +1,7 @@
 package com.slmn.patient_management.views.main_menu;
 
 import com.slmn.patient_management.controllers.BasicRoutingController;
+import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.views.structures.ClosableFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -17,18 +18,15 @@ public class AdminMainMenu extends ViewWithFrame {
     private JButton btnNavDoctorRatings;
     private JPanel mainPanel;
     private JButton btnNavAccountManager;
+    private JButton btnLogout;
 
     public AdminMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
 
         btnNavAccountCreator.addActionListener(e -> controller.routeToAccountCreator());
-        btnNavAccountManager.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.routeToAdminAccountManager();
-            }
-        });
+        btnNavAccountManager.addActionListener(e -> controller.routeToAdminAccountManager());
         btnNavDoctorRatings.addActionListener(e -> controller.routeToDoctorRatingAdmin());
+        btnLogout.addActionListener(e -> Main.logout());
     }
 
     @Override

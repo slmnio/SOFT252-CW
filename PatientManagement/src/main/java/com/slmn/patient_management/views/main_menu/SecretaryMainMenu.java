@@ -1,6 +1,7 @@
 package com.slmn.patient_management.views.main_menu;
 
 import com.slmn.patient_management.controllers.BasicRoutingController;
+import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.views.structures.ClosableFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -17,6 +18,7 @@ public class SecretaryMainMenu extends ViewWithFrame {
     private JButton btnNavMedStock;
     private JButton btnAccountManager;
     private JButton btnAppointmentQueue;
+    private JButton btnLogout;
 
     public SecretaryMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
@@ -25,6 +27,7 @@ public class SecretaryMainMenu extends ViewWithFrame {
         btnNavMedStock.addActionListener(e -> controller.routeToMedicineStock());
         btnAccountManager.addActionListener(e -> controller.routeToSecretaryAccountManager());
         btnAppointmentQueue.addActionListener(e -> controller.routeToAppointmentQueue());
+        btnLogout.addActionListener(e -> Main.logout());
     }
 
     @Override

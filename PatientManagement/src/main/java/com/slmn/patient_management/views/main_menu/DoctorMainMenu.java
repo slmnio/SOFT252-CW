@@ -22,6 +22,7 @@ public class DoctorMainMenu extends ViewWithFrame {
     private JButton btnCreateMed;
     private JButton btnViewFeedback;
     private JButton btnViewAppointments;
+    private JButton btnLogout;
 
     public DoctorMainMenu() {
         update();
@@ -36,6 +37,7 @@ public class DoctorMainMenu extends ViewWithFrame {
         btnCreateMed.addActionListener(e -> controller.routeToMedicineCreator());
         btnViewFeedback.addActionListener(e -> controller.routeToDoctorRatingDoctor());
         btnViewAppointments.addActionListener(e -> controller.routeToAppointmentView((Doctor) Main.authenticatedUser));
+        btnLogout.addActionListener(e -> Main.logout());
     }
 
     private void update() {
