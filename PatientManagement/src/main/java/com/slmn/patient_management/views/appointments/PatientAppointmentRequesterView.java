@@ -4,6 +4,7 @@ import com.slmn.patient_management.controllers.AppointmentController;
 import com.slmn.patient_management.core.Main;
 import com.slmn.patient_management.io.SystemDatabase;
 import com.slmn.patient_management.models.appointments.Appointment;
+import com.slmn.patient_management.models.appointments.AppointmentRequest;
 import com.slmn.patient_management.models.appointments.TimeSlot;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
@@ -77,8 +78,11 @@ public class PatientAppointmentRequesterView  extends ViewWithFrame  {
         btnRequest.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.requestAppointment((Patient) Main.authenticatedUser, doctor, getDate(), controller.generateTimeSlots(getDate()).get(cbxTimeslot.getSelectedIndex()));
-                close();
+                AppointmentRequest request = controller.requestAppointment((Patient) Main.authenticatedUser, doctor, getDate(), controller.generateTimeSlots(getDate()).get(cbxTimeslot.getSelectedIndex()));
+                if (request != null) {
+                    // Can close the form if a request was created, otherwise keep it open.
+                    close();
+                }
             }
         });
         cbxDay.addActionListener(new ActionListener() {
