@@ -92,7 +92,7 @@ public class BasicRoutingController extends Controller {
     public void routeToAppointmentView(Doctor doctor) {
         Main.switchView(new UserAppointmentView(new DoctorMainMenu(), doctor));
     }
-    public void routeToAppointmentView(ViewWithFrame returnFrame, Patient patient) {
+    public void routeToAppointmentView(Patient patient) {
         Main.switchView(new UserAppointmentView(new PatientMainMenu(), patient));
     }
 }

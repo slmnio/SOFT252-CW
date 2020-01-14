@@ -21,6 +21,7 @@ public class PatientMainMenu extends ViewWithFrame {
     private JButton btnRateDoctors;
     private JButton btnRequestAppointment;
     private JButton btnLogout;
+    private JButton btnViewAppointments;
 
     public PatientMainMenu() {
         BasicRoutingController controller = new BasicRoutingController();
@@ -41,6 +42,7 @@ public class PatientMainMenu extends ViewWithFrame {
         });
         btnRequestAppointment.addActionListener(e -> controller.routeToPatientAppointmentRequester());
         btnLogout.addActionListener(e -> Main.logout());
+        btnViewAppointments.addActionListener(e -> controller.routeToAppointmentView((Patient) Main.authenticatedUser));
     }
 
     private void close() {this.getFrame().dispose();}
