@@ -37,6 +37,7 @@ public class UserAppointmentView extends ViewWithFrame {
         this.user = targetUser;
 
         pnlDoctorControls.setVisible(isDoctor());
+        updateTable();
     }
 
 
@@ -69,7 +70,7 @@ public class UserAppointmentView extends ViewWithFrame {
 
 
         /*
-         * Doctor | Rating | Comment | Feedback
+         * Doctor | Date | Time
          * */
         model.setColumnCount(3);
         model.setRowCount(getAppointments().size());
@@ -88,8 +89,7 @@ public class UserAppointmentView extends ViewWithFrame {
         }
 
         tblAppointments.setModel(model);
-        //tableRating.getColumnModel().getColumn(0).setPreferredWidth(110);
-        //tableRating.getColumnModel().getColumn(1).setPreferredWidth(20);
+        tblAppointments.getColumnModel().getColumn(0).setPreferredWidth(200);
     }
 
     @Override
