@@ -12,6 +12,8 @@ import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
@@ -27,6 +29,8 @@ public class UserAppointmentView extends ViewWithFrame {
     private ViewWithFrame returnView;
     private User user;
     private AppointmentController controller = new AppointmentController();
+
+    private Appointment selectedInput = null;
 
     private boolean isDoctor() {
         return user.isDoctor();
@@ -70,7 +74,7 @@ public class UserAppointmentView extends ViewWithFrame {
 
 
         /*
-         * Doctor | Date | Time
+         * Doctor/Patient | Date | Time
          * */
         model.setColumnCount(3);
         model.setRowCount(getAppointments().size());
@@ -88,8 +92,22 @@ public class UserAppointmentView extends ViewWithFrame {
             model.setValueAt(appointment.getTimeSlot(), i, 2);
         }
 
+
+
         tblAppointments.setModel(model);
         tblAppointments.getColumnModel().getColumn(0).setPreferredWidth(200);
+
+        if (isDoctor()) {
+            // No need to add this event listener when the patients can't use them
+            tblAppointments.getSelectionModel().addListSelectionListener(e -> {
+                if (!e.getValueIsAdjusting()) {
+                    int selectedIndex = e.getFirstIndex();
+                    selectedInput = getAppointments().get(selectedIndex);
+                    btnNotes.setEnabled(selectedInput != null);
+                    btnPrescription.setEnabled(selectedInput != null);
+                }
+            });
+        }
     }
 
     @Override
