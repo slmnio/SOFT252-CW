@@ -11,6 +11,7 @@ import com.slmn.patient_management.models.patient_services.DoctorReport;
 import com.slmn.patient_management.models.patient_services.PatientRecord;
 import com.slmn.patient_management.models.users.*;
 import com.slmn.patient_management.models.users.requests.AccountRequest;
+import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.ArrayList;
 
@@ -129,6 +130,8 @@ public class SystemDatabase {
         } catch (NullPointerException e) {
             System.out.println(String.format("No value for key [%s]", key));
             return fallback;
+        } catch (ClassCastException e) {
+            return (int) this.env.get(key);
         }
     }
 
