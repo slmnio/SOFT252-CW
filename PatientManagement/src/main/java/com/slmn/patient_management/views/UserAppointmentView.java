@@ -52,6 +52,11 @@ public class UserAppointmentView extends ViewWithFrame {
             if (selectedInput == null) return;
             controller.routeAppointmentPrescription(selectedInput);
         });
+        btnNotes.addActionListener(z -> {
+
+            if (selectedInput == null) return;
+            controller.routeAppointmentNotes(selectedInput);
+        });
     }
 
 

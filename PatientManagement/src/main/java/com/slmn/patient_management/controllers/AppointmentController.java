@@ -9,6 +9,7 @@ import com.slmn.patient_management.models.appointments.TimeSlot;
 import com.slmn.patient_management.models.notifications.NotificationHandler;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
+import com.slmn.patient_management.views.PatientRecordsDoctorView;
 import com.slmn.patient_management.views.PrescriberView;
 
 import java.util.ArrayList;
@@ -78,4 +79,7 @@ public class AppointmentController extends Controller {
         Main.popupFrame(new PrescriberView(appointment));
     }
 
+    public void routeAppointmentNotes(Appointment appointment) {
+        Main.popupFrame(new PatientRecordsDoctorView(appointment));
+    }
 }

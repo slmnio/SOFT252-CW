@@ -2,11 +2,13 @@ package com.slmn.patient_management.views;
 
 import com.slmn.patient_management.controllers.PatientServicesController;
 import com.slmn.patient_management.core.Main;
+import com.slmn.patient_management.models.appointments.Appointment;
 import com.slmn.patient_management.models.patient_services.PatientRecord;
 import com.slmn.patient_management.models.users.Doctor;
 import com.slmn.patient_management.models.users.Patient;
 import com.slmn.patient_management.views.main_menu.DoctorMainMenu;
 import com.slmn.patient_management.views.main_menu.PatientMainMenu;
+import com.slmn.patient_management.views.structures.PopupFrame;
 import com.slmn.patient_management.views.structures.SubFrame;
 import com.slmn.patient_management.views.structures.SwitchableFrame;
 import com.slmn.patient_management.views.structures.ViewWithFrame;
@@ -24,6 +26,16 @@ public class PatientRecordsDoctorView extends ViewWithFrame {
     private JButton btnSubmitNote;
     private JTextField txtRecord;
     private Patient patient;
+
+
+    private Appointment activeAppointment = null;
+
+    public PatientRecordsDoctorView(Appointment activeAppointment) {
+        // Code alters when an appointment is given
+        this(activeAppointment.getPatient());
+        this.activeAppointment = activeAppointment;
+    }
+
 
     public PatientRecordsDoctorView(Patient patient) {
         this.patient = patient;
@@ -64,6 +76,10 @@ public class PatientRecordsDoctorView extends ViewWithFrame {
 
     @Override
     public SwitchableFrame getFrame() {
-        return new SubFrame("Patient records", this.mainPanel, new DoctorMainMenu());
+        if (this.activeAppointment == null) {
+            return new SubFrame("Patient records", this.mainPanel, new DoctorMainMenu());
+        } else {
+            return new PopupFrame("Patient records", this.mainPanel);
+        }
     }
 }
